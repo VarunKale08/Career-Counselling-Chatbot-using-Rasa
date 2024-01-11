@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-g_level",
+      "2": "I-g_level",
+      "3": "L-g_level",
+      "4": "U-g_level",
+      "5": "B-m_eng",
+      "6": "I-m_eng",
+      "7": "L-m_eng",
+      "8": "U-m_eng",
+      "9": "B-m_maths",
+      "10": "I-m_maths",
+      "11": "L-m_maths",
+      "12": "U-m_maths",
+      "13": "B-m_sci",
+      "14": "I-m_sci",
+      "15": "L-m_sci",
+      "16": "U-m_sci",
+      "17": "B-m_ss",
+      "18": "I-m_ss",
+      "19": "L-m_ss",
+      "20": "U-m_ss",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-g_level": 1,
+      "I-g_level": 2,
+      "L-g_level": 3,
+      "U-g_level": 4,
+      "B-m_eng": 5,
+      "I-m_eng": 6,
+      "L-m_eng": 7,
+      "U-m_eng": 8,
+      "B-m_maths": 9,
+      "I-m_maths": 10,
+      "L-m_maths": 11,
+      "U-m_maths": 12,
+      "B-m_sci": 13,
+      "I-m_sci": 14,
+      "L-m_sci": 15,
+      "U-m_sci": 16,
+      "B-m_ss": 17,
+      "I-m_ss": 18,
+      "L-m_ss": 19,
+      "U-m_ss": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

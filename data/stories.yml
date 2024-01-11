@@ -1,0 +1,83 @@
+version: "3.1"
+
+stories:
+  - story: user in 10th grade negative
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: get_career_guidance
+      - action: utter_get_career_guidance
+      - intent: get_user_grade
+        entities:
+          - g_level: "10th"
+      - action: action_get_user_grade
+      - intent: negative_feedback
+      - action: utter_negative_feedback
+      - intent: science_subject_combination
+      - action: utter_science_subject_combination
+      - intent: pcb_career_paths
+      - action: utter_pcb_career_paths
+
+  - story: user in 12th grade
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: get_career_guidance
+      - action: utter_get_career_guidance
+      - intent: get_user_grade
+        entities:
+          - g_level: "10th"
+      - action: action_get_user_grade
+      - intent: negative_feedback
+      - action: utter_negative_feedback
+      - intent: science_subject_combination
+      - action: utter_science_subject_combination
+      - intent: pcb_career_paths
+      - action: utter_pcb_career_paths
+      
+  - story: user in 10th grade positive
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: get_career_guidance
+      - action: utter_get_career_guidance
+      - intent: get_user_grade
+        entities:
+          - g_level: "10th"
+      - action: action_get_user_grade
+      - intent: positive_feedback
+      - action: utter_positive_feedback
+      - intent: maths_marks
+        entities:
+          - m_maths: "90"      
+      - action: action_validate_form_maths
+      - action: utter_maths_marks
+      - intent: science_marks
+        entities:
+          - m_sci: "85"
+      - action: action_validate_form_science
+      - action: utter_science_marks
+      - intent: social_studies_marks
+        entities:
+          - m_ss: "78"
+      - action: action_validate_form_social_studies
+      - action: utter_social_studies_marks
+      - intent: english_marks
+        entities:
+          - m_eng: "92"
+      - action: action_validate_form_english
+      - action: utter_english_marks
+      - intent: science_subject_combination
+      - action: utter_science_subject_combination
+      - intent: pcb_career_paths
+      - action: utter_pcb_career_paths
+
+
+  - story: entity slot
+    steps:
+      - intent: get_user_grade
+        entities:
+          - g_level: "10th"
+      - action: action_get_user_grade
+
+

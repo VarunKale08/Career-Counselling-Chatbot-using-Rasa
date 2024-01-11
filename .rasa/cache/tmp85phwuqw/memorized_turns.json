@@ -1,0 +1,17 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taS2NhYA6dwbhQ==": "utter_greet",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taSWgBmlJSWpRfEQpbhMiAUAQvc0lw==": "action_listen",
+    "eJydjkEKgDAMBL/SB/iCfkUklLpIQKOkqZfSvxuod8HbLgyzO7c+hXYpbkrZ+JQY2ggk6UAMb9m5GMTZWqDOsHi1GDYFrH84qhmUBvrP8PUCRjm5yFcqr0kyel8eIC1UBA==": "utter_get_career_guidance",
+    "eJydjlEKgCAQRK/iATqBV4lYxIYQagtd+xHv3oJ9Bkp/O/Dm7cylTqZcETc5L+Fka0o7iN0Ba96whyRgZXNCVCawRrFmi4DUjiOLIFJD/xl6KyDknYr0Sw6rY4/BTR/FMfvyAKLXeEg=": "action_listen",
+    "eJytkEEKwzAMBL+iB+QF/koIwjhLELhqsOVcTP5elfTQQ0tKyU2C0eyise8D9bVg45hM7hqoHwNrvCHQa8lSDepsqyjOiPpqgZYC2H7iaGYofKD/Gc5awDhFF3lKkzlqwo+dPhxeYf/S13VighpoXDhjQ54Geo95cv6oOHvC9ADOuJ1m": "utter_get_user_grade",
+    "eJytkFEKgzAQRK+yB/AEuYpIWOIgC2kqycaf4N27xX74UbFK/3Zg5s2wfVs7anPG4jmoPJOjth0+8QOOPiJKUSTz1oJsHkkm1dGUAV1PGFUV2W/We4SzFVAf2EDWUmXkFPDjpi/Bf9AP9hpOVFAc9ZOPWBCHjvY1b589iscL+3eZe0XDC5+sxWs=": "action_listen",
+    "eJy1kFEKwjAQRK+SA/QEuUopYU3HshijJJv8lNzdlfrRDyUq+rcDM2+GHdc2mPWaUB154Uu0Zt0OF+kMax4icBZE9ZaMpB6OKsWaJQHSOowiguQ263eE3gqI86QgbSk8U/R4c9OT4C/oL/YqjoWRrRkXF1ARpsHsa+4+fRTNH+zfZf5R1Hl9xELCFe4IzAfyp9amGxqN4/8=": "utter_negative_feedback",
+    "eJy1kFEKwjAQRK+SA/QEuUopYU3HsBijJNv+hN7dlfpRUEkV/duFmTfD9HXpTL1mzI688CVZU9fDJTrDmscTuQiSaqeCrBpO+oo1IQOyNBiTCLJbpd8RWi0gzpOCNGXikZLHzk4vjL+gv+mrOBZGsaYPLmJGHDqzjbnrdCgaP+i/8fwjqDF9QiDhGe4IjAfyp33Fn217yMMNXRsGoA==": "action_listen",
+    "eJy1kVsKgzAQRbeSBbiCbEUkxHgr02osycQfyd47Yj+EtsS+/mbgPg4z9ZIrtVwDZmMd0+S1WrbBeDtCq/syUGR40aaIIBrysrJWfQA4FzISM4LZpJ8llCjAxlkJkpZEnfUOB5meGH+R/oJX4ogJUau6NwNmDE2l9jWrTg5luzf4d55/FBVO79FbphnmBHStdZdj4I+275MLpNER5HUmpvYMJy+dxpa8XT05NzfAnCl4": "utter_science_subject_combination",
+    "eJy1kUsOgzAMRK+SA3CCXAWhKIQpcguhShw2iLvXiC6Q+gn0s7OlmTcju5zmQk3XgNFYxzR4raZ1MN720Oq+dBQZXrQpIoiGvKysVRsAnjOMxIxgVulnhFwLsHFWQJKSqLHeYWenJ8Zf0F/0FRwxIWpVtqbDiK4q1DZm0cmhbHOg/8bzj6DM6T1ayzTCnICmtu6yr/ij7Xtypml0BHmdiak+w8lLh74mbxfPvs7vAMfSqhvItVSS": "action_listen",
+    "eJy1klsKgzAQRbeSBbgCtyISxnhrp9UoZvRH3HtHbEHoI/b1l8B9nMwkm+bETF2P0ZITbn1qpvVgPTVIzfVScxB41Q4BvWrY61VSU/WAzJGMQQS9XaWfJcQoINaRBmnLwCV5h51MD4y/SH/Cq3EsjJCarLI1RtR5YrY1i04HReUb/BvPP4oio/eoSHiEPQBlQe68D/ze9n1yhDQ4hq7OhqE4welK26ZgT4tnH/OrgF+2Rd7RueL2HTuSY5jn/AKKGnLU": "utter_pcb_career_paths",
+    "eJy1klsOgjAQRbfSBbACtkJIM5QrjmIhdOCHsHeHqImJj1bFvza5j9OZFvOSmbkfMFlywp3PzXw5WE8n5OZ6aTkIvGrHgEE17PUquWkGQJZIxiiCwV6k3yXEKCDWkQZpy8g1eYdEpifGLdJf8GocCyPkpmhsiwltmZn7mlWng6L6A/47zz+KIqP3aEh4gt0BdUXumAb+aPs9OUIaHENXZ8NYHeB0pd2pYk+rJ435XcCWbZF39K66fceeZB/S4B9cCbnlGde/lMI=": "action_listen"
+  }
+}

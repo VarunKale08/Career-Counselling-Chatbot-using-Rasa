@@ -1,0 +1,19 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohPbUkHiQUn16UmJJaWxsLAPL9Hy4=": "action_get_user_grade",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohPbUkHiQUn16UmJJaS5xhaJoIGhoLALktP9w=": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taS2NhYA6dwbhQ==": "utter_greet",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taSWgBmlJSWpRfEQpbhMiAUAQvc0lw==": "action_listen",
+    "eJydjkEKgDAMBL/SB/iCfkUklLpIQKOkqZfSvxuod8HbLgyzO7c+hXYpbkrZ+JQY2ggk6UAMb9m5GMTZWqDOsHi1GDYFrH84qhmUBvrP8PUCRjm5yFcqr0kyel8eIC1UBA==": "utter_get_career_guidance",
+    "eJydjlEKgCAQRK/iATqBV4lYxIYQagtd+xHv3oJ9Bkp/O/Dm7cylTqZcETc5L+Fka0o7iN0Ba96whyRgZXNCVCawRrFmi4DUjiOLIFJD/xl6KyDknYr0Sw6rY4/BTR/FMfvyAKLXeEg=": "action_listen",
+    "eJytkEEKwzAMBL+iB+QF/koIwjhLELhqsOVcTP5elfTQQ0tKyU2C0eyise8D9bVg45hM7hqoHwNrvCHQa8lSDepsqyjOiPpqgZYC2H7iaGYofKD/Gc5awDhFF3lKkzlqwo+dPhxeYf/S13VighpoXDhjQ54Geo95cv6oOHvC9ADOuJ1m": "action_get_user_grade",
+    "eJytkFEKgzAQRK+yB/AEuYpICHGQhXQrycaf4N27xX6UYlHEvx2YeTNs39aO2pyx+BCVn+KobYeX8ICjj0hcFGLeWpDNw2JSHU0Z0PWAUVWR/Wa9RjhaAfUxGMhaKo9BIk5u2gneQf+z13CsjOKon3zCgjR09F3z9tmjwni24Sd0rWl4AV4zxbU=": "action_listen",
+    "eJy1kFEKwjAQRK+SA/QEuUopYU3HsFhXSbf9Cbm7K+2HiKVF9G8HZt4M25bauHLPmANF5Zt4V5YjCF3h3SoGHhVi3mlENg+LSfUuZUDrDmNSRQ6L9TvC3gpoiGQga5m4J4k4uOlD8Bf0jb2GY2WM3rUpDJgxdI17rXn67FHUH214C/2xaev3gkTKM8IZ6E8UL7V2D/Al5Ek=": "utter_negative_feedback",
+    "eJy1kFEKwjAQRK+SA/QEuUopYU3HslhXSbf5Cb27K/VD1NIg+rcLM2+GacvSuHJNyIGi8kW8K+sRhM7w7vGMPCnEtPOEZBoWe9W7IQG67DBmVaSwSr8j7LWAhkgGspSZe5KIyk4fjL+gb/Q1HCtj8q4dwoiMsWvcc8xdZ0NRX5vwYvpj0tb2goGUM8IR6A8UT3XLv9tqyN0NTMYG6g==": "action_listen",
+    "eJy1kUsOgzAMRK+SA3ACroJQZMIUuYVQJQ4blLvXiC6qtgjUz86WZt6M7GrOhZmvAZMlJzz60szrYD0NKM196TkKvGpTRFANe12lNF0AJO8wkgiCXaWfEfZaQKwjBWlK4pa8w8FOb4y/oG/0VRwLI5am6myPCX1dmMeYRaeHovZowpPpj0lbt/foSHiCPQFtQ+5y7PKvtu/JO02jY+jvbEzNGU5/Og4Ne1o8Odc3ykspwg==": "utter_science_subject_combination",
+    "eJy1kUsOgzAMRK+SA3CCXAWhKIQpcguhShw2iLvXiC6qtpT0t7OlmTcju5zmQk3ngNFYxzR4raZ1MN720Oq6dBQZXrQpIoiGvKysVRsAnncYiRnBrNLPCHstwMZZAUlKosZ6h8xOT4y/oG/0FRwxIWpVtqbDiK4q1G3MopND2SY34c70x6St23u0lmmEOQBNbd0p7/KPtu/JO02jI8jvTEz1EU5+OvQ1ebt48jq/AryXVl0A8jBU3A==": "action_listen",
+    "eJy1kl0OgjAQhK/SA3ACrkJIs5QRV6EQuvBCuLtL0MSoSOPPW5vMfDPdbTbNiZm6HqMlJ9z61EzrwXpqkJrrpeYg8KodAnrVsNerpKbqAZl3GIMIertKPyPstYBYRwrSlIFL8g6RnV4Yf0Hf6Ks4FkZITVbZGiPqPDH3MYtOB0VlbMKD6Y9JW7P3qEh4hD0AZUHuHDf5Z9v35J2mwTF0dzYMxQlOd9o2BXtaPHGd3wF+mbbzjs4Vt//YkRzDPOcXymtzHg==": "utter_pcb_career_paths",
+    "eJy1klEOgjAQRK/SA3ACrkJIs5QRV7EQuvBDuLtL0MSoSKP41yYzb6a7zcYpMWPbYbDkhBufmnE5WE8XpOZ2qTkIvGr7gE417PUqqak6QKYNRi+Czi7S7whbLSDWkYI0peeSvENkpzfGPegrfRXHwgipySpbY0CdJ+YxZtbpoKiMTXgy/TFpbfYeFQkPsAegLMid4yb/avudvNE0OIbuzoa+OMHpTptLwZ5mT1znT4A90zbe0bri/h9bkmOIK//iiuDmVzGPlQw=": "action_listen"
+  }
+}

@@ -1,0 +1,257 @@
+version: "3.1"
+
+
+nlu:
+- intent: greet
+  examples: |
+   - hey
+   - hello
+   - hi
+   - hello there
+   - good morning
+   - good evening
+   - moin
+   - hey there
+   - let's go
+   - hey dude
+   - goodmorning
+   - goodevening
+   - good afternoon
+
+
+- intent: get_career_guidance
+  examples: |
+   - I am confused about which field to select. Can you guide me ?
+   - I'm feeling lost about choosing a career path. Can you offer guidance?
+   - I'm unsure about which field to choose for my career. Can you help me decide?
+   - Can you provide some advice on selecting a career path? I'm feeling a bit confused.
+   - I need guidance in choosing the right career. Can you assist me?
+   - I am confused.
+   - I am very confused.
+   - I am unable to select a career path.
+
+- intent: get_user_grade
+  examples: |
+   - I'm currently in [10th](g_level) grade.
+   - I'm studying in [12th](g_level) grade.
+   - Currently, I'm a student in [10th](g_level) grade.
+   - My academic level is [12th](g_level) grade.
+   - I'm in [10th](g_level) grade at the moment.
+   - I'll be entering [12th](g_level) grade next semester.
+   - This year, I'm completing [10th](g_level) grade.
+   - As of now, I'm enrolled in [12th](g_level) grade.
+   - I'm a high school student, specifically in [10th](g_level) grade.
+   - [12th](g_level) grade is my current academic level.
+   - I'm halfway through [10th](g_level) grade right now.
+   - I am in [X](g_level) standard.
+   - I am in [XII](g_level) standard.
+   - I am in [13th](g_level) grade.
+   - I am in [9th](g_level) grade.
+   - I am in [11th](g_level) grade.
+   - I am in [12th](g_level) grade.
+   - I am in [10th](g_level) grade.
+   - I am in [8th](g_level) grade.
+   - I am in [14th](g_level) grade.
+   - I am in [15th](g_level) grade.
+   - I am in [16th](g_level) grade.
+   - I am in [7th](g_level) grade.
+   - I am in [11th](g_level) grade.
+   - I am in [10th](g_level) grade.
+   - I am in [9th](g_level) grade.
+   - I am in [12th](g_level) grade.
+   - I am in [8th](g_level) grade.
+   - I am in [14th](g_level) grade.
+   - I am in [15th](g_level) grade.
+   - I am in [16th](g_level) grade.
+   - I am in [7th](g_level) grade.
+   - I am in [17th](g_level) grade.
+   - I am in [6th](g_level) grade.
+
+- intent: positive_feedback
+  examples: |
+   - Yes, I'm happy to share my marks.
+   - Sure, I can share my scores.
+   - I'm comfortable sharing my marks.
+   - I don't mind sharing my grades.
+   - Yes, I can tell you my marks.
+   - Absolutely, here are my scores.
+   - I'm okay with sharing my marks.
+   - Sure, I can disclose my grades.
+   - No problem, I'll share my marks.
+   - Of course, I'm willing to share my scores.
+   - Yes.
+   - Sure
+
+- intent: maths_marks
+  examples: |
+   - My grades in maths are [65](m_maths).
+   - I got [70](m_maths) in math.
+   - In mathematics, I achieved [92](m_maths) marks.
+   - My math score is [85](m_maths).
+   - I got [70](m_maths) in math.
+   - In mathematics, I achieved [92](m_maths) marks.
+   - My math grades are [78](m_maths).
+   - I scored [95](m_maths) in mathematics.
+   - For math, I received [88](m_maths) marks.
+   - My math performance was [60](m_maths).
+   - I earned [83](m_maths) in mathematics.
+   - In the math exam, I got [75](m_maths) marks.
+   - My math result is [89](m_maths).
+   - I achieved [80](m_maths) in math.
+   - The marks I obtained in mathematics are [72](m_maths).
+   - My math grade is [94](m_maths).
+   - I received [68](m_maths) in the math test.
+   - For mathematics, my score is [87](m_maths).
+   - I scored [79](m_maths) in the math exam.
+   - My math result shows [91](m_maths) marks.
+   - In the math test, I achieved [76](m_maths).
+   - I got [84](m_maths) in mathematics.
+   - My math performance was [73](m_maths).
+
+
+- intent: science_marks
+  examples: |
+   - My grades in science are [65](m_sci).
+   - My science score is [85](m_sci).
+   - I got [70](m_sci) in science.
+   - In the science exam, I achieved [92](m_sci) marks.
+   - My science grades are [78](m_sci).
+   - I scored [95](m_sci) in the science test.
+   - For science, I received [88](m_sci) marks.
+   - My science performance was [60](m_sci).
+   - I earned [83](m_sci) in science.
+   - In the science test, I got [75](m_sci) marks.
+   - My science result is [89](m_sci).
+   - I achieved [80](m_sci) in science class.
+   - The marks I obtained in science are [72](m_sci).
+   - My science grade is [94](m_sci).
+   - I received [68](m_sci) in the science exam.
+   - For science class, my score is [87](m_sci).
+   - I scored [79](m_sci) in the science test.
+   - My science result shows [91](m_sci) marks.
+   - In the science test, I achieved [76](m_sci).
+   - I got [84](m_sci) in science class.
+   - My science performance was [73](m_sci).
+
+
+- intent: social_studies_marks
+  examples: |
+   - My grades in science are [65](m_ss).
+   - My social studies score is [85](m_ss).
+   - I got [70](m_ss) in social studies.
+   - In the social studies exam, I achieved [92](m_ss) marks.
+   - My social studies grades are [78](m_ss).
+   - I scored [95](m_ss) in the social studies test.
+   - For social studies, I received [88](m_ss) marks.
+   - My social studies performance was [60](m_ss).
+   - I earned [83](m_ss) in social studies.
+   - In the social studies test, I got [75](m_ss) marks.
+   - My social studies result is [89](m_ss).
+   - I achieved [80](m_ss) in social studies class.
+   - The marks I obtained in social studies are [72](m_ss).
+   - My social studies grade is [94](m_ss).
+   - I received [68](m_ss) in the social studies exam.
+   - For social studies class, my score is [87](m_ss).
+   - I scored [79](m_ss) in the social studies test.
+   - My social studies result shows [91](m_ss) marks.
+   - In the social studies test, I achieved [76](m_ss).
+   - I got [84](m_ss) in social studies class.
+   - My social studies performance was [73](m_ss).
+
+
+- intent: english_marks
+  examples: |
+   - My grades in science are [65](m_eng).
+   - My English score is [85](m_eng).
+   - I got [70](m_eng) in English.
+   - In the English exam, I achieved [92](m_eng) marks.
+   - My English grades are [78](m_eng).
+   - I scored [95](m_eng) in the English test.
+   - For English, I received [88](m_eng) marks.
+   - My English performance was [60](m_eng).
+   - I earned [83](m_eng) in English.
+   - In the English test, I got [75](m_eng) marks.
+   - My English result is [89](m_eng).
+   - I achieved [80](m_eng) in English class.
+   - The marks I obtained in English are [72](m_eng).
+   - My English grade is [94](m_eng).
+   - I received [68](m_eng) in the English exam.
+   - For English class, my score is [87](m_eng).
+   - I scored [79](m_eng) in the English test.
+   - My English result shows [91](m_eng) marks.
+   - In the English test, I achieved [76](m_eng).
+   - I got [84](m_eng) in English class.
+   - My English performance was [73](m_eng).
+
+
+- intent: negative_feedback
+  examples: |
+   - No, I'm not comfortable with sharing my marks.
+   - I cannot share my marks.
+   - I don't remember my marks.
+   - I don't want to share the marks.
+   - Is it fine if i don't share my marks?
+   - No.
+   - Cannot.
+   - Nah.
+   - Nope.
+   - I can't.
+
+
+- intent: science_subject_combination
+  examples: |
+   - Out of these fields I want to pursue Science.
+   - I'm interested in Science subjects.
+   - Can you provide information about Science subject combinations?
+   - Tell me about the subject combination for Science.
+   - I want to know the subjects I can choose for a Science major.
+   - Which subjects are included in the Science program?
+   - Provide details on Science subject options.
+   - What are the Science subject choices available?
+   - I'm considering Science as my major, what subjects should I choose?
+   - Give me advice on selecting Science subjects.
+
+
+- intent: pcb_career_paths
+  examples: |
+   - I'm interested in PCB (Physics, Chemistry, Biology). What career paths can I pursue?
+   - I've chosen PCB. What career opportunities does it open up?
+   - Can you provide information on career paths for PCB students?
+   - I'm leaning towards PCB. Tell me about the career prospects.
+   - I want to explore career options with a PCB combination. What advice can you give?
+   - I selected option 2 (PCB) for my subjects. What careers are available in this field?
+   - Guide me on potential careers with a PCB subject combination.
+   - What are the job opportunities for students with PCB subjects?
+   - I'm curious about career paths for Biology enthusiasts. Is PCB a good choice?
+   - Tell me more about the professional paths for those who choose PCB subjects.
+
+
+- intent: pcmb_career_paths
+  examples: |
+   - I'm considering PCMB. What career paths are available in this combination?
+   - I want to explore career opportunities with PCMB. Can you provide information?
+   - PCMB is my chosen subject combination (option 3). What careers can I pursue?
+   - Tell me about the career prospects for students with PCMB subjects (option 3).
+   - I've selected Physics, Chemistry, Mathematics, and Biology (option 3). What careers does it lead to?
+   - Guide me on career paths for PCMB students.
+   - What are the job opportunities for those who choose PCMB subjects?
+   - I'm interested in PCMB. What professional paths can I explore?
+   - Share insights into the careers associated with PCMB subjects.
+   - I've opted for PCMB. Can you provide information on potential career choices?
+
+
+- intent: pcm_career_paths
+  examples: |
+   - I've chosen PCM (Physics, Chemistry, Mathematics). What career paths can I follow?
+   - What are the career prospects for students with PCM subjects (option 1)?
+   - PCM is my selected subject combination (option 1). Tell me about the careers available.
+   - I'm interested in PCM. Can you provide information on potential career paths?
+   - I want to explore career opportunities with PCM subjects (option 1). Any advice?
+   - I've opted for Physics, Chemistry, and Mathematics (option 1). What careers does it open up?
+   - Guide me on career paths for PCM students.
+   - What job opportunities are available for those who choose PCM subjects?
+   - I'm considering PCM. What professional paths can I pursue?
+   - Share insights into the careers associated with PCM subjects.
+
+
+

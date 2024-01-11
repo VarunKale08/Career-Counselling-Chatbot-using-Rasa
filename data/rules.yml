@@ -1,0 +1,59 @@
+version: "3.1"
+
+rules:
+
+- rule: career guidance
+  steps:
+  - intent: get_career_guidance 
+  - action: utter_get_career_guidance 
+
+- rule: grade response
+  steps:
+  - intent: get_user_grade
+    entities:
+      - g_level: "10th"
+  - action: action_get_user_grade
+
+- rule: negative_feedback
+  steps:
+  - intent: negative_feedback
+  - action: utter_negative_feedback   
+
+- rule: Maths rule
+  steps:
+  - intent: maths_marks
+    entities:
+      - m_maths: "90"      
+  - action: action_validate_form_maths
+  - action: utter_maths_marks
+
+- rule: Science rule
+  steps:
+  - intent: science_marks
+    entities:
+      - m_sci: "85"      
+  - action: action_validate_form_science
+  - action: utter_science_marks
+
+- rule: Social Studies rule
+  steps:
+  - intent: social_studies_marks
+    entities:
+      - m_ss: "75"      
+  - action: action_validate_form_social_studies
+  - action: utter_social_studies_marks
+
+- rule: English rule
+  steps:
+  - intent: english_marks
+    entities:
+      - m_eng: "92"
+  - action: action_validate_form_english      
+  - action: utter_english_marks
+
+- rule: handle fallback 
+  steps:
+  - intent: nlu_fallback
+  - action: utter_handle_fallback
+
+

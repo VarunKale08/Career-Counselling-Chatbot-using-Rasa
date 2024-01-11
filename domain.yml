@@ -1,0 +1,135 @@
+version: "3.1"
+
+
+intents:
+ - greet
+ - get_career_guidance
+ - get_user_grade
+ - get_predicted_career
+ - negative_feedback
+ - positive_feedback
+ - science_subject_combination
+ - pcb_career_paths
+ - pcmb_career_paths
+ - pcm_career_paths
+ - maths_marks
+ - science_marks
+ - social_studies_marks
+ - english_marks
+
+
+entities:
+ - g_level
+ - m_maths
+ - m_sci
+ - m_ss
+ - m_eng
+
+
+slots:
+ g_level:
+   type: text
+   influence_conversation: false
+   mappings:
+     - type: from_entity
+       entity: g_level
+ m_maths:
+   type: float
+   influence_conversation: false
+   mappings:
+     - type: from_entity
+       entity: m_maths
+ m_sci:
+   type: float
+   influence_conversation: false
+   mappings:
+     - type: from_entity
+       entity: m_sci
+ m_ss:
+   type: float
+   influence_conversation: false
+   mappings:
+     - type: from_entity
+       entity: m_ss
+ m_eng:
+   type: float
+   influence_conversation: false
+   mappings:
+     - type: from_entity
+       entity: m_eng
+
+
+actions:
+ - utter_greet
+ - utter_get_career_guidance
+ - action_get_user_grade
+ - utter_positive_feedback
+ - utter_negative_feedback
+ - utter_science_subject_combination
+ - utter_pcb_career_paths
+ - utter_pcmb_career_paths
+ - utter_pcm_career_paths
+ - utter_maths_marks
+ - utter_science_marks
+ - utter_social_studies_marks
+ - utter_english_marks
+ - action_validate_form_maths
+ - action_validate_form_science
+ - action_validate_form_social_studies
+ - action_validate_form_english
+ - utter_handle_fallback
+
+
+responses:
+ utter_greet:
+ - text: "Hello! Welcome to our career counseling chat. I'm here to help you explore and navigate various career paths. How can I assist you today?"
+
+ utter_handle_fallback:
+ - text: "I am unable to understand what you just said kindly provide appropriate message again."
+
+ utter_get_career_guidance:
+ - text: "Which standard or grade are you currently in?"
+
+ utter_positive_feedback:
+ - text: "To kick things off, could you share your math score?"
+
+ utter_maths_marks:
+ - text: "Now that we've covered math, can you share your science score to continue?"
+
+ utter_science_marks:
+ - text: "Moving on, how about sharing your social studies score?"
+
+ utter_social_studies_marks:
+ - text: "And for english, what was your score?"
+
+
+ utter_english_marks:
+ - text: "Thanks for sharing your marks, Based on your scores, I suggest considering a career in Science. However, it's important to note that there are various exciting career paths you can explore:\n\nScience: If you like subjects like Physics, Chemistry, Biology, or Math and are curious about the natural world, this is for you.\nCommerce: If you're interested in economics, business, and finance, this stream focuses on those areas.\nArts: If you enjoy literature, history, psychology, or creative arts, this stream is for subjects like those.\n\nFeel free to ask questions or seek advice about any of these career paths!"
+
+
+ utter_negative_feedback:
+ - text: "It's completely fine if you do not want to disclose your marks, may I know what you want to pursue as your career in from the following:\n1. Science \n2. Army/Navy/Police officer\n3. Commerce\n4. Arts \n5. Diploma\n6. Government clerk \n7.ITI"
+
+
+ utter_science_subject_combination:
+ - text: "Great to hear about your interest in science! To provide more tailored guidance, could you please specify your preferred subject combination:\n1. PCM (Physics, Chemistry, Mathematics)\n2. PCB (Physics, Chemistry, Biology)\n3. PCMB (Physics, Chemistry, Mathematics, Biology)\n\nFeel free to select the option that aligns with your academic interests, and I'll provide information accordingly."
+
+
+ utter_pcb_career_paths:
+ - text: "Opting for the PCB stream after 10th grade opens up a multitude of career possibilities in the fields of life sciences and healthcare. With this stream, you can embark on a rewarding journey towards careers in medicine (MBBS, BDS), pharmacy, nursing, biotechnology, microbiology, environmental science, zoology, botany, genetics, and various other healthcare and life science disciplines.\n\nYour education will revolve around understanding the intricacies of the human body, diseases, and the natural world. It's an excellent choice if you have a deep interest in biology and aspire to make a difference in people's lives through healthcare and scientific research.\n\nIf you have any specific questions about these career paths or if there's anything else you'd like to know, feel free to ask!"
+
+
+ utter_pcm_career_paths:
+ - text: "Opting for the PCM stream after 10th grade opens up a wide range of career possibilities, not just in science but also in commerce and arts. While it prepares you for careers in engineering, architecture, computer science, and more, it also equips you with strong analytical and problem-solving skills that can be valuable in commerce and even arts-related fields.\n\nSo, it's a versatile choice that can lead to a variety of career paths. If you have a specific area of interest within PCM or if you'd like more details about any particular career option, feel free to ask for more information!"
+
+
+ utter_pcmb_career_paths:
+ - text: "Opting for the PCMB stream after 10th grade provides you with a versatile educational background that not only prepares you for careers in various science and healthcare fields but also keeps your options open for pursuing commerce and arts if you choose to do so after clearing the 12th-grade exam.\n\nIn this stream, you can explore diverse career paths in medicine (MBBS, BDS), pharmacy, biotechnology, environmental science, engineering, research, and more. The critical thinking and problem-solving skills you develop are valuable across various domains, offering you the flexibility to shape your future as you see fit.\n\nIf you have specific questions about the PCMB stream or if there's a particular career path you're interested in, feel free to ask for more information!"
+
+
+session_config:
+ session_expiration_time: 60
+ carry_over_slots_to_new_session: true
+
+
+
