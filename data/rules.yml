@@ -23,8 +23,8 @@ rules:
   steps:
   - intent: maths_marks
     entities:
-      - m_maths: "90"      
-  - action: action_validate_form_maths
+      - m_maths: "90"   
+  - action: action_validate_form_maths   
   - action: utter_maths_marks
 
 - rule: Science rule
@@ -32,7 +32,7 @@ rules:
   - intent: science_marks
     entities:
       - m_sci: "85"      
-  - action: action_validate_form_science
+  - action: action_validate_form_sci   
   - action: utter_science_marks
 
 - rule: Social Studies rule
@@ -40,7 +40,7 @@ rules:
   - intent: social_studies_marks
     entities:
       - m_ss: "75"      
-  - action: action_validate_form_social_studies
+  - action: action_validate_form_ss   
   - action: utter_social_studies_marks
 
 - rule: English rule
@@ -48,12 +48,41 @@ rules:
   - intent: english_marks
     entities:
       - m_eng: "92"
-  - action: action_validate_form_english      
+  - action: action_validate_form_eng   
   - action: utter_english_marks
 
-- rule: handle fallback 
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
   steps:
   - intent: nlu_fallback
-  - action: utter_handle_fallback
+  - action: utter_please_rephrase
 
 
+- rule: Maths rule - blank case
+  steps:
+  - intent: maths_marks 
+  - action: action_validate_form_maths   
+
+- rule: Science rule - blank case
+  steps:
+  - intent: science_marks
+  - action: action_validate_form_sci   
+
+- rule: SS rule - blank case
+  steps:
+  - intent: social_studies_marks
+  - action: action_validate_form_ss   
+
+- rule: eng rule - blank case
+  steps:
+  - intent: english_marks
+  - action: action_validate_form_eng 
+
+- rule: pcmb rule 
+  steps:
+  - intent: pcmb_career_paths
+  - action: utter_pcmb_career_paths 
+
+- rule: science subject
+  steps:
+  - intent: science_subject_combination
+  - action: utter_science_subject_combination

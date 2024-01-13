@@ -1,0 +1,26 @@
+[
+  {
+    "text": "For math, my result is 85.",
+    "entities": [
+      {
+        "start": 23,
+        "end": 25,
+        "value": "85",
+        "entity": "m_maths"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "m_sci",
+        "start": 23,
+        "end": 25,
+        "confidence_entity": 0.3299371004104614,
+        "value": "85",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

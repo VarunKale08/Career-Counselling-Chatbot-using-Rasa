@@ -1,0 +1,10 @@
+[
+  {
+    "text": "My grades in science are .",
+    "intent": "science_marks",
+    "intent_prediction": {
+      "name": "science_subject_combination",
+      "confidence": 0.5454596281051636
+    }
+  }
+]

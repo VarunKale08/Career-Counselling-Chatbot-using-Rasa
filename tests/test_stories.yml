@@ -1,65 +1,5 @@
-#### This file contains tests to evaluate that your bot behaves as expected.
-#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
-
-
 stories:
 - story: user in 10th grade
- steps:
- - user: |
-     hey
-   intent: greet
- - action: utter_greet
- - user: |
-     I'm confused about which field to select. Can you guide me?
-   intent: get_career_guidance
- - action: utter_get_career_guidance
- - user: |
-     I'm currently in 10th grade.
-   intent: get_user_grade
- - action: action_get_user_grade
- - user: |
-     No, I don't want to share the marks.
-   intent: negative_feedback
- - action: utter_negative_feedback
- - user: |
-     I'm interested in Science subjects.
-   intent: science_subject_combination
- - action: utter_science_subject_combination
- - user: |
-     I've chosen PCB. What career opportunities does it open up?
-   intent: pcb_career_paths
- - action: utter_pcb_career_paths
-
-
- - story: user in 12th grade
- steps:
- - user: |
-     hi
-   intent: greet
- - action: utter_greet
- - user: |
-     I'm feeling lost about choosing a career path. Can you offer guidance?
-   intent: get_career_guidance
- - action: utter_get_career_guidance
- - user: |
-     I'm currently in 12th grade.
-   intent: get_user_grade
- - action: action_get_user_grade
- - user: |
-     No, I don't want to share the marks.
-   intent: negative_feedback
- - action: utter_negative_feedback
- - user: |
-     I'm interested in Science subjects.
-   intent: science_subject_combination
- - action: utter_science_subject_combination
- - user: |
-     I've chosen PCB. What career opportunities does it open up?
-   intent: pcb_career_paths
- - action: utter_pcb_career_paths
-
-
-- story: user in 10th grade positive - test
   steps:
   - user: |
       hey
@@ -70,48 +10,93 @@ stories:
     intent: get_career_guidance
   - action: utter_get_career_guidance
   - user: |
-      I'm currently in 10th grade.
+      I'm currently in [10th](g_level) grade.
     intent: get_user_grade
-    entities:
-    - g_level: "10th"
+  - slot_was_set:
+    - g_level: 10th
+  - action: action_get_user_grade
+  - user: |
+      No, I don't want to share the marks.
+    intent: negative_feedback
+  - action: utter_negative_feedback
+  - user: |
+      I want to pursue the science route.
+    intent: science_subject_combination
+  - action: utter_science_subject_combination
+  - user: |
+      I want to select PCMB.
+    intent: pcmb_career_paths
+  - action: utter_pcmb_career_paths
+
+- story: interactive_story_1 - test
+  steps:
+  - user: |
+      hey
+    intent: greet
+  - action: utter_greet
+  - user: |
+      I'm confused about which field to select. Can you guide me?
+    intent: get_career_guidance
+  - action: utter_get_career_guidance
+  - user: |
+      I'm currently in [10th](g_level) grade.
+    intent: get_user_grade
+  - slot_was_set:
+      - g_level: "10th"
   - action: action_get_user_grade
   - user: |
       Yes, I'm happy to share my marks.
     intent: positive_feedback
   - action: utter_positive_feedback
   - user: |
-      My grades in maths are 90.
+      My grades in maths are .
     intent: maths_marks
-    entities:
-    - m_maths: "90"
+  - action: action_validate_form_maths
+  - user: |
+      My grades in maths are [90](m_maths).
+    intent: maths_marks
+  - slot_was_set: 
+      - m_maths: "90" 
   - action: action_validate_form_maths
   - action: utter_maths_marks
   - user: |
-      My grades in science are 85.
+      My marks in science are .
     intent: science_marks
-    entities:
-    - m_sci: "85"
-  - action: action_validate_form_science
+  - action: action_validate_form_sci
+  - user: |
+      My grades in science are [85](m_sci).
+    intent: science_marks
+  - slot_was_set: 
+      - m_sci: "85"
+  - action: action_validate_form_sci
   - action: utter_science_marks
   - user: |
-      My grades in social studies are 78.
+      My grades in social studies are .
     intent: social_studies_marks
-    entities:
-    - m_ss: "78"
-  - action: action_validate_form_social_studies
+  - action: action_validate_form_ss
+  - user: |
+      My grades in social studies are [78](m_ss).
+    intent: social_studies_marks
+  - slot_was_set: 
+      - m_ss: "78"
+  - action: action_validate_form_ss
   - action: utter_social_studies_marks
   - user: |
-      My grades in English are 92.
+      My grades in english are .
     intent: english_marks
-    entities:
-    - m_eng: "92"
-  - action: action_validate_form_english
+  - action: action_validate_form_eng
+  - user: |
+      My grades in English are [92](m_eng).
+    intent: english_marks
+  - slot_was_set: 
+      - m_eng: "92"
+  - action: action_validate_form_eng
   - action: utter_english_marks
   - user: |
-      Out of these fields, I want to pursue Science.
+      I want to pursue the science route.
     intent: science_subject_combination
   - action: utter_science_subject_combination
   - user: |
-      I've chosen PCB. What career opportunities does it open up?
-    intent: pcb_career_paths
-  - action: utter_pcb_career_paths
+      I want to select PCMB.
+    intent: pcmb_career_paths
+  - action: utter_pcmb_career_paths

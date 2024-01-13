@@ -1,6 +1,6 @@
 from typing import Any, Text, Dict, List
 
-
+from rasa_sdk.events import UserUtteranceReverted
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
@@ -35,28 +35,29 @@ class ActionGetUserGrade(Action):
 
 
        return []
-  
-class ValidateForm(Action):
-    def name(self) -> Text:
-        return "action_validate_form"
 
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        m_maths = tracker.get_slot("m_maths")
-        m_sci = tracker.get_slot("m_sci")
-        m_ss = tracker.get_slot("m_ss")
-        m_eng = tracker.get_slot("m_eng")
-        print("maths:", m_maths)
-        print("sci",m_sci)
-        print("ss",m_ss)
-        print("eng",m_eng)
+# debugging for all subs  
+# class ValidateForm(Action):
+#     def name(self) -> Text:
+#         return "action_validate_form"
+
+#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#         m_maths = tracker.get_slot("m_maths")
+#         m_sci = tracker.get_slot("m_sci")
+#         m_ss = tracker.get_slot("m_ss")
+#         m_eng = tracker.get_slot("m_eng")
+#         print("maths:", m_maths)
+#         print("sci",m_sci)
+#         print("ss",m_ss)
+#         print("eng",m_eng)
         
-        if not all([m_maths is not None and m_maths != "",m_sci is not None and m_sci != "", m_ss is not None and m_ss != "", m_eng is not None and m_eng != ""]):
-            dispatcher.utter_message("Please fill in all required fields.")
-            return []
+#         if not all([m_maths is not None and m_maths != "",m_sci is not None and m_sci != "", m_ss is not None and m_ss != "", m_eng is not None and m_eng != ""]):
+#             dispatcher.utter_message("Please fill in all required fields.")
+#             return []
 
 
-        dispatcher.utter_message("Form submitted successfully!")
-        return []
+#         dispatcher.utter_message("Form submitted successfully!")
+#         return []
     
 
 class ValidateFormMaths(Action):
@@ -65,66 +66,70 @@ class ValidateFormMaths(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         m_maths = tracker.get_slot("m_maths")
+
         print("maths:", m_maths)
+
         
-        if not all([m_maths is not None and m_maths != ""]):
-            dispatcher.utter_message("Please provide your maths marks properly.")
+        if m_maths is None or m_maths == "":
+            dispatcher.utter_message("I am unable to understand what you just said. Please provide appropriate information.")
             return []
-     
+
+
+        dispatcher.utter_message("Marks successfully recorded!")
         return []
 
-class ValidateFormScience(Action):
+class ValidateFormSci(Action):
     def name(self) -> Text:
-        return "action_validate_form_science"
+        return "action_validate_form_sci"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         m_sci = tracker.get_slot("m_sci")
-        print("sci",m_sci)
+
+        print("Science:", m_sci)
+
         
-        if not all([m_sci is not None and m_sci != ""]):
-            dispatcher.utter_message("Please provide your science marks properly.")
+        if m_sci is None or m_sci == "":
+            dispatcher.utter_message("I am unable to understand what you just said. Please provide appropriate information.")
             return []
-        
+
+
+        dispatcher.utter_message("Marks successfully recorded!")
         return []
-
-
-class ValidateFormSocialStudies(Action):
+    
+class ValidateFormSs(Action):
     def name(self) -> Text:
-        return "action_validate_form_social_studies"
+        return "action_validate_form_ss"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         m_ss = tracker.get_slot("m_ss")
-        print("ss",m_ss)
+
+        print("ss:", m_ss)
+
         
-        if not all([m_ss is not None and m_ss != ""]):
-            dispatcher.utter_message("Please provide your social studies marks properly.")
+        if m_ss is None or m_ss == "":
+            dispatcher.utter_message("I am unable to understand what you just said. Please provide appropriate information.")
             return []
-        
+
+
+        dispatcher.utter_message("Marks successfully recorded!")
         return []
-
-
-
-class ValidateFormEnglish(Action):
+    
+class ValidateFormEng(Action):
     def name(self) -> Text:
-        return "action_validate_form_english"
+        return "action_validate_form_eng"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         m_eng = tracker.get_slot("m_eng")
-        print("eng",m_eng)
+
+        print("eng:", m_eng)
+
         
-        if not all([m_eng is not None and m_eng != ""]):
-            dispatcher.utter_message("Please provide your english marks properly.")
+        if m_eng is None or m_eng == "":
+            dispatcher.utter_message("I am unable to understand what you just said. Please provide appropriate information.")
             return []
-  
-        dispatcher.utter_message("Form submitted successfully!")
+
+
+        dispatcher.utter_message("Marks successfully recorded!")
         return []
-
-
-
-
-
-
-
-
 
 
