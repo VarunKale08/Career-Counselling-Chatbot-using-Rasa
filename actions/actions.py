@@ -1,11 +1,44 @@
 from typing import Any, Text, Dict, List
-
 from rasa_sdk.events import UserUtteranceReverted
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+import joblib
+import os
+import numpy as np
 
+class CareerPredictionAction(Action):
+    def name(self) -> Text:
+        return "action_career_prediction"
 
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        # Get the path to the Rasa project directory
+        project_dir = os.path.dirname(os.path.abspath(__file__))
 
+        # Specify the name of the model file
+        model_filename = 'career_counseling_best_model_linear.joblib'
+
+        # Create the full path to the model file
+        model_path = os.path.join(project_dir, model_filename)
+        svm_model = joblib.load(model_path)
+
+        numerical_features = ['m_maths', 'm_sci', 'm_ss', 'm_eng']
+        print("num features", numerical_features)
+
+        # Extract numerical features from user input
+        numerical_inputs = [float(tracker.get_slot(feature)) for feature in numerical_features]
+        print("numerical input", numerical_inputs)
+
+        # Reshape numerical_inputs to a 2D array
+        numerical_inputs_2d = np.array(numerical_inputs).reshape(1, -1)
+
+        # Predict using the loaded model
+        predicted_career = svm_model.predict(numerical_inputs_2d)
+        print("predicted career:", predicted_career)
+
+        # Send the predicted career as a response
+        dispatcher.utter_message(f"Thanks for sharing your marks, Based on your scores, I suggest considering a career in {predicted_career[0]}. However, it's important to note that there are various exciting career paths you can explore:\nScience Route: If you like subjects like Physics, Chemistry, Biology, or Math and are curious about the natural world, this is for you.\nCommerce Route: If you're interested in economics, business, and finance, this stream focuses on those areas.\nArts Route: If you enjoy literature, history, psychology, or creative arts, this stream is for subjects like those.\nFeel free to ask questions or seek advice about any of these career paths!")
+
+        return []
 
 class ActionGetUserGrade(Action):
 
@@ -36,30 +69,7 @@ class ActionGetUserGrade(Action):
 
        return []
 
-# debugging for all subs  
-# class ValidateForm(Action):
-#     def name(self) -> Text:
-#         return "action_validate_form"
-
-#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#         m_maths = tracker.get_slot("m_maths")
-#         m_sci = tracker.get_slot("m_sci")
-#         m_ss = tracker.get_slot("m_ss")
-#         m_eng = tracker.get_slot("m_eng")
-#         print("maths:", m_maths)
-#         print("sci",m_sci)
-#         print("ss",m_ss)
-#         print("eng",m_eng)
-        
-#         if not all([m_maths is not None and m_maths != "",m_sci is not None and m_sci != "", m_ss is not None and m_ss != "", m_eng is not None and m_eng != ""]):
-#             dispatcher.utter_message("Please fill in all required fields.")
-#             return []
-
-
-#         dispatcher.utter_message("Form submitted successfully!")
-#         return []
     
-
 class ValidateFormMaths(Action):
     def name(self) -> Text:
         return "action_validate_form_maths"

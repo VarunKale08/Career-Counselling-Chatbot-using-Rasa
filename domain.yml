@@ -13,12 +13,18 @@ intents:
 - science_marks
 - science_subject_combination
 - social_studies_marks
+
+
+
 entities:
 - m_eng
 - m_ss
 - m_sci
 - m_maths
 - g_level
+
+
+
 slots:
   g_level:
     type: text
@@ -50,6 +56,9 @@ slots:
     mappings:
     - type: from_entity
       entity: m_eng
+
+
+
 actions:
 - utter_positive_feedback
 - utter_pcb_career_paths
@@ -58,7 +67,6 @@ actions:
 - utter_science_marks
 - utter_greet
 - utter_get_career_guidance
-- utter_english_marks
 - utter_social_studies_marks
 - utter_maths_marks
 - action_get_user_grade
@@ -68,6 +76,10 @@ actions:
 - action_validate_form_sci
 - action_validate_form_eng
 - action_validate_form_ss
+- action_career_prediction
+
+
+
 responses:
   utter_greet:
   - text: Hello! Welcome to our career counseling chat. I'm here to help you explore and navigate various career paths. How can I assist you today?
@@ -81,15 +93,6 @@ responses:
   - text: Moving on, how about sharing your social studies score? (score between 0-100)
   utter_social_studies_marks:
   - text: And for english, what was your score? (score between 0-100)
-  utter_english_marks:
-  - text: |-
-      Thanks for sharing your marks, Based on your scores, I suggest considering a career in Science. However, it's important to note that there are various exciting career paths you can explore:
-
-      Science Route: If you like subjects like Physics, Chemistry, Biology, or Math and are curious about the natural world, this is for you.
-      Commerce Route: If you're interested in economics, business, and finance, this stream focuses on those areas.
-      Arts Route: If you enjoy literature, history, psychology, or creative arts, this stream is for subjects like those.
-
-      Feel free to ask questions or seek advice about any of these career paths!
   utter_negative_feedback:
   - text: |-
       It's completely fine if you do not want to disclose your marks, may I know what you want to pursue as your career in from the following:

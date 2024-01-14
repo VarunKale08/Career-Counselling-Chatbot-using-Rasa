@@ -91,7 +91,7 @@ stories:
   - slot_was_set: 
       - m_eng: "92"
   - action: action_validate_form_eng
-  - action: utter_english_marks
+  - action: action_career_prediction
   - user: |
       I want to pursue the science route.
     intent: science_subject_combination

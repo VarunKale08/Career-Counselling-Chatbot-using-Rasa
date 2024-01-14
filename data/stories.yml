@@ -79,7 +79,7 @@ stories:
     - slot_was_set:
         - m_eng: '90'
     - action: action_validate_form_eng
-    - action: utter_english_marks
+    - action: action_career_prediction
     - intent: science_subject_combination
     - action: utter_science_subject_combination
     - intent: pcmb_career_paths
