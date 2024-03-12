@@ -6,13 +6,6 @@
     "support": 21,
     "confused_with": {}
   },
-  "g_level": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 25,
-    "confused_with": {}
-  },
   "m_maths": {
     "precision": 1.0,
     "recall": 1.0,
@@ -25,6 +18,13 @@
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 20,
+    "confused_with": {}
+  },
+  "g_level": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 25,
     "confused_with": {}
   },
   "m_eng": {

@@ -1,16 +1,16 @@
 {
+  "pcb_career_paths": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 20,
+    "confused_with": {}
+  },
   "greet": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 13,
-    "confused_with": {}
-  },
-  "maths_marks": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 23,
     "confused_with": {}
   },
   "english_marks": {
@@ -20,18 +20,11 @@
     "support": 22,
     "confused_with": {}
   },
-  "get_career_guidance": {
+  "pcm_career_paths": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 8,
-    "confused_with": {}
-  },
-  "negative_feedback": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 10,
+    "support": 21,
     "confused_with": {}
   },
   "science_marks": {
@@ -39,6 +32,41 @@
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 22,
+    "confused_with": {}
+  },
+  "maths_marks": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 23,
+    "confused_with": {}
+  },
+  "pcmb_career_paths": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 21,
+    "confused_with": {}
+  },
+  "science_subject_combination": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 11,
+    "confused_with": {}
+  },
+  "get_career_guidance": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 8,
+    "confused_with": {}
+  },
+  "positive_feedback": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 13,
     "confused_with": {}
   },
   "get_user_grade": {
@@ -55,39 +83,11 @@
     "support": 23,
     "confused_with": {}
   },
-  "pcb_career_paths": {
+  "negative_feedback": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 20,
-    "confused_with": {}
-  },
-  "science_subject_combination": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 11,
-    "confused_with": {}
-  },
-  "positive_feedback": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 13,
-    "confused_with": {}
-  },
-  "pcmb_career_paths": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 21,
-    "confused_with": {}
-  },
-  "pcm_career_paths": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 21,
+    "support": 10,
     "confused_with": {}
   },
   "accuracy": 1.0,
