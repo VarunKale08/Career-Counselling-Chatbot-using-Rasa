@@ -1,0 +1,50 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"m_maths\"], \"intent\": \"maths_marks\"}}]": "action_validate_form_maths",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"m_maths\"], \"intent\": \"maths_marks\"}}, {\"prev_action\": {\"action_name\": \"action_validate_form_maths\"}, \"user\": {\"entities\": [\"m_maths\"], \"intent\": \"maths_marks\"}}]": "utter_maths_marks",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"m_maths\"], \"intent\": \"maths_marks\"}}, {\"prev_action\": {\"action_name\": \"action_validate_form_maths\"}, \"user\": {\"entities\": [\"m_maths\"], \"intent\": \"maths_marks\"}}, {\"prev_action\": {\"action_name\": \"utter_maths_marks\"}, \"user\": {\"entities\": [\"m_maths\"], \"intent\": \"maths_marks\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"maths_marks\"}}]": "action_validate_form_maths",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"maths_marks\"}}, {\"prev_action\": {\"action_name\": \"action_validate_form_maths\"}, \"user\": {\"intent\": \"maths_marks\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"g_level\"], \"intent\": \"get_user_grade\"}}]": "action_get_user_grade",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"g_level\"], \"intent\": \"get_user_grade\"}}, {\"prev_action\": {\"action_name\": \"action_get_user_grade\"}, \"user\": {\"entities\": [\"g_level\"], \"intent\": \"get_user_grade\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"science_marks\"}}]": "action_validate_form_sci",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"science_marks\"}}, {\"prev_action\": {\"action_name\": \"action_validate_form_sci\"}, \"user\": {\"intent\": \"science_marks\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pcmb_career_paths\"}}]": "utter_pcmb_career_paths",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pcmb_career_paths\"}}, {\"prev_action\": {\"action_name\": \"utter_pcmb_career_paths\"}, \"user\": {\"intent\": \"pcmb_career_paths\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_career_guidance\"}}]": "utter_get_career_guidance",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_career_guidance\"}}, {\"prev_action\": {\"action_name\": \"utter_get_career_guidance\"}, \"user\": {\"intent\": \"get_career_guidance\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"science_subject_combination\"}}]": "utter_science_subject_combination",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"science_subject_combination\"}}, {\"prev_action\": {\"action_name\": \"utter_science_subject_combination\"}, \"user\": {\"intent\": \"science_subject_combination\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"negative_feedback\"}}]": "utter_negative_feedback",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"negative_feedback\"}}, {\"prev_action\": {\"action_name\": \"utter_negative_feedback\"}, \"user\": {\"intent\": \"negative_feedback\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"english_marks\"}}]": "action_validate_form_eng",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"english_marks\"}}, {\"prev_action\": {\"action_name\": \"action_validate_form_eng\"}, \"user\": {\"intent\": \"english_marks\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"m_ss\"], \"intent\": \"social_studies_marks\"}}]": "action_validate_form_ss",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"m_ss\"], \"intent\": \"social_studies_marks\"}}, {\"prev_action\": {\"action_name\": \"action_validate_form_ss\"}, \"user\": {\"entities\": [\"m_ss\"], \"intent\": \"social_studies_marks\"}}]": "utter_social_studies_marks",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"m_ss\"], \"intent\": \"social_studies_marks\"}}, {\"prev_action\": {\"action_name\": \"action_validate_form_ss\"}, \"user\": {\"entities\": [\"m_ss\"], \"intent\": \"social_studies_marks\"}}, {\"prev_action\": {\"action_name\": \"utter_social_studies_marks\"}, \"user\": {\"entities\": [\"m_ss\"], \"intent\": \"social_studies_marks\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"m_eng\"], \"intent\": \"english_marks\"}}]": "action_validate_form_eng",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"m_eng\"], \"intent\": \"english_marks\"}}, {\"prev_action\": {\"action_name\": \"action_validate_form_eng\"}, \"user\": {\"entities\": [\"m_eng\"], \"intent\": \"english_marks\"}}]": "action_career_prediction",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"m_eng\"], \"intent\": \"english_marks\"}}, {\"prev_action\": {\"action_name\": \"action_validate_form_eng\"}, \"user\": {\"entities\": [\"m_eng\"], \"intent\": \"english_marks\"}}, {\"prev_action\": {\"action_name\": \"action_career_prediction\"}, \"user\": {\"entities\": [\"m_eng\"], \"intent\": \"english_marks\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"m_sci\"], \"intent\": \"science_marks\"}}]": "action_validate_form_sci",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"m_sci\"], \"intent\": \"science_marks\"}}, {\"prev_action\": {\"action_name\": \"action_validate_form_sci\"}, \"user\": {\"entities\": [\"m_sci\"], \"intent\": \"science_marks\"}}]": "utter_science_marks",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"m_sci\"], \"intent\": \"science_marks\"}}, {\"prev_action\": {\"action_name\": \"action_validate_form_sci\"}, \"user\": {\"entities\": [\"m_sci\"], \"intent\": \"science_marks\"}}, {\"prev_action\": {\"action_name\": \"utter_science_marks\"}, \"user\": {\"entities\": [\"m_sci\"], \"intent\": \"science_marks\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]": "utter_please_rephrase",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}, {\"prev_action\": {\"action_name\": \"utter_please_rephrase\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"social_studies_marks\"}}]": "action_validate_form_ss",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"social_studies_marks\"}}, {\"prev_action\": {\"action_name\": \"action_validate_form_ss\"}, \"user\": {\"intent\": \"social_studies_marks\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pcmb_career_paths\"}}, {\"prev_action\": {\"action_name\": \"utter_pcmb_career_paths\"}, \"user\": {\"intent\": \"pcmb_career_paths\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"pcmb_career_paths\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}, {\"prev_action\": {\"action_name\": \"utter_please_rephrase\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]",
+      "predicting default action with intent session_start",
+      "predicting default action with intent restart"
+    ]
+  }
+}

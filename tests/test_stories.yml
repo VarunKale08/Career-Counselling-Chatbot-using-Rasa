@@ -24,9 +24,9 @@ stories:
     intent: science_subject_combination
   - action: utter_science_subject_combination
   - user: |
-      I want to select PCMB.
-    intent: pcmb_career_paths
-  - action: utter_pcmb_career_paths
+      I want to select PCM.
+    intent: pcm_careerpath
+  - action: utter_pcm_careerpath
 
 - story: interactive_story_1 - test
   steps:
@@ -97,6 +97,6 @@ stories:
     intent: science_subject_combination
   - action: utter_science_subject_combination
   - user: |
-      I want to select PCMB.
-    intent: pcmb_career_paths
-  - action: utter_pcmb_career_paths
+      I want to select PCM.
+    intent: pcm_careerpath
+  - action: utter_pcm_careerpath

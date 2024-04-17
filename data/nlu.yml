@@ -68,6 +68,7 @@ nlu:
     - Yes.
     - Sure
     - yes
+    - yes.
 - intent: maths_marks
   examples: |
     - My grades in maths are [90](m_maths).
@@ -93,6 +94,7 @@ nlu:
     - My marks in maths are .
     - My marks in maths are [90](m_maths).
     - My grades in maths are .
+    - My marks in maths are [95](m_maths).
 - intent: science_marks
   examples: |
     - My grades in science are [65](m_sci).
@@ -117,6 +119,7 @@ nlu:
     - My marks in science are [85](m_sci).
     - My marks in science are .
     - My grades in science are .
+    - My marks in science are [90](m_sci).
 - intent: social_studies_marks
   examples: |
     - My grades in social studies are [65](m_ss).
@@ -142,6 +145,7 @@ nlu:
     - My marks in social studies are [75](m_ss).
     - My marks in social studies are .
     - My grades in social studies are .
+    - My marks in social studies are [78](m_ss).
 - intent: english_marks
   examples: |
     - My grades in english are [65](m_eng).
@@ -166,6 +170,7 @@ nlu:
     - My marks in english are [80](m_eng).
     - My marks in english are .
     - My grades in english are .
+    - marks in english are [75](m_eng).
 - intent: negative_feedback
   examples: |
     - No, I'm not comfortable with sharing my marks.
@@ -178,6 +183,7 @@ nlu:
     - Nah.
     - Nope.
     - I can't.
+    - no
 - intent: science_subject_combination
   examples: |
     - Out of these fields, I want to pursue the science route.
@@ -191,6 +197,7 @@ nlu:
     - I'm considering the science route as my major; what subjects should I choose?
     - Give me advice on selecting subjects for the science route.
     - I want to pursue the science route.
+    - Science ROute
 - intent: pcb_career_paths
   examples: |
     - PCB
@@ -236,7 +243,7 @@ nlu:
     - Guide me on choosing the right career with PCMB subjects.
     - Share details about the careers associated with PCMB combination.
     - I want to select PCMB.
-- intent: pcm_career_paths
+- intent: pcm_careerpath
   examples: |
     - PCM
     - I've chosen PCM (Physics, Chemistry, Mathematics). What career paths can I follow?
@@ -259,3 +266,584 @@ nlu:
     - I'm interested in PCM. What careers can I explore with this subject combination?
     - Provide insights into the job opportunities for PCM students.
     - Guide me on selecting the right career with PCM subjects.
+- intent: army_navy_airforce_career_paths
+  examples: |
+    - I'm interested in joining the Army, Navy, or Air Force. What career paths are available?
+    - What are the career prospects for individuals interested in the Army, Navy, or Air Force?
+    - Can you provide information on career opportunities within the Army, Navy, and Air Force?
+    - I want to explore career opportunities in the military. Any advice for joining the Army, Navy, or Air Force?
+    - Tell me about the professional paths for those interested in serving in the Army, Navy, or Air Force.
+    - I'm considering a career in the military. What options exist within the Army, Navy, and Air Force?
+    - Share insights into the careers associated with the Army, Navy, and Air Force.
+    - What job opportunities are available for individuals interested in serving in the military?
+    - I'm interested in joining the Armed Forces. What career paths can I pursue?
+    - Guide me on career paths for individuals interested in the Army, Navy, or Air Force.
+    - I want information on job prospects within the military. Any advice for someone considering the Army, Navy, or Air Force?
+    - Share details about the career opportunities within the Army, Navy, and Air Force.
+    - What are the professional paths for those aspiring to serve in the Army, Navy, or Air Force?
+    - I'm interested in joining the military. What careers can I explore within the Army, Navy, and Air Force?
+    - Provide insights into the job opportunities for individuals interested in serving in the military.
+    - Guide me on selecting the right career within the Army, Navy, or Air Force.
+- intent: army_career
+  examples: |
+    - I want to join the Army. How can I enlist?
+    - What are the requirements for joining the Army?
+    - Can you provide information on how to join the Army?
+    - I'm interested in serving in the Army. What steps should I take?
+    - How do I start a career in the Army?
+    - Tell me about the process of joining the Army.
+    - I want to enlist in the Army. What do I need to know?
+    - Provide guidance on joining the Army.
+    - How can I become a part of the Army?
+    - I'm considering a career in the Army. What's the first step?
+    - What are the steps to becoming a soldier in the Army?
+    - Guide me on the process of joining the Army.
+    - Share details about enlisting in the Army.
+    - What are the entry requirements for the Army?
+    - I'm ready to join the Army. What should I do next?
+    - Can you assist me with joining the Army?
+    - I'm interested in a career in the Army. What's the procedure for joining?
+    - How can I apply to join the Army?
+- intent: army_qualifications
+  examples: |
+    - What qualifications do I need to join the Army?
+    - Can you tell me about the exams required for joining the Army?
+    - I'm interested in the qualifications and exams for joining the Army. Could you provide details?
+    - What are the educational requirements for joining the Army?
+    - What exams do I need to take to join the Army?
+    - Are there any specific qualifications I need to meet to enlist in the Army?
+    - Tell me about the academic and physical requirements for joining the Army.
+    - What are the eligibility criteria for joining the Army?
+    - How can I prepare for the exams required to join the Army?
+    - I want to know about the tests and qualifications necessary for joining the Army.
+    - Provide information on the educational and medical qualifications for joining the Army.
+    - Can you outline the requirements and exams for joining the Army?
+- intent: navy_career
+  examples: |
+    - I want to join the Navy. How can I enlist?
+    - What are the requirements for joining the Navy?
+    - Can you provide information on how to join the Navy?
+    - I'm interested in serving in the Navy. What steps should I take?
+    - How do I start a career in the Navy?
+    - Tell me about the process of joining the Navy.
+    - I want to enlist in the Navy. What do I need to know?
+    - Provide guidance on joining the Navy.
+    - How can I become a part of the Navy?
+    - I'm considering a career in the Navy. What's the first step?
+    - What are the steps to becoming a sailor in the Navy?
+    - Guide me on the process of joining the Navy.
+    - Share details about enlisting in the Navy.
+    - What are the entry requirements for the Navy?
+    - I'm ready to join the Navy. What should I do next?
+    - Can you assist me with joining the Navy?
+    - I'm interested in a career in the Navy. What's the procedure for joining?
+    - How can I apply to join the Navy?
+- intent: navy_qualifications
+  examples: |
+    - What qualifications do I need to join the Navy?
+    - Can you tell me about the exams required for joining the Navy?
+    - I'm interested in the qualifications and exams for joining the Navy. Could you provide details?
+    - What are the educational requirements for joining the Navy?
+    - What exams do I need to take to join the Navy?
+    - Are there any specific qualifications I need to meet to enlist in the Navy?
+    - Tell me about the academic and physical requirements for joining the Navy.
+    - What are the eligibility criteria for joining the Navy?
+    - How can I prepare for the exams required to join the Navy?
+    - I want to know about the tests and qualifications necessary for joining the Navy.
+    - Provide information on the educational and medical qualifications for joining the Navy.
+    - Can you outline the requirements and exams for joining the Navy?
+- intent: airforce_career
+  examples: |
+    - I want to join the Air Force. How can I enlist?
+    - What are the requirements for joining the Air Force?
+    - Can you provide information on how to join the Air Force?
+    - I'm interested in serving in the Air Force. What steps should I take?
+    - How do I start a career in the Air Force?
+    - Tell me about the process of joining the Air Force.
+    - I want to enlist in the Air Force. What do I need to know?
+    - Provide guidance on joining the Air Force.
+    - How can I become a part of the Air Force?
+    - I'm considering a career in the Air Force. What's the first step?
+    - What are the steps to becoming an airman in the Air Force?
+    - Guide me on the process of joining the Air Force.
+    - Share details about enlisting in the Air Force.
+    - What are the entry requirements for the Air Force?
+    - I'm ready to join the Air Force. What should I do next?
+    - Can you assist me with joining the Air Force?
+    - I'm interested in a career in the Air Force. What's the procedure for joining?
+    - How can I apply to join the Air Force?
+- intent: airforce_qualifications
+  examples: |
+    - What qualifications do I need to join the Air Force?
+    - Can you tell me about the exams required for joining the Air Force?
+    - I'm interested in the qualifications and exams for joining the Air Force. Could you provide details?
+    - What are the educational requirements for joining the Air Force?
+    - What exams do I need to take to join the Air Force?
+    - Are there any specific qualifications I need to meet to enlist in the Air Force?
+    - Tell me about the academic and physical requirements for joining the Air Force.
+    - What are the eligibility criteria for joining the Air Force?
+    - How can I prepare for the exams required to join the Air Force?
+    - I want to know about the tests and qualifications necessary for joining the Air Force.
+    - Provide information on the educational and medical qualifications for joining the Air Force.
+    - Can you outline the requirements and exams for joining the Air Force?
+- intent: nda_career
+  examples: |
+    - What is the National Defence Academy (NDA)?
+    - Can you provide information about the NDA?
+    - What does the NDA offer for those interested in a military career?
+    - I'm interested in the NDA. What can you tell me about it?
+    - Tell me about the training program at the National Defence Academy (NDA).
+    - How can I join the NDA?
+    - What opportunities does the NDA provide for aspiring military personnel?
+    - Explain the purpose and structure of the National Defence Academy (NDA).
+- intent: barch_career
+  examples: |
+    - What is a B.Arch. (Bachelor of Architecture) degree?
+    - Can you provide information about studying Architecture?
+    - What does a Bachelor of Architecture program involve?
+    - I'm interested in pursuing a career in Architecture. What can you tell me about it?
+    - Tell me about the Bachelor of Architecture degree and its career prospects.
+    - How can I enroll in a B.Arch. program?
+    - What opportunities does a B.Arch. degree provide for aspiring architects?
+    - Explain the curriculum and focus areas of a Bachelor of Architecture program.
+- intent: barch_qualification
+  examples: |
+    - What qualifications are required to enroll in a Bachelor of Architecture program?
+    - Can you provide information about the exams and qualifications needed for a Bachelor of Architecture program?
+    - I'm interested in pursuing a Bachelor of Architecture degree. What qualifications do I need?
+    - What criteria should I satisfy to enroll in a Bachelor of Architecture program?
+    - Explain the qualifications and exams necessary for joining a Bachelor of Architecture program.
+- intent: beng_career
+  examples: |
+    - What is a Bachelor of Engineering (B.E.) degree?
+    - Can you provide information about studying Engineering?
+    - What does a Bachelor of Engineering program involve?
+    - I'm interested in pursuing a career in Engineering. What can you tell me about it?
+    - Tell me about the Bachelor of Engineering degree and its career prospects.
+    - How can I enroll in a B.E. program?
+    - What opportunities does a B.E. degree provide for aspiring engineers?
+    - Explain the curriculum and specializations available in a Bachelor of Engineering program.
+- intent: beng_qualification
+  examples: |
+    - What qualifications are required to enroll in a Bachelor of Engineering program?
+    - Can you provide information about the exams and qualifications needed for a Bachelor of Engineering program?
+    - I'm interested in pursuing a Bachelor of Engineering degree. What qualifications do I need?
+    - What criteria should I satisfy to enroll in a Bachelor of Engineering program?
+    - Explain the qualifications and exams necessary for joining a Bachelor of Engineering program.
+- intent: bca_career
+  examples: |
+    - What is a Bachelor of Computer Applications (BCA) degree?
+    - Can you provide information about studying Computer Applications?
+    - What does a Bachelor of Computer Applications program involve?
+    - I'm interested in pursuing a career in Computer Applications. What can you tell me about it?
+    - Tell me about the Bachelor of Computer Applications degree and its career prospects.
+    - How can I enroll in a BCA program?
+    - What opportunities does a BCA degree provide for aspiring IT professionals?
+    - Explain the curriculum and focus areas of a Bachelor of Computer Applications program.
+- intent: bca_qualification
+  examples: |
+    - What qualifications are required to enroll in a Bachelor of Computer Applications program?
+    - Can you provide information about the exams and qualifications needed for a BCA program?
+    - I'm interested in pursuing a Bachelor of Computer Applications degree. What qualifications do I need?
+    - What criteria should I satisfy to enroll in a BCA program?
+    - Explain the qualifications and exams necessary for joining a Bachelor of Computer Applications program.
+- intent: hotelm_career
+  examples: |
+    - What is a degree in Hotel Management?
+    - Can you provide information about studying Hotel Management?
+    - What does a degree in Hotel Management involve?
+    - I'm interested in pursuing a career in Hotel Management. What can you tell me about it?
+    - Tell me about the Hotel Management degree and its career prospects.
+    - How can I enroll in a Hotel Management program?
+    - What opportunities does a degree in Hotel Management provide for aspiring hospitality professionals?
+    - Explain the curriculum and focus areas of a Hotel Management degree program
+- intent: hotelm_qualification
+  examples: |
+    - What qualifications are required to enroll in a Hotel Management degree program?
+    - Can you provide information about the exams and qualifications needed for a Hotel Management degree?
+    - I'm interested in pursuing a Hotel Management degree. What qualifications do I need?
+    - What criteria should I satisfy to enroll in a Hotel Management program?
+    - Explain the qualifications and exams necessary for joining a Hotel Management degree program.
+- intent: no_button_selection
+  examples: |
+    - Restart the conversation or know more
+    - I'd like to restart the conversation or know more
+    - Can we start over or learn more?
+    - Restart or learn more about it
+    - Start again or find out more
+    - How can I restart or get more information?
+
+- intent: mbbs_career
+  examples: |
+    - What is an M.B.B.S (Bachelor of Medicine and Bachelor of Surgery) degree?
+    - Can you provide information about studying Medicine and Surgery?
+    - What does an M.B.B.S program involve?
+    - I'm interested in pursuing a career in Medicine. What can you tell me about it?
+    - Tell me about the M.B.B.S degree and its career prospects.
+    - How can I enroll in an M.B.B.S program?
+    - What opportunities does an M.B.B.S degree provide for aspiring medical professionals?
+    - Explain the curriculum and focus areas of an M.B.B.S degree program.
+
+- intent: mbbs_qualification
+  examples: |
+    - What qualifications are required to enroll in an MBBS program?
+    - Can you provide information about the exams and qualifications needed for an MBBS program?
+    - I'm interested in pursuing an MBBS degree. What qualifications do I need?
+    - What criteria should I satisfy to enroll in an MBBS program?
+    - Explain the qualifications and exams necessary for joining an MBBS program.
+
+- intent: bsc_nursing_career
+  examples: |
+    - What is a B.Sc. Nursing degree?
+    - Can you provide information about studying B.Sc. Nursing?
+    - What does a B.Sc. Nursing degree involve?
+    - I'm interested in pursuing a career in nursing. What can you tell me about B.Sc. Nursing?
+    - Tell me about the B.Sc. Nursing degree and its career prospects.
+    - How can I enroll in a B.Sc. Nursing program?
+    - What opportunities does a B.Sc. Nursing degree provide for aspiring healthcare professionals?
+    - Explain the curriculum and focus areas of a B.Sc. Nursing degree program.
+
+- intent: bsc_nursing_qualification
+  examples: |
+    - What qualifications are required for B.Sc. Nursing?
+    - Can you tell me about the criteria for B.Sc. Nursing admission?
+    - What exams do I need to pass for B.Sc. Nursing?
+    - What are the requirements to pursue B.Sc. Nursing?
+    - Explain the qualifications needed to enroll in a B.Sc. Nursing program.
+
+- intent: bvsc_career
+  examples: |
+    - What is a Bachelor of Veterinary Science (B.V.Sc.) degree?
+    - Can you provide information about studying Veterinary Science?
+    - What does a Bachelor of Veterinary Science program involve?
+    - I'm interested in pursuing a career in Veterinary Science. What can you tell me about it?
+    - Tell me about the Bachelor of Veterinary Science degree and its career prospects.
+    - How can I enroll in a B.V.Sc. program?
+    - What opportunities does a B.V.Sc. degree provide for aspiring veterinarians?
+    - Explain the curriculum and focus areas of a Bachelor of Veterinary Science program.
+
+- intent: bvsc_qualification
+  examples: |
+    - What qualifications are required to enroll in a Bachelor of Veterinary Science program?
+    - Can you provide information about the exams and qualifications needed for a B.V.Sc. program?
+    - I'm interested in pursuing a Bachelor of Veterinary Science degree. What qualifications do I need?
+    - What criteria should I satisfy to enroll in a B.V.Sc. program?
+    - Explain the qualifications and exams necessary for joining a Bachelor of Veterinary Science program.
+
+- intent: bsc_bmbzc_career
+  examples: |
+    - What careers can I pursue with a B.Sc. in Botany, Microbiology, Biology, Zoology, or Chemistry?
+    - Can you provide information about career opportunities after completing a B.Sc. in Botany, Microbiology, Biology, Zoology, or Chemistry?
+    - What are the prospects for B.Sc. graduates in Botany, Microbiology, Biology, Zoology, or Chemistry?
+    - I'm interested in studying Botany, Microbiology, Biology, Zoology, or Chemistry. What career options are available after completing the degree?
+    - Tell me about the career pathways for students with a B.Sc. in Botany, Microbiology, Biology, Zoology, or Chemistry.
+    - What job opportunities exist for graduates of B.Sc. programs in Botany, Microbiology, Biology, Zoology, or Chemistry?
+    - Explain the employment prospects for individuals holding a B.Sc. degree in Botany, Microbiology, Biology, Zoology, or Chemistry.
+    - What careers can I pursue with a B.Sc. in Botany?
+    - Can you provide information about career opportunities after completing a B.Sc. in Botany?
+    - What are the prospects for B.Sc. graduates in Botany?
+    - I'm interested in studying Botany. What career options are available after completing the degree?
+    - Tell me about the career pathways for students with a B.Sc. in Botany.
+    - What job opportunities exist for graduates of B.Sc. programs in Botany?
+    - Explain the employment prospects for individuals holding a B.Sc. degree in Botany.
+    - What careers can I pursue with a B.Sc. in Microbiology?
+    - Can you provide information about career opportunities after completing a B.Sc. in Microbiology?
+    - What are the prospects for B.Sc. graduates in Microbiology?
+    - I'm interested in studying Microbiology. What career options are available after completing the degree?
+    - Tell me about the career pathways for students with a B.Sc. in Microbiology.
+    - What job opportunities exist for graduates of B.Sc. programs in Microbiology?
+    - Explain the employment prospects for individuals holding a B.Sc. degree in Microbiology.
+    - What careers can I pursue with a B.Sc. in Biology?
+    - Can you provide information about career opportunities after completing a B.Sc. in Biology?
+    - What are the prospects for B.Sc. graduates in Biology?
+    - I'm interested in studying Biology. What career options are available after completing the degree?
+    - Tell me about the career pathways for students with a B.Sc. in Biology.
+    - What job opportunities exist for graduates of B.Sc. programs in Biology?
+    - Explain the employment prospects for individuals holding a B.Sc. degree in Biology.
+    - What careers can I pursue with a B.Sc. in Zoology?
+    - Can you provide information about career opportunities after completing a B.Sc. in Zoology?
+    - What are the prospects for B.Sc. graduates in Zoology?
+    - I'm interested in studying Zoology. What career options are available after completing the degree?
+    - Tell me about the career pathways for students with a B.Sc. in Zoology.
+    - What job opportunities exist for graduates of B.Sc. programs in Zoology?
+    - Explain the employment prospects for individuals holding a B.Sc. degree in Zoology.
+    - What careers can I pursue with a B.Sc. in Chemistry?
+    - Can you provide information about career opportunities after completing a B.Sc. in Chemistry?
+    - What are the prospects for B.Sc. graduates in Chemistry?
+    - I'm interested in studying Chemistry. What career options are available after completing the degree?
+    - Tell me about the career pathways for students with a B.Sc. in Chemistry.
+    - What job opportunities exist for graduates of B.Sc. programs in Chemistry?
+    - Explain the employment prospects for individuals holding a B.Sc. degree in Chemistry.
+
+- intent: bsc_bmbzc_qualification
+  examples: |
+    - What qualifications are required for a B.Sc. in Botany, Microbiology, Biology, Zoology, or Chemistry?
+    - Can you tell me about the criteria for admission to a B.Sc. program in Botany, Microbiology, Biology, Zoology, or Chemistry?
+    - What exams do I need to pass to enroll in a B.Sc. program in Botany, Microbiology, Biology, Zoology, or Chemistry?
+    - What are the requirements to pursue a B.Sc. degree in Botany, Microbiology, Biology, Zoology, or Chemistry?
+    - Explain the qualifications needed to apply for a B.Sc. program in Botany, Microbiology, Biology, Zoology, or Chemistry.
+
+- intent: bscdt_career
+  examples: |
+    - What career options are available with a B.Sc. in Dairy Technology?
+    - Can you provide information about career opportunities after completing a B.Sc. in Dairy Technology?
+    - What are the prospects for graduates of B.Sc. programs in Dairy Technology?
+    - I'm interested in studying Dairy Technology. What career pathways can I pursue after completing the degree?
+    - Tell me about the employment prospects for individuals holding a B.Sc. degree in Dairy Technology.
+    - What job opportunities exist for graduates of B.Sc. programs in Dairy Technology?
+    - Explain the career pathways for students with a B.Sc. in Dairy Technology.
+
+- intent: bscdt_qualification
+  examples: |
+    - What qualifications are required to enroll in a B.Sc. in Dairy Technology program?
+    - Can you provide detailed information about the exams and qualifications needed for a B.Sc. in Dairy Technology program?
+    - I'm interested in pursuing a B.Sc. in Dairy Technology. What specific qualifications do I need?
+    - What criteria should I satisfy to enroll in a B.Sc. in Dairy Technology program?
+    - Explain in detail the qualifications and exams necessary for joining a B.Sc. in Dairy Technology program.
+
+- intent: bop_career
+  examples: |
+    - What career options are available with a Bachelor of Pharmacy degree?
+    - Can you provide information about career opportunities after completing a Bachelor of Pharmacy program?
+    - What are the prospects for graduates of Bachelor of Pharmacy programs?
+    - I'm interested in studying Pharmacy. What career pathways can I pursue after completing the degree?
+    - Tell me about the employment prospects for individuals holding a Bachelor of Pharmacy degree.
+    - What job opportunities exist for graduates of Bachelor of Pharmacy programs?
+    - Explain the career pathways for students with a Bachelor of Pharmacy degree.
+
+- intent: bop_qualification
+  examples: |
+    - What qualifications are required to enroll in a Bachelor of Pharmacy program?
+    - Can you provide detailed information about the exams and qualifications needed for a Bachelor of Pharmacy program?
+    - I'm interested in pursuing a Bachelor of Pharmacy. What specific qualifications do I need?
+    - What criteria should I satisfy to enroll in a Bachelor of Pharmacy program?
+    - Explain in detail the qualifications and exams necessary for joining a Bachelor of Pharmacy program.
+
+- intent: btech_agri_career
+  examples: |
+    - What careers can I pursue with a B.Tech in Agriculture?
+    - Can you provide information about career opportunities after completing a B.Tech in Agriculture?
+    - What are the prospects for B.Tech graduates in Agriculture?
+    - I'm interested in studying Agriculture. What career options are available after completing a B.Tech in Agriculture?
+    - Tell me about the career pathways for students with a B.Tech in Agriculture.
+    - What job opportunities exist for graduates of B.Tech programs in Agriculture?
+    - Explain the employment prospects for individuals holding a B.Tech degree in Agriculture.
+
+- intent: btech_agri_qualification
+  examples: |
+    - What qualifications are required for a B.Tech in Agriculture?
+    - Can you tell me about the criteria for admission to a B.Tech program in Agriculture?
+    - What exams do I need to pass to enroll in a B.Tech program in Agriculture?
+    - What are the requirements to pursue a B.Tech degree in Agriculture?
+    - Explain the qualifications needed to apply for a B.Tech program in Agriculture.
+
+- intent: bscbt_career
+  examples: |
+    - What career options are available with a B.Sc in Biotechnology degree?
+    - Can you provide information about career opportunities after completing a B.Sc in Biotechnology program?
+    - What are the prospects for graduates of B.Sc in Biotechnology programs?
+    - I'm interested in studying Biotechnology. What career pathways can I pursue after completing the degree?
+    - Tell me about the employment prospects for individuals holding a B.Sc in Biotechnology degree.
+    - What job opportunities exist for graduates of B.Sc in Biotechnology programs?
+    - Explain the career pathways for students with a B.Sc in Biotechnology degree.
+
+- intent: bscbt_qualification
+  examples: |
+    - What qualifications are required to enroll in a B.Sc in Biotechnology program?
+    - Can you provide detailed information about the exams and qualifications needed for a B.Sc in Biotechnology program?
+    - I'm interested in pursuing a B.Sc in Biotechnology. What specific qualifications do I need?
+    - What criteria should I satisfy to enroll in a B.Sc in Biotechnology program?
+    - Explain in detail the qualifications and exams necessary for joining a B.Sc in Biotechnology program.
+
+- intent: bsc_agri_career
+  examples: |
+    - What careers can I pursue with a B.Sc in Agriculture?
+    - Can you provide information about career opportunities after completing a B.Sc in Agriculture?
+    - What are the prospects for B.Sc graduates in Agriculture?
+    - I'm interested in studying Agriculture. What career options are available after completing a B.Sc in Agriculture?
+    - Tell me about the career pathways for students with a B.Sc in Agriculture.
+    - What job opportunities exist for graduates of B.Sc programs in Agriculture?
+    - Explain the employment prospects for individuals holding a B.Sc degree in Agriculture.
+
+- intent: bsc_agri_qualification
+  examples: |
+    - What qualifications are required for a B.Sc in Agriculture?
+    - Can you tell me about the criteria for admission to a B.Sc program in Agriculture?
+    - What exams do I need to pass to enroll in a B.Sc program in Agriculture?
+    - What are the requirements to pursue a B.Sc degree in Agriculture?
+    - Explain the qualifications needed to apply for a B.Sc program in Agriculture.
+
+
+- intent: dedt_career
+  examples: |
+    - What career options are available with a D.Ed. Teacher qualification?
+    - Can you provide information about career opportunities after completing a D.Ed. Teacher program?
+    - What are the prospects for graduates of D.Ed. Teacher programs?
+    - I'm interested in becoming a teacher. What career pathways can I pursue with a D.Ed. qualification?
+    - Tell me about the employment prospects for individuals with a D.Ed. Teacher qualification.
+    - What job opportunities exist for graduates of D.Ed. Teacher programs?
+    - Explain the career pathways for students with a D.Ed. Teacher qualification.
+
+- intent: dedt_qualification
+  examples: |
+    - What qualifications are required to enroll in a D.Ed. Teacher program?
+    - Can you provide detailed information about the exams and qualifications needed for a D.Ed. Teacher program?
+    - I'm interested in pursuing a D.Ed. Teacher qualification. What specific qualifications do I need?
+    - What criteria should I satisfy to enroll in a D.Ed. Teacher program?
+    - Explain in detail the qualifications and exams necessary for joining a D.Ed. Teacher program.
+
+- intent: llb_career
+  examples: |
+    - What career options are available with an L.L.B. Foundation qualification?
+    - Can you provide information about career opportunities after completing an L.L.B. Foundation program?
+    - What are the prospects for graduates of L.L.B. Foundation programs?
+    - I'm interested in studying law. What career pathways can I pursue with an L.L.B. qualification?
+    - Tell me about the employment prospects for individuals with an L.L.B. Foundation qualification.
+    - What job opportunities exist for graduates of L.L.B. Foundation programs?
+    - Explain the career pathways for students with an L.L.B. Foundation qualification.
+
+- intent: llb_qualification
+  examples: |
+    - What qualifications are required to enroll in an L.L.B. Foundation program?
+    - Can you provide detailed information about the exams and qualifications needed for an L.L.B. Foundation program?
+    - I'm interested in pursuing an L.L.B. Foundation qualification. What specific qualifications do I need?
+    - What criteria should I satisfy to enroll in an L.L.B. Foundation program?
+    - Explain in detail the qualifications and exams necessary for joining an L.L.B. Foundation program.
+
+- intent: fdd_career
+  examples: |
+    - What career options are available with a Fashion Designing Diploma?
+    - Can you provide information about career opportunities after completing a Fashion Designing Diploma program?
+    - What are the prospects for graduates of Fashion Designing Diploma programs?
+    - I'm interested in studying fashion design. What career pathways can I pursue with a Fashion Designing Diploma?
+    - Tell me about the employment prospects for individuals with a Fashion Designing Diploma.
+    - What job opportunities exist for graduates of Fashion Designing Diploma programs?
+    - Explain the career pathways for students with a Fashion Designing Diploma.
+
+- intent: fdd_qualification
+  examples: |
+    - What qualifications are required to enroll in a Fashion Designing Diploma program?
+    - Can you provide information about the exams and qualifications needed for a Fashion Designing Diploma program?
+    - I'm interested in pursuing a Fashion Designing Diploma. What qualifications do I need?
+    - What criteria should I satisfy to enroll in a Fashion Designing Diploma program?
+    - Explain the qualifications and exams necessary for joining a Fashion Designing Diploma program.
+
+- intent: ba_career
+  examples: |
+    - What career options are available with a Bachelor in Arts degree?
+    - Can you provide information about career opportunities after completing a B.A. program?
+    - What are the prospects for graduates of Bachelor in Arts programs?
+    - I'm interested in studying arts. What career pathways can I pursue with a B.A. degree?
+    - Tell me about the employment prospects for individuals with a Bachelor in Arts degree.
+    - What job opportunities exist for graduates of B.A. programs?
+    - Explain the career pathways for students with a B.A. degree.
+
+- intent: ba_qualification
+  examples: |
+    - What qualifications are required to enroll in a B.A. (Bachelor in Arts) program?
+    - Can you provide information about the exams and qualifications needed for a B.A. program?
+    - I'm interested in pursuing a Bachelor in Arts degree. What qualifications do I need?
+    - What criteria should I satisfy to enroll in a B.A. program?
+    - Explain the qualifications and exams necessary for joining a Bachelor in Arts program.
+
+- intent: bba_career
+  examples: |
+    - What career options are available with a Bachelor of Business Administration degree?
+    - Can you provide information about career opportunities after completing a B.B.A. program?
+    - What are the prospects for graduates of Bachelor of Business Administration programs?
+    - I'm interested in studying business administration. What career pathways can I pursue with a B.B.A. degree?
+    - Tell me about the employment prospects for individuals with a B.B.A. degree.
+    - What job opportunities exist for graduates of B.B.A. programs?
+    - Explain the career pathways for students with a B.B.A. degree.
+
+- intent: bba_qualification
+  examples: |
+    - What qualifications are required to enroll in a B.B.A. (Bachelor of Business Administration) program?
+    - Can you provide information about the exams and qualifications needed for a B.B.A. program?
+    - I'm interested in pursuing a Bachelor of Business Administration degree. What qualifications do I need?
+    - What criteria should I satisfy to enroll in a B.B.A. program?
+    - Explain the qualifications and exams necessary for joining a Bachelor of Business Administration program.
+
+- intent: commerce_subject_combination
+  examples: |
+    - Out of these fields, I want to pursue the commerce route.
+    - I'm interested in the commerce route subjects.
+    - Can you provide information about subject combinations in the commerce route?
+    - Tell me about the subject combination for the commerce route.
+    - I want to know the subjects I can choose for the commerce route major.
+    - Which subjects are included in the commerce route program?
+    - Provide details on subject options for the commerce route.
+    - What are the subject choices available for the commerce route?
+    - I'm considering the commerce route as my major; what subjects should I choose?
+    - Give me advice on selecting subjects for the commerce route.
+    - I want to pursue the commerce route.
+    - Commerce Route
+
+- intent: arts_subject_combination
+  examples: |
+    - Out of these fields, I want to pursue the arts route.
+    - I'm interested in the arts route subjects.
+    - Can you provide information about subject combinations in the arts route?
+    - Tell me about the subject combination for the arts route.
+    - I want to know the subjects I can choose for the arts route major.
+    - Which subjects are included in the arts route program?
+    - Provide details on subject options for the arts route.
+    - What are the subject choices available for the arts route?
+    - I'm considering the arts route as my major; what subjects should I choose?
+    - Give me advice on selecting subjects for the arts route.
+    - I want to pursue the arts route.
+    - Arts Route
+
+- intent: caf_career
+  examples: |
+    - What career options are available after completing the C.A. Foundation?
+    - Can you provide information about career opportunities after passing the C.A. Foundation exam?
+    - What are the prospects for individuals who clear the C.A. Foundation?
+    - I'm interested in pursuing Chartered Accountancy. What career pathways can I pursue after the C.A. Foundation?
+    - Tell me about the employment prospects for individuals who complete the C.A. Foundation.
+    - What job opportunities exist after completing the C.A. Foundation?
+    - Explain the career pathways for students who clear the C.A. Foundation.
+
+- intent: caf_qualification
+  examples: |
+    - What qualifications are required to enroll in the C.A. Foundation?
+    - Can you provide information about the exams and qualifications needed for the C.A. Foundation?
+    - I'm interested in pursuing the C.A. Foundation. What qualifications do I need?
+    - What criteria should I satisfy to enroll in the C.A. Foundation?
+    - Explain the qualifications and exams necessary for enrolling in the C.A. Foundation.
+
+- intent: bc_career
+  examples: |
+    - What career options are available after completing a Bachelor's in Commerce?
+    - Can you provide information about career opportunities after obtaining a B. Com degree?
+    - What are the prospects for graduates of Bachelor's in Commerce programs?
+    - I'm interested in studying Commerce. What career pathways can I pursue with a B. Com degree?
+    - Tell me about the employment prospects for individuals with a B. Com degree.
+    - What job opportunities exist for graduates of B. Com programs?
+    - Explain the career pathways for students with a B. Com degree.
+
+- intent: bc_qualification
+  examples: |
+    - What qualifications are required to enroll in a Bachelor's in Commerce program?
+    - Can you provide information about the exams and qualifications needed for pursuing a B. Com degree?
+    - I'm interested in studying Commerce. What qualifications do I need for a B. Com program?
+    - What criteria should I satisfy to enroll in a B. Com program?
+    - Explain the qualifications and exams necessary for enrolling in a Bachelor's in Commerce program.
+
+- intent: csf_career
+  examples: |
+    - What career options are available after completing the C.S. Foundation?
+    - Can you provide information about career opportunities after passing the C.S. Foundation exam?
+    - What are the prospects for individuals who clear the C.S. Foundation?
+    - I'm interested in pursuing Company Secretaryship. What career pathways can I pursue after the C.S. Foundation?
+    - Tell me about the employment prospects for individuals who complete the C.S. Foundation.
+    - What job opportunities exist after completing the C.S. Foundation?
+    - Explain the career pathways for students who clear the C.S. Foundation.
+
+- intent: csf_qualification
+  examples: |
+    - What qualifications are required to enroll in the C.S. Foundation?
+    - Can you provide information about the exams and qualifications needed for the C.S. Foundation?
+    - I'm interested in pursuing the C.S. Foundation. What qualifications do I need?
+    - What criteria should I satisfy to enroll in the C.S. Foundation?
+    - Explain the qualifications and exams necessary for enrolling in the C.S. Foundation.

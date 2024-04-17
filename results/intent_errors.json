@@ -1,10 +1,26 @@
 [
   {
-    "text": "My grades in science are .",
-    "intent": "science_marks",
+    "text": "What qualifications do I need to join the Army?",
+    "intent": "army_career",
     "intent_prediction": {
-      "name": "science_subject_combination",
-      "confidence": 0.5454596281051636
+      "name": "army_qualifications",
+      "confidence": 0.7793785333633423
+    }
+  },
+  {
+    "text": "What qualifications do I need to join the Navy?",
+    "intent": "navy_career",
+    "intent_prediction": {
+      "name": "navy_qualifications",
+      "confidence": 0.638117790222168
+    }
+  },
+  {
+    "text": "What qualifications do I need to join the Air Force?",
+    "intent": "airforce_career",
+    "intent_prediction": {
+      "name": "airforce_qualifications",
+      "confidence": 0.839103639125824
     }
   }
 ]

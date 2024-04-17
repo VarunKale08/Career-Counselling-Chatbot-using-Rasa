@@ -17,8 +17,8 @@ stories:
       - action: utter_negative_feedback
       - intent: science_subject_combination
       - action: utter_science_subject_combination
-      - intent: pcmb_career_paths
-      - action: utter_pcmb_career_paths
+      - intent: pcm_careerpath
+      - action: utter_pcm_careerpath
 
       
   - story: entity slot
@@ -30,7 +30,10 @@ stories:
           - g_level: 10th
       - action: action_get_user_grade
 
-  - story: base_story_1
+
+
+
+  - story: yes_army_yes
     steps:
     - intent: greet
     - action: utter_greet
@@ -82,5 +85,3764 @@ stories:
     - action: action_career_prediction
     - intent: science_subject_combination
     - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: nda_career
+    - action: utter_nda_career
+    - intent: army_career
+    - action: utter_army_career
+    - intent: army_qualifications
+    - action: utter_army_qualifications 
+
+
+  - story: interactive_story_1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: nda_career
+    - action: utter_nda_career
+    - intent: army_career
+    - action: utter_army_career
+    - intent: army_qualifications
+    - action: utter_army_qualifications
+
+
+
+
+  - story: yes_navy_yes
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+    - action: action_validate_form_maths
+    - intent: maths_marks
+      entities:
+        - m_maths: '90'
+    - slot_was_set:
+        - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+    - action: action_validate_form_sci
+    - intent: science_marks
+      entities:
+        - m_sci: '84'
+    - slot_was_set:
+        - m_sci: '84'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+    - action: action_validate_form_ss
+    - intent: social_studies_marks
+      entities:
+        - m_ss: '75'
+    - slot_was_set:
+        - m_ss: '75'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+    - action: action_validate_form_eng
+    - intent: english_marks
+      entities:
+        - m_eng: '90'
+    - slot_was_set:
+        - m_eng: '90'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: nda_career
+    - action: utter_nda_career
+    - intent: navy_career
+    - action: utter_navy_career
+    - intent: navy_qualifications
+    - action: utter_navy_qualifications 
+
+
+  - story: interactive_story_2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: nda_career
+    - action: utter_nda_career
+    - intent: navy_career
+    - action: utter_navy_career
+    - intent: navy_qualifications
+    - action: utter_navy_qualifications
+
+
+  - story: yes_airforce_yes
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+    - action: action_validate_form_maths
+    - intent: maths_marks
+      entities:
+        - m_maths: '90'
+    - slot_was_set:
+        - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+    - action: action_validate_form_sci
+    - intent: science_marks
+      entities:
+        - m_sci: '84'
+    - slot_was_set:
+        - m_sci: '84'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+    - action: action_validate_form_ss
+    - intent: social_studies_marks
+      entities:
+        - m_ss: '75'
+    - slot_was_set:
+        - m_ss: '75'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+    - action: action_validate_form_eng
+    - intent: english_marks
+      entities:
+        - m_eng: '90'
+    - slot_was_set:
+        - m_eng: '90'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: nda_career
+    - action: utter_nda_career
+    - intent: airforce_career
+    - action: utter_airforce_career
+    - intent: airforce_qualifications
+    - action: utter_airforce_qualifications 
+
+
+  - story: interactive_story_3
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: nda_career
+    - action: utter_nda_career
+    - intent: airforce_career
+    - action: utter_airforce_career
+    - intent: airforce_qualifications
+    - action: utter_airforce_qualifications 
+
+
+
+  - story: yes_army_no
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+    - action: action_validate_form_maths
+    - intent: maths_marks
+      entities:
+        - m_maths: '90'
+    - slot_was_set:
+        - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+    - action: action_validate_form_sci
+    - intent: science_marks
+      entities:
+        - m_sci: '84'
+    - slot_was_set:
+        - m_sci: '84'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+    - action: action_validate_form_ss
+    - intent: social_studies_marks
+      entities:
+        - m_ss: '75'
+    - slot_was_set:
+        - m_ss: '75'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+    - action: action_validate_form_eng
+    - intent: english_marks
+      entities:
+        - m_eng: '90'
+    - slot_was_set:
+        - m_eng: '90'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: nda_career
+    - action: utter_nda_career
+    - intent: army_career
+    - action: utter_army_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+
+  - story: interactive_story_4
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: nda_career
+    - action: utter_nda_career
+    - intent: army_career
+    - action: utter_army_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+
+
+  - story: yes_navy_no
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+    - action: action_validate_form_maths
+    - intent: maths_marks
+      entities:
+        - m_maths: '90'
+    - slot_was_set:
+        - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+    - action: action_validate_form_sci
+    - intent: science_marks
+      entities:
+        - m_sci: '84'
+    - slot_was_set:
+        - m_sci: '84'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+    - action: action_validate_form_ss
+    - intent: social_studies_marks
+      entities:
+        - m_ss: '75'
+    - slot_was_set:
+        - m_ss: '75'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+    - action: action_validate_form_eng
+    - intent: english_marks
+      entities:
+        - m_eng: '90'
+    - slot_was_set:
+        - m_eng: '90'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: nda_career
+    - action: utter_nda_career
+    - intent: navy_career
+    - action: utter_navy_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection 
+
+
+  - story: interactive_story_5
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: nda_career
+    - action: utter_nda_career
+    - intent: navy_career
+    - action: utter_navy_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection 
+
+
+
+
+  - story: yes_airforce_no
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+    - action: action_validate_form_maths
+    - intent: maths_marks
+      entities:
+        - m_maths: '90'
+    - slot_was_set:
+        - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+    - action: action_validate_form_sci
+    - intent: science_marks
+      entities:
+        - m_sci: '84'
+    - slot_was_set:
+        - m_sci: '84'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+    - action: action_validate_form_ss
+    - intent: social_studies_marks
+      entities:
+        - m_ss: '75'
+    - slot_was_set:
+        - m_ss: '75'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+    - action: action_validate_form_eng
+    - intent: english_marks
+      entities:
+        - m_eng: '90'
+    - slot_was_set:
+        - m_eng: '90'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: nda_career
+    - action: utter_nda_career
+    - intent: airforce_career
+    - action: utter_airforce_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+
+
+  - story: interactive_story_6
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: nda_career
+    - action: utter_nda_career
+    - intent: airforce_career
+    - action: utter_airforce_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+
+
+
+  - story: barch_story
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+    - action: action_validate_form_maths
+    - intent: maths_marks
+      entities:
+        - m_maths: '90'
+    - slot_was_set:
+        - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+    - action: action_validate_form_sci
+    - intent: science_marks
+      entities:
+        - m_sci: '84'
+    - slot_was_set:
+        - m_sci: '84'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+    - action: action_validate_form_ss
+    - intent: social_studies_marks
+      entities:
+        - m_ss: '75'
+    - slot_was_set:
+        - m_ss: '75'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+    - action: action_validate_form_eng
+    - intent: english_marks
+      entities:
+        - m_eng: '90'
+    - slot_was_set:
+        - m_eng: '90'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: barch_career
+    - action: utter_barch_career
+    - intent: barch_qualification
+    - action: utter_barch_qualification
+
+
+
+  - story: interactive_story_7
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: barch_career
+    - action: utter_barch_career
+    - intent: barch_qualification
+    - action: utter_barch_qualification
+
+
+
+  - story: beng_story
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+    - action: action_validate_form_maths
+    - intent: maths_marks
+      entities:
+        - m_maths: '90'
+    - slot_was_set:
+        - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+    - action: action_validate_form_sci
+    - intent: science_marks
+      entities:
+        - m_sci: '84'
+    - slot_was_set:
+        - m_sci: '84'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+    - action: action_validate_form_ss
+    - intent: social_studies_marks
+      entities:
+        - m_ss: '75'
+    - slot_was_set:
+        - m_ss: '75'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+    - action: action_validate_form_eng
+    - intent: english_marks
+      entities:
+        - m_eng: '90'
+    - slot_was_set:
+        - m_eng: '90'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: beng_career
+    - action: utter_beng_career
+    - intent: beng_qualification
+    - action: utter_beng_qualification
+
+
+  - story: interactive_story_8
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: beng_career
+    - action: utter_beng_career
+    - intent: beng_qualification
+    - action: utter_beng_qualification
+
+
+  - story: bca_story
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+    - action: action_validate_form_maths
+    - intent: maths_marks
+      entities:
+        - m_maths: '90'
+    - slot_was_set:
+        - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+    - action: action_validate_form_sci
+    - intent: science_marks
+      entities:
+        - m_sci: '84'
+    - slot_was_set:
+        - m_sci: '84'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+    - action: action_validate_form_ss
+    - intent: social_studies_marks
+      entities:
+        - m_ss: '75'
+    - slot_was_set:
+        - m_ss: '75'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+    - action: action_validate_form_eng
+    - intent: english_marks
+      entities:
+        - m_eng: '90'
+    - slot_was_set:
+        - m_eng: '90'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: bca_career
+    - action: utter_bca_career
+    - intent: bca_qualification
+    - action: utter_bca_qualification
+
+
+  - story: interactive_story_8
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: bca_career
+    - action: utter_bca_career
+    - intent: bca_qualification
+    - action: utter_bca_qualification
+
+
+
+  - story: hotelm_story
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+    - action: action_validate_form_maths
+    - intent: maths_marks
+      entities:
+        - m_maths: '90'
+    - slot_was_set:
+        - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+    - action: action_validate_form_sci
+    - intent: science_marks
+      entities:
+        - m_sci: '84'
+    - slot_was_set:
+        - m_sci: '84'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+    - action: action_validate_form_ss
+    - intent: social_studies_marks
+      entities:
+        - m_ss: '75'
+    - slot_was_set:
+        - m_ss: '75'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+    - action: action_validate_form_eng
+    - intent: english_marks
+      entities:
+        - m_eng: '90'
+    - slot_was_set:
+        - m_eng: '90'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: hotelm_career
+    - action: utter_hotelm_career
+    - intent: hotelm_qualification
+    - action: utter_hotelm_qualification
+
+
+
+  - story: interactive_story_9
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: hotelm_career
+    - action: utter_hotelm_career
+    - intent: hotelm_qualification
+    - action: utter_hotelm_qualification
+
+
+
+
+
+  - story: army_story
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: army_navy_airforce_career_paths
+    - action: utter_army_navy_airforce_career_paths
+    - intent: army_career
+    - action: utter_army_career
+    - intent: army_qualifications
+    - action: utter_army_qualifications  
+
+
+    
+    
+  - story: navy_story
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: army_navy_airforce_career_paths
+    - action: utter_army_navy_airforce_career_paths
+    - intent: navy_career
+    - action: utter_navy_career
+    - intent: navy_qualifications
+    - action: utter_navy_qualifications  
+
+
+  - story: airforce_story
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: army_navy_airforce_career_paths
+    - action: utter_army_navy_airforce_career_paths
+    - intent: airforce_career
+    - action: utter_airforce_career
+    - intent: airforce_qualifications
+    - action: utter_airforce_qualifications  
+
+
+  - story: army_story_no
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: army_navy_airforce_career_paths
+    - action: utter_army_navy_airforce_career_paths
+    - intent: army_career
+    - action: utter_army_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection  
+    
+  - story: navy_story_no
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: army_navy_airforce_career_paths
+    - action: utter_army_navy_airforce_career_paths
+    - intent: navy_career
+    - action: utter_navy_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection   
+
+
+  - story: airforce_story_no
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: army_navy_airforce_career_paths
+    - action: utter_army_navy_airforce_career_paths
+    - intent: airforce_career
+    - action: utter_airforce_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection 
+
+  - story: mbbs_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcb_career_paths
+    - action: utter_pcb_career_paths
+    - intent: mbbs_career
+    - action: utter_mbbs_career
+    - intent: mbbs_qualification
+    - action: utter_mbbs_qualification
+
+  - story: mbbs_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcb_career_paths
+    - action: utter_pcb_career_paths
+    - intent: mbbs_career
+    - action: utter_mbbs_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story: bsc_nursing_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcb_career_paths
+    - action: utter_pcb_career_paths
+    - intent: bsc_nursing_career
+    - action: utter_bsc_nursing_career
+    - intent: bsc_nursing_qualification
+    - action: utter_bsc_nursing_qualification
+
+  - story: bsc_nursing_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcb_career_paths
+    - action: utter_pcb_career_paths
+    - intent: bsc_nursing_career
+    - action: utter_bsc_nursing_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story: bvsc_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcb_career_paths
+    - action: utter_pcb_career_paths
+    - intent: bvsc_career
+    - action: utter_bvsc_career
+    - intent: bvsc_qualification
+    - action: utter_bvsc_qualification
+
+  - story: bvsc_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcb_career_paths
+    - action: utter_pcb_career_paths
+    - intent: bvsc_career
+    - action: utter_bvsc_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+
+  - story: bsc_bmbzc_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcb_career_paths
+    - action: utter_pcb_career_paths
+    - intent: bsc_bmbzc_career
+    - action: utter_bsc_bmbzc_career
+    - intent: bsc_bmbzc_qualification
+    - action: utter_bsc_bmbzc_qualification
+
+  - story: bsc_bmbzc_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcb_career_paths
+    - action: utter_pcb_career_paths
+    - intent: bsc_bmbzc_career
+    - action: utter_bsc_bmbzc_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story: bsc_dairyTech_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
     - intent: pcmb_career_paths
     - action: utter_pcmb_career_paths
+    - intent: bscdt_career
+    - action: utter_bscdt_career
+    - intent: bscdt_qualification
+    - action: utter_bscdt_qualification
+
+  - story: bsc_dairyTech_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: bscdt_career
+    - action: utter_bscdt_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+
+  - story:  BPharma_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: bop_career
+    - action: utter_bop_career
+    - intent: bop_qualification
+    - action: utter_bop_qualification
+
+  - story: bsc_dairyTech_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: bop_career
+    - action: utter_bop_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+
+  - story:  BPharma_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: bop_career
+    - action: utter_bop_career
+    - intent: bop_qualification
+    - action: utter_bop_qualification
+
+  - story: BPharma_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: bop_career
+    - action: utter_bop_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story:  B.Tech_Agriculture_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: btech_agri_career
+    - action: utter_btech_agri_career
+    - intent: btech_agri_qualification
+    - action: utter_btech_agri_qualification
+
+  - story: B.Tech_Agriculture_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: btech_agri_career
+    - action: utter_btech_agri_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story:  B.Sc_Biotechnology_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: bscbt_career
+    - action: utter_bscbt_career
+    - intent: bscbt_qualification
+    - action: utter_bscbt_qualification
+
+  - story:  B.Sc_Biotechnology_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: bscbt_career
+    - action: utter_bscbt_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+ 
+
+  - story: B.Sc_Agriculture_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: bsc_agri_career
+    - action: utter_bsc_agri_career
+    - intent: bsc_agri_qualification
+    - action: utter_bsc_agri_qualification
+
+  - story: B.Sc_Agriculture_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: bsc_agri_career
+    - action: utter_bsc_agri_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+
+  - story: Dedt_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: dedt_career
+    - action: utter_dedt_career
+    - intent: dedt_qualification
+    - action: utter_dedt_qualification
+
+
+  - story: Dedt_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: dedt_career
+    - action: utter_dedt_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+  
+
+  - story: llb_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: llb_career
+    - action: utter_llb_career
+    - intent: llb_qualification
+    - action: utter_llb_qualification
+
+
+  - story: llb_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: llb_career
+    - action: utter_llb_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+
+  - story: fdd_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: fdd_career
+    - action: utter_fdd_career
+    - intent: fdd_qualification
+    - action: utter_fdd_qualification
+
+
+  - story: fdd_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: fdd_career
+    - action: utter_fdd_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+
+  - story: ba_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: ba_career
+    - action: utter_ba_career
+    - intent: ba_qualification
+    - action: utter_ba_qualification
+
+
+  - story: ba_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: ba_career
+    - action: utter_ba_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+
+  - story: bba_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: bba_career
+    - action: utter_bba_career
+    - intent: bba_qualification
+    - action: utter_bba_qualification
+
+
+  - story: bba_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: bba_career
+    - action: utter_bba_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+  
+
+  - story: barch_commerce_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: barch_career
+    - action: utter_barch_career
+    - intent: barch_qualification
+    - action: utter_barch_qualification
+
+
+  - story: barch_commerce_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: barch_career
+    - action: utter_barch_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story: barch_arts_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: barch_career
+    - action: utter_barch_career
+    - intent: barch_qualification
+    - action: utter_barch_qualification
+
+
+  - story: barch_arts_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: barch_career
+    - action: utter_barch_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+  
+  - story: caf_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: caf_career
+    - action: utter_caf_career
+    - intent: caf_qualification
+    - action: utter_caf_qualification
+
+
+  - story: caf_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: caf_career
+    - action: utter_caf_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+
+  - story: bc_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: bc_career
+    - action: utter_bc_career
+    - intent: bc_qualification
+    - action: utter_bc_qualification
+
+
+  - story: bc_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: bc_career
+    - action: utter_bc_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+
+  - story: bba_commerce_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: bba_career
+    - action: utter_bba_career
+    - intent: bba_qualification
+    - action: utter_bba_qualification
+
+
+  - story: bba_commerce_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: bba_career
+    - action: utter_bba_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+
+  - story: csf_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: csf_career
+    - action: utter_csf_career
+    - intent: csf_qualification
+    - action: utter_csf_qualification
+
+
+  - story: csf_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: csf_career
+    - action: utter_csf_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+
+  - story: bca_commerce_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: bca_career
+    - action: utter_bca_career
+    - intent: bca_qualification
+    - action: utter_bca_qualification
+
+
+  - story: bca_commerce_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: bca_career
+    - action: utter_bca_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+
+  - story: barch_commerce_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: barch_career
+    - action: utter_barch_career
+    - intent: barch_qualification
+    - action: utter_barch_qualification
+
+
+  - story: barch_commerce_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: barch_career
+    - action: utter_barch_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+
+  - story: dedt_commerce_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: dedt_career
+    - action: utter_dedt_career
+    - intent: dedt_qualification
+    - action: utter_dedt_qualification
+
+
+  - story: dedt_commerce_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: dedt_career
+    - action: utter_dedt_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story: hotelm_commerce_story1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: hotelm_career
+    - action: utter_hotelm_career
+    - intent: hotelm_qualification
+    - action: utter_hotelm_qualification
+
+
+  - story: hotelm_commerce_story2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '95'
+    - slot_was_set:
+      - m_maths: '95'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '90'
+    - slot_was_set:
+      - m_sci: '90'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '78'
+    - slot_was_set:
+      - m_ss: '78'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '75'
+    - slot_was_set:
+      - m_eng: '75'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: hotelm_career
+    - action: utter_hotelm_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection

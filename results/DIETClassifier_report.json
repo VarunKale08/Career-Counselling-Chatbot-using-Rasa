@@ -1,23 +1,16 @@
 {
-  "m_ss": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 21,
-    "confused_with": {}
-  },
   "m_maths": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 21,
+    "support": 22,
     "confused_with": {}
   },
   "m_sci": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 20,
+    "support": 21,
     "confused_with": {}
   },
   "g_level": {
@@ -31,26 +24,33 @@
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 20,
+    "support": 21,
+    "confused_with": {}
+  },
+  "m_ss": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 22,
     "confused_with": {}
   },
   "micro avg": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 107
+    "support": 111
   },
   "macro avg": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 107
+    "support": 111
   },
   "weighted avg": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 107
+    "support": 111
   },
   "accuracy": 1.0
 }

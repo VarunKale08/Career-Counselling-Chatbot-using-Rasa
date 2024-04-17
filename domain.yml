@@ -1,30 +1,80 @@
 version: '3.1'
 intents:
+- airforce_career
+- airforce_qualifications
+- army_career
+- army_navy_airforce_career_paths
+- army_qualifications
+- barch_career
+- barch_qualification
+- bca_career
+- bca_qualification
+- beng_career
+- beng_qualification
 - english_marks
 - get_career_guidance
 - get_user_grade
 - greet
+- hotelm_career
+- hotelm_qualification
 - maths_marks
+- navy_career
+- navy_qualifications
+- nda_career
 - negative_feedback
+- nlu_fallback
+- no_button_selection
 - pcb_career_paths
-- pcm_career_paths
+- pcm_careerpath
 - pcmb_career_paths
 - positive_feedback
 - science_marks
 - science_subject_combination
 - social_studies_marks
-
+- mbbs_career
+- mbbs_qualification
+- bsc_nursing_career
+- bsc_nursing_qualification
+- bvsc_career
+- bvsc_qualification
+- bsc_bmbzc_career
+- bsc_bmbzc_qualification
+- bscdt_career
+- bscdt_qualification
+- bop_career
+- bop_qualification
+- btech_agri_career
+- btech_agri_qualification
+- bscbt_career
+- bscbt_qualification
+- bsc_agri_career
+- bsc_agri_qualification
+- dedt_career
+- dedt_qualification
+- llb_career
+- llb_qualification
+- fdd_career
+- fdd_qualification
+- ba_career
+- ba_qualification
+- bba_career
+- bba_qualification
+- caf_career
+- caf_qualification
+- bc_career
+- bc_qualification
+- csf_career
+- csf_qualification
+- arts_subject_combination
+- commerce_subject_combination
 
 
 entities:
-- m_eng
 - m_ss
-- m_sci
+- m_eng
 - m_maths
+- m_sci
 - g_level
-
-
-
 slots:
   g_level:
     type: text
@@ -56,29 +106,78 @@ slots:
     mappings:
     - type: from_entity
       entity: m_eng
-
-
-
 actions:
-- utter_positive_feedback
-- utter_pcb_career_paths
-- utter_science_subject_combination
-- action_validate_form_maths
-- utter_science_marks
-- utter_greet
-- utter_get_career_guidance
-- utter_social_studies_marks
-- utter_maths_marks
-- action_get_user_grade
-- utter_negative_feedback
-- utter_pcmb_career_paths
-- utter_pcm_career_paths
-- action_validate_form_sci
 - action_validate_form_eng
-- action_validate_form_ss
+- action_validate_form_maths
 - action_career_prediction
-
-
+- utter_greet
+- utter_pcm_careerpath
+- utter_get_career_guidance
+- utter_science_subject_combination
+- utter_social_studies_marks
+- utter_science_marks
+- utter_army_career
+- utter_army_qualifications
+- utter_positive_feedback
+- action_get_user_grade
+- action_validate_form_ss
+- action_validate_form_sci
+- utter_nda_career
+- utter_maths_marks
+- utter_negative_feedback
+- utter_please_rephrase
+- utter_army_navy_airforce_career_paths
+- utter_pcb_career_paths
+- utter_pcmb_career_paths
+- utter_navy_career
+- utter_navy_qualifications
+- utter_airforce_career
+- utter_airforce_qualifications
+- utter_no_button_selection
+- utter_barch_career
+- utter_barch_qualification
+- utter_beng_career
+- utter_beng_qualification
+- utter_bca_career
+- utter_bca_qualification
+- utter_hotelm_career
+- utter_hotelm_qualification
+- utter_mbbs_career
+- utter_mbbs_qualification
+- utter_bsc_nursing_career
+- utter_bsc_nursing_qualification
+- utter_bvsc_career
+- utter_bvsc_qualification
+- utter_bsc_bmbzc_career
+- utter_bsc_bmbzc_qualification
+- utter_bscdt_career
+- utter_bscdt_qualification
+- utter_bop_career
+- utter_bop_qualification
+- utter_btech_agri_career
+- utter_btech_agri_qualification
+- utter_bscbt_career
+- utter_bscbt_qualification
+- utter_bsc_agri_career
+- utter_bsc_agri_qualification
+- utter_dedt_career
+- utter_dedt_qualification
+- utter_llb_career
+- utter_llb_qualification
+- utter_fdd_career
+- utter_fdd_qualification
+- utter_ba_career
+- utter_ba_qualification
+- utter_bba_career
+- utter_bba_qualification
+- utter_caf_career
+- utter_caf_qualification
+- utter_bc_career
+- utter_bc_qualification
+- utter_csf_career
+- utter_csf_qualification
+- utter_arts_subject_combination
+- utter_commerce_subject_combination
 
 responses:
   utter_greet:
@@ -94,23 +193,36 @@ responses:
   utter_social_studies_marks:
   - text: And for english, what was your score? (score between 0-100)
   utter_negative_feedback:
-  - text: |-
-      It's completely fine if you do not want to disclose your marks, may I know what you want to pursue as your career in from the following:
-      1. Science 
-      2. Army/Navy/Police officer
-      3. Commerce
-      4. Arts 
-      5. Diploma
-      6. Government clerk 
-      7.ITI
+  - text: "It's completely fine if you do not want to disclose your marks, may I know what you want to pursue as your career in from the following:"
+    buttons:
+    - title: Science
+      payload: /science_subject_combination
+    - title: Commerce
+      payload: /
+    - title: Arts
+      payload: /
+    - title: Army/Navy/Police officer
+      payload: /army_navy_airforce_career_paths
+    - title: Diploma
+      payload: /
+    - title: Government clerk
+      payload: /
+    - title: ITI
+      payload: /
   utter_science_subject_combination:
   - text: |-
       Great to hear about your interest in science! To provide more tailored guidance, could you please specify your preferred subject combination:
-        PCM (Physics, Chemistry, Mathematics)
-        PCB (Physics, Chemistry, Biology)
-        PCMB (Physics, Chemistry, Mathematics, Biology)
-
+      PCM (Physics, Chemistry, Mathematics)
+      PCB (Physics, Chemistry, Biology)
+      PCMB (Physics, Chemistry, Mathematics, Biology)
       Feel free to select the option that aligns with your academic interests, and I'll provide information accordingly.
+    buttons:
+    - title: PCM
+      payload: /pcm_careerpath
+    - title: PCB
+      payload: /pcb_career_paths
+    - title: PCMB
+      payload: /pcmb_career_paths
   utter_pcb_career_paths:
   - text: |-
       Opting for the PCB stream after 10th grade opens up a multitude of career possibilities in the fields of life sciences and healthcare. With this stream, you can embark on a rewarding journey towards careers in medicine (MBBS, BDS), pharmacy, nursing, biotechnology, microbiology, environmental science, zoology, botany, genetics, and various other healthcare and life science disciplines.
@@ -118,11 +230,31 @@ responses:
       Your education will revolve around understanding the intricacies of the human body, diseases, and the natural world. It's an excellent choice if you have a deep interest in biology and aspire to make a difference in people's lives through healthcare and scientific research.
 
       If you have any specific questions about these career paths or if there's anything else you'd like to know, feel free to ask!
-  utter_pcm_career_paths:
+    buttons:
+    - title: MBBS
+      payload: /mbbs_career
+    - title: B.Sc. Nursing
+      payload: /bsc_nursing_career
+    - title: Bachelor of Veterinary Science (B.V.Sc.) 
+      payload: /bvsc_career  
+    - title: B.Sc. in Botany, Microbiology, Biology, Zoology, or Chemistry
+      payload: /bsc_bmbzc_career
+  utter_pcm_careerpath:
   - text: |-
       Opting for the PCM stream after 10th grade opens up a wide range of career possibilities, not just in science but also in commerce and arts. While it prepares you for careers in engineering, architecture, computer science, and more, it also equips you with strong analytical and problem-solving skills that can be valuable in commerce and even arts-related fields.
 
-      So, it's a versatile choice that can lead to a variety of career paths. If you have a specific area of interest within PCM or if you'd like more details about any particular career option, feel free to ask for more information!
+      So, it's a versatile choice that can lead to a variety of career paths. PCM has the following fields that can be pursued: 
+    buttons:
+    - title: NDA
+      payload: /nda_career
+    - title: B.Arch
+      payload: /barch_career
+    - title: B.E.
+      payload: /beng_career
+    - title: B.C.A
+      payload: /bca_career
+    - title: Hotel Management
+      payload: /hotelm_career
   utter_pcmb_career_paths:
   - text: |-
       Opting for the PCMB stream after 10th grade provides you with a versatile educational background that not only prepares you for careers in various science and healthcare fields but also keeps your options open for pursuing commerce and arts if you choose to do so after clearing the 12th-grade exam.
@@ -130,8 +262,824 @@ responses:
       In this stream, you can explore diverse career paths in medicine (MBBS, BDS), pharmacy, biotechnology, environmental science, engineering, research, and more. The critical thinking and problem-solving skills you develop are valuable across various domains, offering you the flexibility to shape your future as you see fit.
 
       If you have specific questions about the PCMB stream or if there's a particular career path you're interested in, feel free to ask for more information!
+      So, it's a versatile choice that can lead to a variety of career paths. PCMB has the following fields that can be pursued: 
+    buttons:
+    - title: B.Sc. in Dairy Technology
+      payload: /bscdt_career
+    - title: Bachelor of Pharmacy
+      payload: /bop_career
+    - title: B.Tech in Agriculture  
+      payload: /btech_agri_career  
+    - title: B.Sc in BioTechnology 
+      payload: /bscbt_career
+    - title: B.Sc in Agriculture 
+      payload: /bsc_agri_career
   utter_please_rephrase:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_army_navy_airforce_career_paths:
+  - text: |-
+      Considering a career in the military? You have three noble paths to choose from: Army, Navy, and Air Force.
+      Army: Embrace ground combat, engineering, intelligence, and various specialized roles, safeguarding borders and serving in various operations.
+
+      Navy: Dive into maritime defense, aviation, submarine service, and medical support, protecting seas and ensuring global security.
+
+      Air Force: Take flight with roles in aerial warfare, intelligence, logistics, and cyber operations, dominating the skies and protecting national interests.Each branch offers unique opportunities for service, leadership, and personal growth. Delve deeper into any of these options to discover the right fit for you!
+      To know more. Select one of the following fields: 
+    buttons:
+    - title: Army
+      payload: /army_career
+    - title: Navy
+      payload: /navy_career
+    - title: Airforce
+      payload: /airforce_career
+  utter_army_career:
+  - text: |-
+      Joining the Army is a noble commitment to serving your country. Here's how you can start your journey: 
+      Requirements: To enlist, you must be a citizen or legal resident, meet age and education requirements, pass a physical exam, and have no major criminal convictions. 
+      Steps to Enlistment: Research: 
+      Learn about the different branches and career options within the Army. Contact a Recruiter: Reach out to an Army recruiter who can guide you through the process. 
+      ASVAB Test: Take the Armed Services Vocational Aptitude Battery (ASVAB) test to determine your skills and strengths. 
+      Physical Exam: Undergo a medical examination to ensure you meet the physical standards for service. 
+      Choose a Career Path: Explore the various job opportunities and select a career path that aligns with your interests and skills. 
+      Basic Training: Upon enlistment, you'll undergo basic combat training to prepare you for military life. 
+      Possible Career Paths in the Army: Infantry, artillery, armor, engineering, intelligence, medical services, logistics, communications, military police, special forces, and more. 
+      There are opportunities for leadership and advancement in various fields, allowing you to excel and make a difference in the world.
+
+      Are you interested in learning about the qualifications needed and the exams required for joining the army?(Yes/No)
+    buttons:
+    - title: Yes
+      payload: /army_qualifications
+    - title: No
+      payload: /no_button_selection
+  utter_army_qualifications:
+  - text: |-
+      To join the Army, you'll need to meet certain qualifications and pass specific exams. Here's what you need to know:
+
+      Qualifications:
+      1) Citizenship or legal residency: You must be a citizen or legal resident of the country you're applying to serve.
+      2) Age requirement: Typically, you must be between 17 and 35 years old, although there may be variations depending on the country and specific circumstances.
+      3) Education: You'll need a high school diploma or equivalent. Some positions may require further education or specific certifications.
+      4) Physical fitness: You must meet the Army's physical fitness standards, which include strength, endurance, and overall health.
+      5) Background check: You must pass a background check, and certain criminal convictions may disqualify you from service.
+
+      Exams:
+      1) Armed Services Vocational Aptitude Battery (ASVAB): This test measures your strengths and helps determine which Army job roles you're best suited for.
+      2) Physical examination: You'll undergo a medical examination to ensure you meet the physical standards required for military service. This includes tests for vision, hearing, and overall health.
+      3) Additional exams may be required depending on the specific role you're applying for, such as language proficiency tests for certain positions.
+
+      It's essential to prepare both mentally and physically for these exams and meet the qualifications to pursue a career in the Army. 
+  utter_navy_career:
+  - text: |-
+      Joining the Navy opens up a world of opportunities for service and adventure. Here's how you can start your journey: 
+      Requirements: To enlist, you must be a citizen or legal resident, meet age and education requirements, pass a physical exam, and have no major criminal convictions. 
+      Steps to Enlistment: Research: 
+      Learn about the different roles and career paths available in the Navy. Contact a Recruiter: Reach out to a Navy recruiter who can assist you with the enlistment process. 
+      ASVAB Test: Take the Armed Services Vocational Aptitude Battery (ASVAB) test to assess your skills and abilities. 
+      Physical Exam: Undergo a medical examination to ensure you meet the physical standards required for service. 
+      Choose a Career Path: Explore the diverse opportunities in the Navy, from aviation and engineering to intelligence and healthcare, and select a path that aligns with your interests and strengths. 
+      Basic Training: Upon enlistment, you'll undergo basic training, also known as boot camp, to prepare you for the demands of military life. 
+      Possible Career Paths in the Navy: Surface warfare, submarine service, aviation, special operations, intelligence, healthcare, engineering, logistics, and more. 
+      In the Navy, you'll have the chance to develop valuable skills, travel the world, and make a meaningful impact through your service. 
+
+      Are you interested in learning about the qualifications needed and the exams required for joining the navy? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /navy_qualifications
+    - title: No
+      payload: /no_button_selection
+  utter_navy_qualifications:
+  - text: |-
+      To join the Navy, you'll need to meet specific qualifications and pass required exams. Here's what you need to know:
+
+      Qualifications:
+      1) Citizenship or legal residency: You must be a citizen or legal resident of the country you're applying to serve.
+      2) Age requirement: Typically, you must be between 17 and 39 years old, though age limits may vary based on the country and specific circumstances.
+      3) Education: You'll need a high school diploma or equivalent. Some roles may require further education or specific certifications.
+      4) Physical fitness: Meeting the Navy's physical fitness standards is essential, including strength, endurance, and overall health.
+      5) Background check: Passing a background check is necessary, and certain criminal convictions may disqualify you from service.
+
+      Exams:
+      1) Armed Services Vocational Aptitude Battery (ASVAB): This test assesses your skills and abilities, helping determine suitable Navy job roles.
+      2) Physical examination: You'll undergo a medical examination to ensure you meet the physical standards required for Navy service, including tests for vision, hearing, and overall health.
+      3) Depending on the specific Navy career path you're interested in, additional exams or assessments may be required, such as swimming proficiency tests for certain roles.
+
+      It's crucial to prepare both mentally and physically for these exams and meet the qualifications to pursue a career in the Navy.
+  utter_airforce_career:
+  - text: |-
+      Joining the Air Force offers exciting opportunities to serve your country and advance your career. Here's what you need to know:
+      Requirements: To enlist, you must be a citizen or legal resident, meet age and education requirements, pass a physical exam, and have no major criminal convictions.
+      Steps to Enlistment:
+      1. Research: Learn about the different career options and specialties within the Air Force.
+      2. Contact a Recruiter: Reach out to an Air Force recruiter who can assist you throughout the process.
+      3. ASVAB Test: Take the Armed Services Vocational Aptitude Battery (ASVAB) test to assess your skills and abilities.
+      4. Medical Exam: Undergo a thorough medical examination to ensure you meet the physical standards for service.
+      5. Choose a Career Path: Explore the various job opportunities in areas like aviation, engineering, intelligence, logistics, and more.
+      6. Basic Military Training (BMT): Upon enlistment, you'll undergo BMT to prepare you for Air Force life.
+      Career Paths in the Air Force: Pilot, navigator, aircraft maintenance, cybersecurity, intelligence, logistics, medical services, and more.
+      The Air Force offers diverse career options with opportunities for advancement and professional growth.
+
+      Are you interested in learning about the qualifications needed and the exams required for joining the Air Force? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /airforce_qualifications
+    - title: No
+      payload: /no_button_selection
+  utter_airforce_qualifications:
+  - text: |-
+      Joining the Air Force requires meeting specific qualifications and passing exams. Here's what you need to know:
+
+      Qualifications:
+      1) Citizenship or legal residency: You must be a citizen or legal resident of the country you're applying to serve.
+      2) Age requirement: Typically, you must be between 17 and 39 years old, although age limits can vary based on the country and position.
+      3) Education: A high school diploma or equivalent is usually required. Some roles may have additional education or training requirements.
+      4) Physical fitness: You must meet the Air Force's physical fitness standards, including strength, endurance, and overall health.
+      5) Background check: You'll undergo a background check, and certain criminal history may disqualify you from service.
+
+      Exams:
+      1) Armed Services Vocational Aptitude Battery (ASVAB): This test assesses your skills and helps determine your suitability for Air Force roles.
+      2) Medical examination: You'll undergo a medical exam to ensure you meet the Air Force's health and fitness standards. This includes tests for vision, hearing, and overall health.
+      3) Additional exams may be required based on the specific career path you choose, such as aptitude tests for technical roles or language proficiency exams for certain positions.
+
+      Preparation for these exams involves studying relevant subjects, maintaining physical fitness, and ensuring you meet all qualifications for enlistment in the Air Force. 
+  utter_no_button_selection:
+  - text: Thank you for considering a career path. Best of luck with your future endeavors! If you'd like to restart the conversation or learn more , feel free to let me know.
+  utter_nda_career:
+  - text: |-
+      The National Defence Academy (NDA) offers a prestigious 3-year training program for individuals aspiring to join the Indian Army, Navy, or Air Force. This comprehensive program combines academic studies, physical fitness training, and leadership development. Graduates of the NDA emerge as well-rounded officers ready to serve their country with distinction across various branches of the Indian Armed Forces. If you're considering a military career in India, the NDA provides an excellent pathway to achieve your goals.
+      Please choose your preferred branch from the three main fields: Army, Navy, or Air Force.
+    buttons:
+    - title: Army
+      payload: /army_career
+    - title: Navy
+      payload: /navy_career
+    - title: Airforce
+      payload: /airforce_career
+  utter_barch_career:
+  - text: |-
+      Pursuing a Bachelor of Architecture (B.Arch.) degree involves a comprehensive 5-year undergraduate program focusing on design principles, construction technology, and urban planning. Architects play a crucial role in shaping our built environment, and this degree equips students with the necessary skills and knowledge to excel in the field. If you're passionate about architecture and aspire to contribute to innovative design and urban development, pursuing a B.Arch. degree could be the first step towards a rewarding career.
+      Career paths achievable with a Bachelor of Architecture (B.Arch.) degree include:
+      1. Architect: Leading design and construction projects for buildings and structures.
+      2. Urban Planner: Creating plans for sustainable urban development and land use.
+      3. Interior Designer: Designing functional and visually appealing interior spaces.
+      4. Landscape Architect: Planning and designing outdoor environments and green spaces.
+      5. Construction Manager: Overseeing construction projects, ensuring they are completed on time and within budget.
+
+      Would you like to know about the qualifications required and the process for enrolling in a Bachelor of Architecture program? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /barch_qualification
+    - title: No
+      payload: /no_button_selection
+  utter_barch_qualification:
+  - text: |-
+      To enroll in a Bachelor of Architecture program, you typically need to meet the following qualifications and criteria:
+
+      Qualifications:
+      1) High school diploma or equivalent: You must have completed secondary education with a strong academic record.
+      2) Math and Science proficiency: A solid understanding of mathematics and science subjects, particularly physics, is essential.
+      3) Creative skills: Strong artistic and design abilities are often required, as architecture involves creative problem-solving and visualization.
+      4) Portfolio: Many programs may require submission of a portfolio showcasing your design work or artistic projects.
+
+      Exams:
+      1) Architecture Aptitude Test (AAT): In some countries, such as India, you may need to clear the AAT as part of the admission process for architecture programs.
+      2) National Aptitude Test in Architecture (NATA): This exam assesses your aptitude for architecture studies and is commonly required for admission to architecture programs in India and other countries.
+      3) Joint Entrance Examination (JEE) Main Paper 2: Some universities may also accept scores from JEE Main Paper 2 as part of their admission criteria.
+      4) State-level entrance exams: Various states conduct their own entrance exams for admission to Bachelor of Architecture programs.
+
+      Eligibility criteria typically require candidates to pass Class 12 with 50 percent marks in Mathematics, Physics, and Chemistry. However, some universities may accept students with a background in PCB (Biology instead of Mathematics) if they demonstrate high scores. 
+
+      Some popular colleges in India that offer Bachelor of Architecture (B.Arch.) courses include the Indian Institutes of Technology (IITs), National Institutes of Technology (NITs), School of Planning and Architecture (SPA), and many other government and private institutions.
+  utter_beng_career:
+  - text: |-
+      A Bachelor of Engineering (B.E.) degree is a 4-year undergraduate program that provides a foundational education in various engineering disciplines such as Mechanical, Electrical, Civil, or Computer Science. This degree equips students with the knowledge and skills needed to pursue careers in engineering and related fields. If you're passionate about problem-solving, innovation, and technology, a Bachelor of Engineering program could be the ideal pathway to a rewarding career in engineering.
+      Career opportunities for individuals with a Bachelor of Engineering (B.E.) degree include:
+
+      1. Mechanical Engineer: Designing and developing mechanical systems, machinery, and equipment.
+      2. Electrical Engineer: Working on the design, development, and maintenance of electrical systems and devices.
+      3. Civil Engineer: Planning, designing, and overseeing construction projects such as buildings, bridges, and infrastructure.
+      4. Computer Engineer: Designing and developing computer hardware and software systems.
+      5. Software Engineer: Developing and maintaining software applications and systems.
+      6. Systems Engineer: Integrating and managing complex systems and ensuring their functionality and efficiency.
+      7. AI & ML Engineer: Developing artificial intelligence and machine learning algorithms and systems.
+      8. Instrumentation Engineer: Designing, installing, and maintaining instruments and control systems.
+      9. Electronics & Telecommunication Engineer: Working on electronic devices, communication systems, and networks.
+      10. IT (Information Technology) Professional: Managing and supporting information systems and infrastructure.
+
+      Would you like to know about the qualifications required and the process for enrolling in a Bachelor of Engineering program? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /beng_qualification
+    - title: No
+      payload: /no_button_selection
+  utter_beng_qualification:
+  - text: |-
+      To enroll in a Bachelor of Engineering (B.E.) program, you typically need to meet the following detailed qualifications and criteria:
+
+      Qualifications:
+      1) High school diploma or equivalent: You must have completed secondary education with a strong academic record. Most institutions require a minimum percentage in your high school exams, often around 50% or above.
+      2) Mathematics and Science proficiency: A solid understanding of mathematics and science subjects, particularly physics and chemistry, is essential. You should have studied these subjects at the high school level and obtained a satisfactory grade.
+      3) Specialization-specific prerequisites: Depending on the engineering discipline you're interested in, there may be specific prerequisites in subjects like Chemistry or Biology. For example, Chemical Engineering programs may require a good understanding of Chemistry, while Biomedical Engineering may require Biology background.
+      4) Some universities may also consider extracurricular activities, leadership experiences, and letters of recommendation as part of the admission criteria.
+
+        Exams:
+      1)Joint Entrance Examination (JEE) Main: This is a common entrance exam for admission to engineering programs in India. It assesses your proficiency in Physics, Chemistry, and Mathematics. Your JEE Main score, along with your high school performance, is often used for admission consideration.
+      2) State-level entrance exams: Various states conduct their own entrance exams for admission to engineering colleges within the state. These exams may have different formats and syllabi compared to JEE Main.
+      3) Some universities may have their own entrance exams: Certain institutions conduct their own entrance exams or aptitude tests as part of the admission process. These exams may focus on assessing problem-solving skills, analytical abilities, and engineering aptitude.
+
+      It's essential to research the specific requirements of the institutions you're interested in applying to and prepare accordingly for the entrance exams. Additionally, staying updated with the latest exam patterns and syllabi can enhance your chances of success in securing admission to a Bachelor of Engineering program.
+  utter_bca_career:
+  - text: |-
+      A Bachelor of Computer Applications (BCA) degree is a 3-year undergraduate program focusing on software development, programming, and computer systems. This degree equips students with the knowledge and skills needed to pursue careers in the IT industry. If you're passionate about technology, software development, and computer systems, a Bachelor of Computer Applications program could be the ideal pathway to a rewarding career in IT.
+      Career opportunities for individuals with a Bachelor of Computer Applications (BCA) degree include:
+
+      1. Software Developer: Designing, coding, testing, and maintaining software applications.
+      2. Web Developer: Creating and maintaining websites and web applications.
+      3. Systems Analyst: Analyzing business requirements and designing IT solutions.
+      4. Database Administrator: Managing and maintaining databases to ensure data integrity and security.
+      5. Network Administrator: Setting up and maintaining computer networks to ensure smooth communication and data transfer.
+
+      Would you like to know about the qualifications required and the process for enrolling in a Bachelor of of Computer Applications (BCA) program? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /bca_qualification
+    - title: No
+      payload: /no_button_selection
+  utter_bca_qualification:
+  - text: |-
+      To enroll in a Bachelor of Computer Applications (BCA) program, you typically need to meet the following detailed qualifications and criteria:
+
+      Qualifications:
+      - High school diploma or equivalent: You must have completed secondary education with a strong academic record. Most institutions require a minimum percentage in your high school exams, often around 50% or above.
+      - Mathematics: A basic understanding of mathematics is usually required, though some programs may have specific prerequisites in subjects like Computer Science or Information Technology.
+      - Some universities may also consider relevant computer-related certifications or diplomas as part of the admission criteria.
+      - English proficiency: Since BCA programs often involve coursework and materials in English, proficiency in the language may be required. This can be demonstrated through standardized tests like TOEFL or IELTS, or through English language proficiency exams conducted by the institution.
+
+      Exams:
+      1) Common Entrance Tests (CETs): Many universities conduct entrance exams specifically for admission to BCA programs. These exams may assess your proficiency in subjects like Mathematics, English, and General Knowledge. Examples of such exams include the BCA Entrance Test (BCAET), NIMCET, IPUCET, etc.
+      2) Some institutions may accept scores from broader entrance exams like Joint Entrance Examination (JEE) or other national or state-level entrance exams.
+      3) Additionally, some universities may conduct interviews or personal assessments to evaluate the candidate's aptitude and suitability for the BCA program.
+
+      It's essential to research the specific requirements and admission procedures of the institutions you're interested in applying to and prepare accordingly for the entrance exams. Additionally, staying updated with the latest exam patterns and syllabi can enhance your chances of success in securing admission to a Bachelor of Computer Applications program.
+  utter_hotelm_career:
+  - text: |-
+      A degree in Hotel Management is a 3-year undergraduate program covering hospitality management, culinary arts, and event planning. This degree equips students with the knowledge and skills needed to pursue rewarding careers in the hospitality sector. If you're passionate about providing excellent service, managing operations, and creating memorable guest experiences, a degree in Hotel Management could be the ideal pathway to a fulfilling career in the hospitality industry.
+      Career opportunities for individuals with a Bachelor of Computer Applications (BCA) degree include:
+
+      1. Hotel Manager: Overseeing the daily operations of a hotel, including guest services, housekeeping, food and beverage, and staff management.
+      2. Event Planner: Organizing and coordinating various events, such as weddings, conferences, and corporate meetings, for hotels or event management companies.
+      3. Food and Beverage Manager: Managing the food and beverage operations within a hotel, including restaurants, bars, and catering services.
+      4. Front Office Manager: Supervising the front desk operations, reservations, and guest services to ensure smooth check-in and check-out processes.
+      5. Revenue Manager: Maximizing hotel revenue by setting room rates, managing inventory, and implementing pricing strategies to optimize occupancy and revenue.
+
+      Would you like to know about the qualifications required and the process for enrolling in a hotel management degree? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /hotelm_qualification
+    - title: No
+      payload: /no_button_selection
+  utter_hotelm_qualification:
+  - text: |-
+      To enroll in a Hotel Management degree program, you typically need to meet the following detailed qualifications and criteria:
+
+      Qualifications:
+      1) High school diploma or equivalent: You must have completed secondary education with a strong academic record. Most institutions require a minimum percentage in your high school exams, often around 50% or above.
+      2) English proficiency: Since Hotel Management programs often involve coursework and communication in English, proficiency in the language may be required. This can be demonstrated through standardized tests like TOEFL or IELTS, or through English language proficiency exams conducted by the institution.
+      3) Some universities may also consider relevant work experience or extracurricular activities related to the hospitality industry as part of the admission criteria.
+      4) Personal Interview: Some institutions may conduct personal interviews to assess your motivation, communication skills, and suitability for the program.
+
+      Exams:
+      1) Common Entrance Tests (CETs): Some institutions conduct entrance exams specifically for admission to Hotel Management degree programs. These exams may assess your aptitude in areas like English, Mathematics, and General Knowledge. Examples of such exams include the National Council for Hotel Management Joint Entrance Exam (NCHM JEE) and the All India Hotel Management Entrance Exam (AIHMCT).
+      2) Some universities may accept scores from broader entrance exams like SAT or other national or state-level entrance exams.
+      3) Additionally, some institutions may require you to pass a medical examination to ensure you meet the physical requirements for working in the hospitality industry.
+
+      It's essential to research the specific requirements and admission procedures of the institutions you're interested in applying to and prepare accordingly for the entrance exams. Additionally, staying updated with the latest exam patterns and syllabi can enhance your chances of success in securing admission to a Hotel Management degree program.
+  utter_mbbs_career:
+  - text: |-
+      An M.B.B.S (Bachelor of Medicine and Bachelor of Surgery) degree is a 5-year undergraduate program in Medicine and Surgery, leading to a career as a medical doctor. This program involves in-depth studies in medical sciences and clinical practice. Graduates of M.B.B.S programs are equipped with the knowledge and skills needed to diagnose, treat, and prevent various medical conditions, and they can pursue careers as medical practitioners, surgeons, researchers, or specialists in various fields of medicine.
+      Career opportunities for individuals with an M.B.B.S degree include:
+
+      1. Medical Doctor: Providing medical care, diagnosing illnesses, and prescribing treatments for patients in hospitals, clinics, or private practice.
+      2. Surgeon: Performing surgical procedures to treat injuries, diseases, or deformities.
+      3. Researcher: Conducting medical research to advance scientific knowledge and develop new treatments or therapies.
+      4. Specialist: Becoming a specialist in a specific area of medicine, such as cardiology, oncology, or pediatrics, through further training and certification.
+      5. Public Health Officer: Working in public health organizations or government agencies to promote community health, prevent disease outbreaks, and implement health policies.
+      Would you like to know about the qualifications required and the process for enrolling in a M.B.B.S (Bachelor of Medicine and Bachelor of Surgery) degree ? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /mbbs_qualification
+    - title: No
+      payload: /no_button_selection
+  utter_mbbs_qualification:
+  - text: |-
+      To enroll in an MBBS (Bachelor of Medicine and Bachelor of Surgery) program, you typically need to meet the following detailed qualifications and criteria:
+
+      Qualifications:
+      1) High school diploma or equivalent: You must have completed secondary education with a strong academic record. Most institutions require a minimum percentage in your high school exams, often around 50% or above.
+      2) Science proficiency: A solid understanding of science subjects, particularly Biology, Chemistry, and Physics, is essential. Most MBBS programs require high school coursework in these subjects.
+      3)Some universities may also consider relevant extracurricular activities, volunteer work, or healthcare-related experiences as part of the admission criteria.
+
+      Exams:
+      1) National Eligibility cum Entrance Test (NEET): In many countries, including India, NEET is a common entrance exam for admission to medical programs, including MBBS. NEET assesses your proficiency in Biology, Chemistry, and Physics. It is a highly competitive exam, and your NEET score is crucial for securing admission to MBBS programs.
+      2) Some countries may have their own national or state-level entrance exams for admission to medical programs. For example, in the United States, the Medical College Admission Test (MCAT) is commonly used for admission to medical schools. Similarly, the United Kingdom has the UK Clinical Aptitude Test (UKCAT) and the Biomedical Admissions Test (BMAT).
+      3)Additionally, some institutions may conduct their own entrance exams or interviews to assess the candidate's aptitude, problem-solving skills, and suitability for a career in medicine.
+
+      It's essential to research the specific requirements and admission procedures of the institutions you're interested in applying to and prepare accordingly for the entrance exams. Additionally, staying updated with the latest exam patterns, syllabi, and preparation strategies can enhance your chances of success in securing admission to an MBBS program.
+
+  utter_bsc_nursing_career:
+  - text: |-
+      A B.Sc. Nursing degree is a 3-4 year undergraduate program that prepares individuals for roles in healthcare. It combines theoretical knowledge with practical training in nursing practices. Students learn about anatomy, physiology, pharmacology, and nursing techniques. Clinical rotations in hospitals or healthcare facilities provide hands-on experience. Graduates of B.Sc. Nursing programs can pursue diverse career paths in areas such as hospitals, clinics, community health centers, and more. If you're passionate about healthcare and helping others, a B.Sc. Nursing degree can lead to a fulfilling career as a registered nurse or in various healthcare roles.
+      Would you like to know about the qualifications required and the process for enrolling in a B.Sc. Nursing degree ? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /bsc_nursing_qualification
+    - title: No
+      payload: /no_button_selection
+  utter_bsc_nursing_qualification:
+  - text: |-
+      To qualify for a B.Sc. Nursing program, applicants typically need to meet the following criteria:
+      1. Educational Qualifications: Candidates should have completed their higher secondary education (10+2) with a background in science subjects such as Physics, Chemistry, and Biology.
+      2. Minimum Marks: Many institutions require candidates to have a minimum aggregate score in their 10+2 examinations, often ranging from 45% to 60%, depending on the institution and country.
+      3. Entrance Exams: Candidates may need to pass specific entrance exams such as NEET (National Eligibility cum Entrance Test) or other regional/national-level nursing entrance exams conducted by respective authorities.
+      4. Age Limit: There may be an age limit for admission, typically ranging from 17 to 35 years, although this can vary by institution and country.
+      Meeting these qualifications and successfully passing the entrance exams are essential steps to securing admission into a B.Sc. Nursing program.
+  utter_bvsc_career:
+  - text: |
+      A Bachelor of Veterinary Science (B.V.Sc.) degree is a 5-year undergraduate program specializing in animal health, surgery, and welfare. Graduates of this program can work as veterinarians in diverse settings, including veterinary clinics, hospitals, research laboratories, zoos, and government agencies. If you're passionate about animal care, health, and welfare, a B.V.Sc. degree could be the ideal pathway to a fulfilling career as a veterinarian.
+
+      Career opportunities for individuals with a Bachelor of Veterinary Science (B.V.Sc.) degree include:
+
+      1. Veterinarian: Providing medical care, diagnosing illnesses, and performing surgeries on various animals in veterinary clinics, hospitals, or private practice.
+      2. Researcher: Conducting research on animal diseases, treatments, and welfare to advance scientific knowledge and improve veterinary practices.
+      3. Wildlife Conservationist: Working in wildlife parks, reserves, or conservation organizations to protect and preserve endangered species and their habitats.
+      4. Livestock Inspector: Inspecting and monitoring livestock farms to ensure compliance with health and welfare standards and prevent disease outbreaks.
+      5. Animal Welfare Officer: Advocating for the rights and well-being of animals in organizations such as animal shelters, rescue groups, or government agencies.
+      Would you like to know about the qualifications required and the process for enrolling in a Bachelor of Veterinary Science (B.V.Sc.) degree ? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /bvsc_qualification
+    - title: No
+      payload: /no_button_selection
+  utter_bvsc_qualification:
+  - text: |
+      To enroll in a Bachelor of Veterinary Science (B.V.Sc.) program, you typically need to meet the following qualifications and criteria:
+      Qualifications:
+      1) High school diploma or equivalent: You must have completed secondary education with a strong academic record. Most institutions require a minimum percentage in your high school exams, often around 50% or above.
+      2) Science proficiency: A solid understanding of science subjects, particularly Biology, Chemistry, and Physics, is essential. Most B.V.Sc. programs require high school coursework in these subjects.
+      3) Some universities may also consider relevant extracurricular activities, volunteer work, or experiences related to animal care or veterinary medicine as part of the admission criteria.
+
+      Exams:
+      1)Entrance exams: Many universities or veterinary colleges conduct entrance exams specifically for admission to B.V.Sc. programs. These exams may assess your proficiency in Biology, Chemistry, and Physics, along with general aptitude and reasoning skills.
+      2) Some institutions may accept scores from broader entrance exams like National Eligibility cum Entrance Test (NEET) or other national or state-level entrance exams.
+      
+      Additionally, specific requirements and admission procedures may vary depending on the institution and country where you plan to pursue your Bachelor of Veterinary Science degree. It's advisable to check with the admissions office of your chosen program for the most accurate information regarding qualifications and exams.
+  utter_bsc_bmbzc_career:
+  - text: |-
+      A Bachelor's degree in Botany, Microbiology, Biology, Zoology, or Chemistry is a 3-year undergraduate program offering specializations in life sciences. Graduates of these programs can pursue various career paths depending on their chosen specialization:
+      - Botany: Career options include plant research, conservation, forestry, horticulture, environmental consulting, and teaching.
+      - Microbiology: Graduates can work in fields such as medical microbiology, industrial microbiology, pharmaceuticals, food microbiology, research, and quality control.
+      - Biology: Career opportunities include wildlife biologist, environmental scientist, biotechnologist, laboratory technician, science writer, and secondary school teacher.
+      - Zoology: Graduates can find employment as wildlife biologists, zookeepers, marine biologists, conservationists, ecologists, and museum curators.
+      - Chemistry: Career paths include analytical chemist, biochemist, chemical engineer, forensic scientist, pharmaceutical researcher, and quality control chemist.
+      These degrees provide a solid foundation for further education and research in their respective fields or immediate entry into the workforce.
+      Would you like to know about the qualifications required and the process for enrolling in a B.Sc. in Botany, Microbiology, Biology, Zoology, Chemistry. ? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /bsc_bmbzc_qualification
+    - title: No
+      payload: /no_button_selection
+  utter_bsc_bmbzc_qualification:
+  - text: |-
+      To qualify for a B.Sc. program in Botany, Microbiology, Biology, Zoology, or Chemistry, applicants typically need to meet the following criteria:
+      1. Educational Qualifications: Candidates should have completed their higher secondary education (10+2) with a strong foundation in science subjects such as Physics, Chemistry, and Biology.
+      2. Minimum Marks: Many institutions require candidates to have a minimum aggregate score in their 10+2 examinations, typically ranging from 45% to 60%, depending on the institution and country.
+      3. Entrance Exams: Some institutions may conduct entrance exams specific to their B.Sc. programs, while others may consider national-level entrance exams such as NEET (National Eligibility cum Entrance Test) or equivalent exams depending on the country.
+      4. Age Limit: There may be an age limit for admission, typically ranging from 17 to 25 years, although this can vary by institution and country.
+      Meeting these qualifications and successfully passing the required entrance exams are essential steps to securing admission into a B.Sc. program in Botany, Microbiology, Biology, Zoology, or Chemistry.
+  utter_bscdt_career:
+  - text: |-
+      With a Bachelor of Science (B.Sc.) in Dairy Technology, you can explore various career opportunities in the dairy industry. This 4-year undergraduate program focuses on the science and technology behind dairy production, processing, and quality control. Graduates of B.Sc. in Dairy Technology programs can work in roles such as dairy technologists, quality control managers, production supervisors, research assistants, and product development specialists in dairy processing plants, food companies, research institutions, and government agencies.
+      Career opportunities for individuals with a B.Sc. in Dairy Technology include:
+      1. Dairy Technologist: Overseeing the production process, ensuring quality control, and developing new dairy products.
+      2. Quality Control Manager: Ensuring compliance with food safety and quality standards throughout the dairy production process.
+      3. Production Supervisor: Managing day-to-day operations in dairy processing plants, including scheduling, staffing, and equipment maintenance.
+      4. Research Assistant: Assisting in research projects related to dairy technology, product development, and process improvement.
+      5. Product Development Specialist: Creating new dairy products and improving existing ones through formulation, testing, and innovation.
+      Would you like to know about the qualifications required and the process for enrolling in a B.Sc. in Dairy Technology ? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /bscdt_qualification
+    - title: No
+      payload: /no_button_selection
+  utter_bscdt_qualification:
+  - text: |-
+      To enroll in a Bachelor of Science (B.Sc.) in Dairy Technology program, you typically need to meet the following detailed qualifications and criteria:
+      Qualifications:
+      1) High school diploma or equivalent: You must have completed secondary education with a strong academic record. Most institutions require a minimum percentage in your high school exams, often around 50% or above.
+      2) Science proficiency: A solid understanding of science subjects, particularly Biology, Chemistry, and Mathematics, is essential. Most B.Sc. in Dairy Technology programs require high school coursework in these subjects.
+      3) Some universities may also consider relevant extracurricular activities, volunteer work, or experiences related to food science, agriculture, or technology as part of the admission criteria.
+      Exams:
+      1) Entrance exams: Many universities or colleges offering B.Sc. in Dairy Technology programs may conduct entrance exams specifically for admission. These exams may assess your proficiency in science subjects and general aptitude. Examples of such exams include Dairy Technology Entrance Test (DTET) or university-specific entrance exams.
+      2) Some institutions may accept scores from broader entrance exams like National Eligibility cum Entrance Test (NEET) or other national or state-level entrance exams if they include relevant science subjects.
+      Additionally, specific requirements and admission procedures may vary depending on the institution and country where you plan to pursue your B.Sc. in Dairy Technology degree. It's advisable to check with the admissions office of your chosen program for the most accurate and up-to-date information regarding qualifications and exams.
+  utter_bop_career:
+  - text: |-
+      A Bachelor of Pharmacy (B.Pharm) degree is a 3-year undergraduate program covering pharmaceutical sciences, drug formulation, and pharmacy practice. Graduates of this program can explore various career opportunities in the pharmaceutical industry. They can work as pharmacists, pharmaceutical researchers, pharmaceutical sales representatives, regulatory affairs professionals, and quality control analysts in pharmaceutical companies, hospitals, research institutions, and government agencies.
+
+      Career opportunities for individuals with a Bachelor of Pharmacy (B.Pharm) degree include:
+
+      1. Pharmacist: Dispensing medications, providing patient counseling, and ensuring medication safety in retail pharmacies, hospitals, or clinics.
+      2. Pharmaceutical Researcher: Conducting research to develop new drugs, improve existing medications, or explore drug interactions and effects.
+      3. Pharmaceutical Sales Representative: Promoting and selling pharmaceutical products to healthcare professionals, pharmacies, or hospitals.
+      4. Regulatory Affairs Professional: Ensuring compliance with regulations and guidelines set by regulatory authorities in the pharmaceutical industry.
+      5. Quality Control Analyst: Testing pharmaceutical products to ensure they meet quality standards and specifications before distribution.
+      Would you like to know about the qualifications required and the process for enrolling in a Bachelor of Pharmacy ? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /bscdt_qualification
+    - title: No
+      payload: /no_button_selection
+  utter_bop_qualification:
+  - text: |-
+      To enroll in a Bachelor of Pharmacy (B.Pharm) program, you typically need to meet the following detailed qualifications and criteria:
+
+      Qualifications:
+      1) High school diploma or equivalent: You must have completed secondary education with a strong academic record. Most institutions require a minimum percentage in your high school exams, often around 50% or above.
+      2)Science proficiency: A solid understanding of science subjects, particularly Chemistry, Biology, and Mathematics, is essential. Most B.Pharm programs require high school coursework in these subjects.
+      3) Some universities may also consider relevant extracurricular activities, volunteer work, or experiences related to healthcare, science, or pharmacy as part of the admission criteria.
+
+      Exams:
+      1) Entrance exams: Many universities or colleges offering B.Pharm programs may conduct entrance exams specifically for admission. These exams may assess your proficiency in science subjects and general aptitude. Examples of such exams include Pharmacy College Admission Test (PCAT), Graduate Pharmacy Aptitude Test (GPAT), or university-specific entrance exams.
+      2) Some institutions may accept scores from broader entrance exams like National Eligibility cum Entrance Test (NEET) or other national or state-level entrance exams if they include relevant science subjects.
+      
+      Additionally, specific requirements and admission procedures may vary depending on the institution and country where you plan to pursue your Bachelor of Pharmacy degree. It's advisable to check with the admissions office of your chosen program for the most accurate and up-to-date information regarding qualifications and exams.
+  utter_btech_agri_career:
+  - text: |-
+      A Bachelor's degree in Agriculture Technology (B.Tech in Agriculture) is a 4-year undergraduate program focusing on agricultural engineering, crop management, and sustainable farming practices. Graduates of this program can pursue various career paths in the agriculture sector, including:
+      - Agricultural Engineer: Designing and implementing machinery, equipment, and structures for agricultural processes.
+      - Agronomist: Studying plant genetics, soil science, and crop management techniques to optimize crop production.
+      - Farm Manager: Overseeing day-to-day operations on farms, including crop cultivation, livestock management, and resource allocation.
+      - Agricultural Consultant: Providing expert advice on agricultural practices, technology adoption, and business management to farmers and agricultural organizations.
+      - Agricultural Scientist: Conducting research to improve crop yields, develop new agricultural technologies, and address environmental sustainability challenges.
+      - Agribusiness Manager: Managing agricultural businesses, such as agro-processing units, food processing plants, and agricultural supply chains.
+      These are just a few examples of the diverse career opportunities available to graduates of B.Tech in Agriculture programs. With the growing emphasis on sustainable agriculture and food security, the demand for skilled professionals in this field is expected to remain strong.
+      Would you like to know about the qualifications required and the process for enrolling in a Bachelor's degree in Agriculture Technology ? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /btech_agri_qualification
+    - title: No
+      payload: /no_button_selection
+  utter_btech_agri_qualification:
+  - text: |-
+      To qualify for a B.Tech program in Agriculture, applicants typically need to meet the following criteria:
+      1. Educational Qualifications: Candidates should have completed their higher secondary education (10+2) with a strong foundation in science subjects such as Physics, Chemistry, and Biology or Mathematics.
+      2. Minimum Marks: Many institutions require candidates to have a minimum aggregate score in their 10+2 examinations, typically ranging from 45% to 60%, depending on the institution and country.
+      3. Entrance Exams: Some institutions may conduct their entrance exams for admission to B.Tech programs in Agriculture. Additionally, candidates may need to appear for national or state-level engineering entrance exams such as JEE (Joint Entrance Examination), CET (Common Entrance Test), or equivalent exams depending on the country.
+      4. Age Limit: There may be an age limit for admission, typically ranging from 17 to 25 years, although this can vary by institution and country.
+      Meeting these qualifications and successfully passing the required entrance exams are essential steps to securing admission into a B.Tech program in Agriculture.
+  utter_bscbt_career:
+  - text: |-
+      A Bachelor of Science (B.Sc) in Biotechnology is a 4-year undergraduate program focusing on genetic engineering, molecular biology, and bioprocessing. Graduates of this program can pursue various career opportunities in the biotechnology industry. They can work as research scientists, laboratory technicians, bioprocess engineers, quality control analysts, or regulatory affairs specialists in biotechnology companies, pharmaceutical firms, research institutions, and government agencies.
+      Career opportunities for individuals with a B.Sc in Biotechnology degree include:
+      1. Research Scientist: Conducting experiments, analyzing data, and contributing to research projects in fields such as genetic engineering, molecular biology, and bioprocessing.
+      2. Laboratory Technician: Assisting in laboratory experiments, conducting tests, and maintaining laboratory equipment and facilities.
+      3. Bioprocess Engineer: Designing and optimizing bioprocesses for the production of pharmaceuticals, biofuels, and other biotechnology products.
+      4. Quality Control Analyst: Testing and analyzing products to ensure they meet quality standards and regulatory requirements.
+      5. Regulatory Affairs Specialist: Ensuring compliance with regulations and guidelines set by regulatory authorities in the biotechnology and pharmaceutical industries.
+      Would you like to know about the qualifications required and the process for enrolling in a Bachelor's degree in Agriculture Technology ? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /bscbt_qualification
+    - title: No
+      payload: /no_button_selection
+  utter_bscbt_qualification:
+  - text: |-
+      To enroll in a Bachelor of Science (B.Sc) in Biotechnology program, you typically need to meet the following detailed qualifications and criteria:
+
+      Qualifications:
+      1) High school diploma or equivalent: You must have completed secondary education with a strong academic record. Most institutions require a minimum percentage in your high school exams, often around 50% or above.
+      2) Science proficiency: A solid understanding of science subjects, particularly Biology, Chemistry, and Mathematics, is essential. Most B.Sc in Biotechnology programs require high school coursework in these subjects.
+      3) Some universities may also consider relevant extracurricular activities, volunteer work, or experiences related to biotechnology, science, or research as part of the admission criteria.
+
+      Exams:
+      1) Entrance exams: Many universities or colleges offering B.Sc in Biotechnology programs may conduct entrance exams specifically for admission. These exams may assess your proficiency in science subjects and general aptitude. Examples of such exams include Biology, Chemistry, and Mathematics proficiency tests, Graduate Aptitude Test in Engineering (GATE), Biology, Chemistry, and Mathematics proficiency tests, or university-specific entrance exams.
+      
+      Additionally, specific requirements and admission procedures may vary depending on the institution and country where you plan to pursue your B.Sc in Biotechnology degree. It's advisable to check with the admissions office of your chosen program for the most accurate and up-to-date information regarding qualifications and exams.
+  utter_bsc_agri_career:
+  - text: |-
+      A Bachelor's degree in Agriculture (B.Sc in Agriculture) is a 4-year undergraduate program specializing in agronomy, soil science, crop science, and agribusiness. Graduates of this program can pursue various career paths in the agriculture sector, including:
+      - Agronomist: Providing expertise in crop production, soil management, and agricultural practices to optimize yields and sustainability.
+      - Soil Scientist: Conducting research and analysis to understand soil properties, fertility, and conservation techniques for improved agricultural productivity.
+      - Crop Scientist: Developing and implementing innovative techniques for crop breeding, pest management, and disease control to enhance crop yields and quality.
+      - Agribusiness Manager: Managing agricultural enterprises, including farm operations, agro-processing units, marketing, and distribution channels.
+      - Agricultural Extension Officer: Working with farmers and rural communities to disseminate knowledge, technology, and best practices for sustainable agriculture and rural development.
+      - Agricultural Researcher: Conducting scientific research to address challenges in agriculture, such as climate change, food security, and resource management.
+      These are just a few examples of the diverse career opportunities available to graduates of B.Sc in Agriculture programs. With the growing demand for sustainable food production and agricultural innovation, the agriculture sector offers promising career prospects for skilled professionals.
+    buttons:
+    - title: Yes
+      payload: /bsc_agri_qualification
+    - title: No
+      payload: /no_button_selection
+  utter_bsc_agri_qualification:
+  - text: |-
+      To qualify for a B.Sc program in Agriculture, applicants typically need to meet the following criteria:
+      1. Educational Qualifications: Candidates should have completed their higher secondary education (10+2) with a strong foundation in science subjects such as Physics, Chemistry, Biology, and Mathematics.
+      2. Minimum Marks: Many institutions require candidates to have a minimum aggregate score in their 10+2 examinations, typically ranging from 45% to 60%, depending on the institution and country.
+      3. Entrance Exams: Some institutions may conduct their entrance exams for admission to B.Sc programs in Agriculture. Additionally, candidates may need to appear for national or state-level agriculture entrance exams conducted by respective authorities.
+      4. Age Limit: There may be an age limit for admission, typically ranging from 17 to 25 years, although this can vary by institution and country.
+      Meeting these qualifications and successfully passing the required entrance exams are essential steps to securing admission into a B.Sc program in Agriculture.
+  utter_commerce_subject_combination:
+  - text: |-
+      The field of commerce encompasses various aspects of business, including finance, accounting, marketing, and management, providing a comprehensive understanding of economic activities and transactions. Professionals in commerce often analyze market trends, manage financial resources, and facilitate trade to drive organizational growth and profitability.
+      Following are the career paths that one can choose by pursuing commerce:
+    buttons:
+    - title: C.A. Foundation
+      payload: /caf_career
+    - title: Bachelor in Commerce 
+      payload: /bc_career
+    - title: Bachelor of Business Administration
+      payload: /bba_career
+    - title: C.S. Foundation
+      payload: /csf_career
+    - title: Bachelor's in Computer Applications 
+      payload: /bca_career
+    - title: Bachelor of Architecture
+      payload: /barch_career
+    - title: Diploma in Education
+      payload: /dedt_qualification
+    - title: Hotel Management Degree
+      payload: /hotelm_career
+
+  utter_caf_career:
+  - text: |-
+      The C.A. Foundation is the first level in the Chartered Accountancy (C.A.) course and serves as a stepping stone toward a rewarding career as a Chartered Accountant. Upon successfully completing the C.A. Foundation exam, individuals can pursue various career pathways in the field of accounting, finance, and business. They can work as accounting professionals, auditors, financial analysts, tax consultants, or even start their own accounting firms. Additionally, clearing the C.A. Foundation opens up opportunities for further advancement in the Chartered Accountancy course, leading to becoming a fully qualified Chartered Accountant.
+      Career opportunities for individuals who have cleared the C.A. Foundation exam include:
+      1. Accounting Professional: Working as an accountant in public accounting firms, corporate finance departments, or government agencies.
+      2. Auditor: Conducting financial audits for organizations to ensure compliance with regulatory standards and financial reporting requirements.
+      3. Financial Analyst: Analyzing financial data, preparing reports, and providing insights to support investment decisions and strategic planning.
+      4. Tax Consultant: Advising individuals and businesses on tax planning, compliance, and optimization strategies.
+      5. Business Consultant: Providing advisory services to businesses on financial management, risk assessment, and business process optimization.
+      Would you like to know about the qualifications required and the process for enrolling in a C.A. Foundation? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /caf_qualification
+    - title: No
+      payload: /no_button_selection
+
+  utter_caf_qualification:
+  - text: |-
+      To enroll in the C.A. Foundation and embark on the journey to becoming a Chartered Accountant, you typically need to meet the following qualifications and criteria:
+      Qualifications:
+      1) Higher secondary education: You must have completed secondary education (12th grade or equivalent) from a recognized board or institution.
+      2) Some institutions may require a minimum percentage in your higher secondary exams, often around 50% or above.
+      3) Additionally, a background in commerce or accounting-related subjects may be beneficial, but it is not always mandatory.
+
+      Exams:
+      C.A. Foundation exam: The main requirement for enrolling in the C.A. Foundation is to pass the C.A. Foundation exam conducted by the Institute of Chartered Accountants of India (ICAI). This exam assesses candidates' understanding of fundamental concepts in accounting, economics, law, and quantitative aptitude.
+      It's advisable to check with the relevant regulatory body or the ICAI for the most accurate information regarding qualifications and exams.
+
+
+  utter_bc_career:
+  - text: |-
+      A Bachelor's in Commerce (B. Com) degree is a 3-year undergraduate program that offers a wide range of career opportunities in the fields of commerce, accounting, finance, and business management. Graduates of this program can pursue diverse career pathways across different sectors. They can work in roles such as accountant, financial analyst, auditor, tax consultant, business analyst, or bank officer. Additionally, they may also explore opportunities in areas such as investment banking, corporate finance, management consulting, or entrepreneurship. The B. Com degree provides a strong foundation for building a successful career in the business and financial sectors.
+
+      Career opportunities for individuals with a Bachelor's in Commerce (B. Com) degree include:
+
+      1. Accountant: Managing financial records, preparing statements, and analyzing financial data for businesses or individuals.
+      2. Financial Analyst: Analyzing financial data, preparing reports, and providing insights to support investment decisions and strategic planning.
+      3. Auditor: Conducting financial audits for organizations to ensure compliance with regulatory standards and financial reporting requirements.
+      4. Tax Consultant: Advising individuals and businesses on tax planning, compliance, and optimization strategies.
+      5. Business Analyst: Analyzing business processes, identifying areas for improvement, and recommending solutions to enhance efficiency and profitability.
+      Would you like to know about the qualifications required and the process for enrolling in a B. Com? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /bc_qualification
+    - title: No
+      payload: /no_button_selection
+
+  utter_bc_qualification:
+  - text: |-
+      To enroll in a Bachelor's in Commerce (B. Com) program and pursue a career in commerce, accounting, finance, or business management, you typically need to meet the following qualifications and criteria:
+
+      Qualifications:
+      1) Higher secondary education: You must have completed secondary education (12th grade or equivalent) from a recognized board or institution.
+      2) Some institutions may require a minimum percentage in your higher secondary exams, often around 50% or above.
+      3) Additionally, a background in commerce or mathematics-related subjects may be beneficial, but it is not always mandatory.
+
+      Exams:
+      1) Entrance exams: Some universities or colleges may require you to take specific entrance exams to assess your aptitude for commerce studies. However, entrance exams are not mandatory for all B. Com programs.
+      2) Some institutions may have their own entrance exams, while others may consider scores from broader entrance exams like the Common Entrance Test (CET) or other relevant state-level exams.
+      It's advisable to check with the admissions office of your chosen program for the most accurate information regarding qualifications and exams.
+
+  utter_csf_career:
+  - text: |-
+      The Company Secretary (C.S.) Foundation serves as the first step towards a rewarding career as a Company Secretary, providing individuals with a strong foundation in corporate governance and related fields. Upon successfully completing the C.S. Foundation exam, individuals can pursue various career pathways in the corporate sector, legal firms, financial institutions, or government organizations. They can work as Company Secretaries, corporate governance professionals, legal advisors, compliance officers, or in managerial roles within companies. Additionally, clearing the C.S. Foundation opens up opportunities for further advancement in the Company Secretaryship course, leading to becoming a fully qualified Company Secretary.
+
+      Career opportunities for individuals who have cleared the C.S. Foundation exam include:
+
+      1. Company Secretary: Managing corporate governance, compliance, and regulatory affairs for companies.
+      2. Legal Advisor: Providing legal counsel and advice on corporate matters, contracts, and compliance issues.
+      3. Compliance Officer: Ensuring adherence to regulatory requirements and company policies.
+      4. Corporate Governance Professional: Implementing best practices for corporate governance and ethics within organizations.
+      5. Managerial Roles: Holding managerial positions in various departments, such as finance, legal, or administration, within companies.
+    buttons:
+    - title: Yes
+      payload: /csf_qualification
+    - title: No
+      payload: /no_button_selection
+
+  utter_csf_qualification:
+  - text: |-
+      To enroll in the Company Secretary (C.S.) Foundation program and begin your journey towards becoming a Company Secretary, you typically need to meet the following qualifications and criteria:
+
+      Qualifications:
+      1) Higher secondary education: You must have completed secondary education (12th grade or equivalent) from a recognized board or institution.
+      2) Some institutions may require a minimum percentage in your higher secondary exams, often around 50% or above.
+      3) Additionally, a background in commerce, business studies, or related subjects may be beneficial, but it is not always mandatory.
+
+      Exams:
+      1) C.S. Foundation exam: The main requirement for enrolling in the C.S. Foundation program is to pass the C.S. Foundation exam conducted by the Institute of Company Secretaries of India (ICSI). This exam assesses candidates' understanding of business environment, legal aspects, and communication skills.
+      It's advisable to check with the relevant regulatory body or the ICSI for the most accurate information regarding qualifications and exams.
+
+
+  utter_arts_subject_combination:
+  - text: |-
+      Arts encompasses a diverse range of disciplines including literature, history, sociology, psychology, and more. It explores human expression, creativity, and the complexities of society and culture.
+      Following are the career paths that one can choose by pursuing arts:
+    buttons:
+    - title: D.Ed. Teacher
+      payload: /dedt_career
+    - title: Bachelor of Legislative Law (L.L.B.)
+      payload: /llb_career
+    - title: Fashion Designing Diploma 
+      payload: /fdd_career
+    - title: Bachelor in Arts (B.A.)
+      payload: /ba_career
+    - title: Bachelor of Business Administration (B.B.A.)
+      payload: /bba_career
+    - title: Bachelor of Architecture (B.Arch.)
+      payload: /barch_career
+
+  utter_dedt_career:
+  - text: |-
+      A Diploma in Education (D.Ed.) is a 2-year program designed to train individuals to become qualified teachers. Graduates of this program can pursue various career opportunities in the field of education. They can work as primary or secondary school teachers in both public and private educational institutions. Additionally, they may also explore roles such as educational consultants, curriculum developers, teacher trainers, or education administrators.
+
+      Career opportunities for individuals with a D.Ed. Teacher qualification include:
+
+      1. Primary School Teacher: Teaching students in elementary grades, typically covering multiple subjects.
+      2. Secondary School Teacher: Instructing students in specific subjects at the middle or high school level.
+      3. Education Administrator: Overseeing school operations, managing staff, and implementing educational policies.
+      4. Curriculum Developer: Designing educational materials and programs to enhance student learning outcomes.
+      5. Teacher Trainer: Providing professional development and training to new and experienced teachers.
+      Would you like to know about the qualifications required and the process for enrolling in a D.Ed. Teacher ? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /dedt_qualification
+    - title: No
+      payload: /no_button_selection
+
+  utter_dedt_qualification:
+  - text: |-
+      To enroll in a Diploma in Education (D.Ed.) program and become a trained teacher, you typically need to meet the following detailed qualifications and criteria:
+
+      Qualifications:
+      1) Higher secondary education: You must have completed secondary education (12th grade or equivalent) with a strong academic record. Most institutions require a minimum percentage in your higher secondary exams, often around 50% or above.
+      2) Subject prerequisites: Some D.Ed. programs may have specific subject requirements, particularly in areas related to education, humanities, or social sciences.
+      3) Teaching aptitude: Candidates with a genuine interest in teaching and a passion for working with children are preferred. Some programs may assess teaching aptitude through interviews or written tests.
+      
+      Exams:
+      1)Entrance exams: Many D.Ed. Teacher programs may conduct entrance exams specifically for admission. These exams assess your teaching aptitude, subject knowledge, and general aptitude. Examples of such exams include the Teacher Eligibility Test (TET), State Level Eligibility Test (SLET), or university-specific entrance exams.
+      2) Additionally, some institutions may accept scores from broader entrance exams like the Common Entrance Test (CET) or other relevant state-level exams.
+      
+      It's advisable to check with the admissions office of your chosen program for the most accurate and up-to-date information regarding qualifications and exams.
+
+  utter_llb_career:
+  - text: |-
+      The L.L.B. Foundation (Bachelor of Legislative Law) is a 5-year undergraduate program that provides a strong foundation in various aspects of legal studies, preparing individuals for a career in law. Graduates of this program can pursue diverse career opportunities in the legal field. They can work as lawyers, legal advisors, legal researchers, corporate counsels, judges, or pursue careers in academia or public policy. Additionally, they may also explore roles in fields such as legal journalism, human rights advocacy, or legal consulting.
+
+      Career opportunities for individuals with an L.L.B. Foundation (Bachelor of Legislative Law) qualification include:
+
+      1. Lawyer: Practicing law in various fields such as civil litigation, criminal law, corporate law, family law, or intellectual property law.
+      2. Legal Advisor: Providing legal advice and guidance to individuals, organizations, or government agencies on legal matters.
+      3. Legal Researcher: Conducting legal research, analyzing case laws, and preparing legal documents for lawyers or law firms.
+      4. Corporate Counsel: Representing corporations and providing legal advice on corporate governance, contracts, mergers, and acquisitions.
+      5. Judge: Presiding over court proceedings and interpreting and applying the law to resolve disputes and administer justice.
+
+      Would you like to know about the qualifications required and the process for enrolling in aL.L.B. Foundation (Bachelor of Legislative Law) ? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /llb_qualification
+    - title: No
+      payload: /no_button_selection
+
+  utter_llb_qualification:
+  - text: |-
+      To enroll in an L.L.B. Foundation (Bachelor of Legislative Law) program and embark on a journey in law, you typically need to meet the following detailed qualifications and criteria:
+
+      Qualifications:
+      1) Higher secondary education: You must have completed secondary education (12th grade or equivalent) with a strong academic record. Most institutions require a minimum percentage in your higher secondary exams, often around 50% or above.
+      2) Subject prerequisites: Some L.L.B. Foundation programs may have specific subject requirements in your higher secondary education, such as English, History, or Political Science.
+      3) Age criteria: Some institutions may have age restrictions for admission to L.L.B. Foundation programs.
+
+      Exams:
+      1) Entrance exams: Many L.L.B. Foundation programs may conduct entrance exams specifically for admission. These exams assess your aptitude for legal studies, analytical skills, and language proficiency. Examples of such exams include the Common Law Admission Test (CLAT), All India Law Entrance Test (AILET), or university-specific entrance exams.
+      2) Additionally, some institutions may also consider scores from broader entrance exams like the Common Entrance Test (CET) or other relevant state-level exams.
+      
+      It's advisable to check with the admissions office of your chosen program for the most accurate and up-to-date information regarding qualifications and exams.
+
+  utter_fdd_career:
+  - text: |-
+      A Fashion Designing Diploma is a 3-year program that opens up various career opportunities in the dynamic fashion industry. Graduates of this program can pursue roles such as fashion designer, apparel merchandiser, fashion stylist, textile designer, fashion illustrator, pattern maker, or fashion consultant. They can work in fashion houses, clothing manufacturing companies, retail stores, or start their own fashion labels. Additionally, they may also explore opportunities in fashion journalism, fashion marketing, or fashion event management.
+      Career opportunities for individuals with a Fashion Designing Diploma include:
+
+      1. Fashion Designer: Creating clothing and accessory designs for various markets and clients.
+      2. Apparel Merchandiser: Managing the buying and selling of fashion products, analyzing market trends, and developing marketing strategies.
+      3. Fashion Stylist: Providing fashion advice, selecting outfits for photo shoots or events, and coordinating wardrobe choices.
+      4. Textile Designer: Designing patterns and fabrics for clothing, home decor, and other textile products.
+      5. Fashion Illustrator: Creating sketches and drawings of fashion designs for presentations or publications.
+      Would you like to know about the qualifications required and the process for enrolling in a Fashion Designing Diploma ? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /fdd_qualification
+    - title: No
+      payload: /no_button_selection
+
+  utter_fdd_qualification:
+  - text: |-
+      To enroll in a Fashion Designing Diploma program and embark on a journey in the creative world of fashion, you typically need to meet the following qualifications and criteria:
+
+      Qualifications:
+      1) Higher secondary education: You must have completed secondary education (12th grade or equivalent) with a strong academic record.
+      2) Some institutions may require a minimum percentage in your higher secondary exams, often around 50% or above.
+      3) Additionally, a portfolio showcasing your creativity and design skills may be required as part of the application process.
+
+      Exams:
+      1) Entrance exams: Some Fashion Designing Diploma programs may require you to take specific entrance exams to assess your aptitude for design and creativity. These exams may include a design aptitude test or a personal interview to evaluate your artistic abilities and passion for fashion.
+
+      It's advisable to check with the admissions office of your chosen program for the most accurate information regarding qualifications and exams.
+
+  utter_ba_career:
+  - text: |-
+      A Bachelor in Arts (B.A.) degree is a traditional 3-year undergraduate program that offers a wide range of career opportunities across various fields. Graduates of this program can pursue diverse career pathways based on their chosen specialization. They can work in fields such as education, journalism, public relations, social work, human resources, marketing, or business administration. Additionally, they may also explore opportunities in government agencies, non-profit organizations, or pursue further studies in areas such as law, psychology, or social sciences.
+      Career opportunities for individuals with a Bachelor in Arts (B.A.) degree include:
+
+      1. Teacher: Teaching in primary, secondary, or higher education institutions.
+      2. Writer/Editor: Working as a writer, editor, or content creator for media outlets, publishing houses, or online platforms.
+      3. Social Worker: Providing support and assistance to individuals and communities in need.
+      4. Human Resources Specialist: Managing recruitment, training, and employee relations in organizations.
+      5. Marketing Executive: Developing and implementing marketing strategies to promote products or services.
+      Would you like to know about the qualifications required and the process for enrolling in a B.A. (Bachelor in Arts) ? (Yes/No)
+    buttons:
+    - title: Yes
+      payload: /ba_qualification
+    - title: No
+      payload: /no_button_selection
+
+  utter_ba_qualification:
+  - text: |-
+      To enroll in a Bachelor in Arts (B.A.) program and embark on a journey in the field of humanities and social sciences, you typically need to meet the following qualifications and criteria:
+
+      Qualifications:
+      1) Higher secondary education: You must have completed secondary education (12th grade or equivalent) with a strong academic record.
+      2) Some institutions may require a minimum percentage in your higher secondary exams, often around 50% or above.
+      3) Additionally, specific subject prerequisites may vary depending on the chosen specialization within the B.A. program.
+
+      Exams:
+      1) Entrance exams: While many B.A. programs do not require specific entrance exams, some institutions may conduct entrance exams or interviews to assess your aptitude for the chosen field of study. These exams may include general aptitude tests or subject-specific tests, depending on the program and institution.
+
+      It's advisable to check with the admissions office of your chosen program for the most accurate information regarding qualifications and exams.
+
+  utter_bba_career:
+  - text: |-
+      A Bachelor of Business Administration (B.B.A.) degree is a 2-year undergraduate program that offers various career opportunities in the field of business, management, and entrepreneurship. Graduates of this program can pursue diverse career pathways across different sectors. They can work as business analysts, management consultants, marketing executives, financial analysts, human resource managers, or operations managers in corporations, government agencies, non-profit organizations, or start their own businesses. Additionally, they may also explore opportunities in fields such as finance, sales, supply chain management, or international business.
+
+      Career opportunities for individuals with a Bachelor of Business Administration (B.B.A.) degree include:
+
+      1. Business Analyst: Analyzing business processes, identifying areas for improvement, and recommending solutions.
+      2. Marketing Executive: Developing and implementing marketing strategies to promote products or services.
+      3. Financial Analyst: Analyzing financial data, preparing reports, and providing insights to support decision-making.
+      4. Human Resource Manager: Managing recruitment, training, and employee relations within organizations.
+      5. Operations Manager: Overseeing daily operations, optimizing processes, and ensuring efficiency within businesses.
+      Would you like to know about the qualifications required and the process for enrolling in a B.B.A. (Bachelor of Business Administration) ? (Yes/No)
+    buttons:
+      - title: Yes
+        payload: /bba_qualification
+      - title: No
+        payload: /no_button_selection
+
+  utter_bba_qualification:
+  - text: |-
+      To enroll in a B.B.A. (Bachelor of Business Administration) program and kickstart your journey in the field of business and management, you typically need to meet the following qualifications and criteria:
+
+      Qualifications:
+      1) Higher secondary education: You must have completed secondary education (12th grade or equivalent) with a strong academic record.
+      2) Some institutions may require a minimum percentage in your higher secondary exams, often around 50% or above.
+      3) Additionally, specific subject prerequisites may vary depending on the institution, but a background in commerce, mathematics, or business-related subjects may be beneficial.
+
+      Exams:
+      1) Entrance exams: Many B.B.A. programs require you to take specific entrance exams to assess your aptitude for business studies. Common entrance exams include the BBA entrance exam conducted by various universities or institutes. Some institutions may also consider scores from broader entrance exams like the Common Entrance Test (CET) or other relevant state-level exams.
+
+      It's advisable to check with the admissions office of your chosen program for the most accurate information regarding qualifications and exams.
+
 
 session_config:
   session_expiration_time: 60

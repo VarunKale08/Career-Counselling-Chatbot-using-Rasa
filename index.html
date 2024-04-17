@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasa Chatbot</title>
+    <!-- Include Rasa Webchat widget script -->
+    <script src="https://unpkg.com/rasa-webchat"></script>
+    <style>
+        /* Add CSS styling as needed */
+        #webchat {
+            height: 500px;
+            width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML markup for the chat widget -->
+    <div id="webchat"></div>
+
+    <!-- Initialize Rasa Webchat widget -->
+    <script>
+        WebChat.default.init({
+            selector: "#webchat",
+            initPayload: "/get_started",  // Initial payload to send to Rasa
+            customData: { "language": "en" }, // Custom data to send along with the message
+            socketUrl: "https://45e3-103-247-7-109.ngrok-free.app", // Ngrok URL of your Rasa server
+            socketPath: "/socket.io/",
+            title: "Your Chatbot Title", // Title to display in the chat widget
+            subtitle: "Your Chatbot Subtitle", // Subtitle to display in the chat widget
+            inputTextFieldHint: "Type a message...", // Placeholder text for input field
+            connectingText: "Connecting...", // Text to display while connecting to the server
+            hideWhenNotConnected: true, // Hide the chat widget when not connected
+            fullScreenMode: false, // Enable full-screen mode
+            params: {
+                storage: "local" // Store conversation data locally in the browser
+            }
+        });
+    </script>
+</body>
+</html>
