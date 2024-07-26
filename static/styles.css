@@ -1,0 +1,180 @@
+body {
+    font-family: Inter var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Set background color to white */
+}
+
+#chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+#chat-display {
+    display: flex;
+    flex-direction: column; /* Reverse the order of messages */
+    overflow-y: auto; /* Enable vertical scrollbar */
+    height: 70vh; /* Adjust height of chat display */
+    border-bottom: 1px solid #ccc; /* Add border only at the bottom */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+.user-message {
+    background-color: #cceeff; /* Light blue background for user messages */
+    color: #000; /* Black text color for user messages */
+    border-radius: 10px; /* Rounded corners for user messages */
+    padding: 10px;
+    margin-bottom: 10px;
+    align-self: flex-end; /* Align user messages to the right */
+    max-width: 70%; /* Set maximum width for user messages */
+    word-wrap: break-word; /* Allow long messages to wrap */
+}
+
+.bot-message {
+    background-color: #f0f0f0; /* Light gray background for chatbot messages */
+    color: #000; /* Black text color for chatbot messages */
+    border-radius: 10px; /* Rounded corners for chatbot messages */
+    padding: 10px;
+    margin-bottom: 10px;
+    align-self: flex-start; /* Align chatbot messages to the left */
+    max-width: 70%; /* Set maximum width for chatbot messages */
+    word-wrap: break-word; /* Allow long messages to wrap */
+}
+
+
+#input-container {
+    display: flex;
+    align-items: center;
+    padding: 0 10px; /* Add padding */
+    height: 60px; /* Adjust height of input container */
+
+}
+
+#user-input {
+    width: calc(100% - 20px); /* Adjust width of input field */
+    padding: 10px;
+    border: none; /* Remove border */
+    border-radius: 10px; /* Add border radius */
+    outline: none; /* Remove outline */
+    font-family: Inter var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 14px; /* Adjust font size for placeholder text */
+}
+
+#user-input::placeholder {
+    font-family: Inter var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+
+#user-input:focus {
+    font-size: 16px; /* Adjust font size when input is focused */
+}
+
+#send-button {
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
+
+/*  */
+.button-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap to next line if needed */
+    justify-content: center; /* Center align buttons */
+    margin-top: 10px; /* Add space above buttons */
+}
+
+.bot-button {
+    padding: 10px 20px; /* Add padding */
+    margin: 5px; /* Add margin around buttons */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    background-color: #f0f0f0; /* Light gray background */
+    color: #000; /* Black text color */
+    font-size: 14px; /* Adjust font size */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s, border 0.3s, box-shadow 0.3s; /* Add transition effect */
+}
+
+.bot-button:hover {
+    background-color: #e0e0e0; /* Darker background color on hover */
+    border-color: #aaa; /* Darker border color on hover */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+body {
+    font-family: Inter var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Set background color to white */
+    border: 1px solid #ccc; /* Add border around the whole interface */
+    border-radius: 10px; /* Add border radius */
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+#chat-container {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center; /* Center align the heading */
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+#input-container {
+    display: flex;
+    align-items: center;
+    padding: 0 10px; /* Add padding */
+    height: 60px; /* Adjust height of input container */
+    border: 1px solid #ccc; /* Add border around the input container */
+    border-radius: 10px; /* Add border radius */
+}
+
+#user-input {
+    width: calc(100% - 50px); /* Adjust width of input field */
+    padding: 10px;
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    font-family: Inter var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 14px; /* Adjust font size for placeholder text */
+}
+
+#user-input::placeholder {
+    font-family: Inter var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+#send-button {
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#chat-display {
+    display: flex;
+    flex-direction: column; /* Reverse the order of messages */
+    overflow-y: auto; /* Enable vertical scrollbar */
+    height: 50vh; /* Adjust height of chat display */
+    border-bottom: 1px solid #ccc; /* Add border only at the bottom */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* Add the rest of your CSS here */
+
+
+

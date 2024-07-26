@@ -15,6 +15,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - heyy
 - intent: get_career_guidance
   examples: |
     - I am confused about which field to select. Can you guide me ?
@@ -25,6 +26,7 @@ nlu:
     - I am confused.
     - I am very confused.
     - I am unable to select a career path.
+    - I am unable to make life choices
 - intent: get_user_grade
   examples: |
     - I'm currently in [10th](g_level) grade.
@@ -52,7 +54,8 @@ nlu:
     - I am in [7th](g_level) grade.
     - I am in [17th](g_level) grade.
     - I am in [6th](g_level) grade.
-    - I am in [10th](g_level) grade.
+    - [10th](g_level) std
+    - I am in [10th](g_level) grade
 - intent: positive_feedback
   examples: |
     - Yes, I'm happy to share my marks.
@@ -69,6 +72,7 @@ nlu:
     - Sure
     - yes
     - yes.
+    - Yes
 - intent: maths_marks
   examples: |
     - My grades in maths are [90](m_maths).
@@ -95,6 +99,7 @@ nlu:
     - My marks in maths are [90](m_maths).
     - My grades in maths are .
     - My marks in maths are [95](m_maths).
+    - My marks in maths are [90](m_maths).
 - intent: science_marks
   examples: |
     - My grades in science are [65](m_sci).
@@ -120,6 +125,7 @@ nlu:
     - My marks in science are .
     - My grades in science are .
     - My marks in science are [90](m_sci).
+    - marks in science are [89](m_sci).
 - intent: social_studies_marks
   examples: |
     - My grades in social studies are [65](m_ss).
@@ -146,6 +152,7 @@ nlu:
     - My marks in social studies are .
     - My grades in social studies are .
     - My marks in social studies are [78](m_ss).
+    - marks in social studies are [81](m_ss).
 - intent: english_marks
   examples: |
     - My grades in english are [65](m_eng).
@@ -171,6 +178,7 @@ nlu:
     - My marks in english are .
     - My grades in english are .
     - marks in english are [75](m_eng).
+    - marks in english are [78](m_eng).
 - intent: negative_feedback
   examples: |
     - No, I'm not comfortable with sharing my marks.
@@ -198,6 +206,7 @@ nlu:
     - Give me advice on selecting subjects for the science route.
     - I want to pursue the science route.
     - Science ROute
+    - Science
 - intent: pcb_career_paths
   examples: |
     - PCB
@@ -304,7 +313,7 @@ nlu:
     - Can you assist me with joining the Army?
     - I'm interested in a career in the Army. What's the procedure for joining?
     - How can I apply to join the Army?
-- intent: army_qualifications
+- intent: army_qualification
   examples: |
     - What qualifications do I need to join the Army?
     - Can you tell me about the exams required for joining the Army?
@@ -338,7 +347,7 @@ nlu:
     - Can you assist me with joining the Navy?
     - I'm interested in a career in the Navy. What's the procedure for joining?
     - How can I apply to join the Navy?
-- intent: navy_qualifications
+- intent: navy_qualification
   examples: |
     - What qualifications do I need to join the Navy?
     - Can you tell me about the exams required for joining the Navy?
@@ -372,7 +381,7 @@ nlu:
     - Can you assist me with joining the Air Force?
     - I'm interested in a career in the Air Force. What's the procedure for joining?
     - How can I apply to join the Air Force?
-- intent: airforce_qualifications
+- intent: airforce_qualification
   examples: |
     - What qualifications do I need to join the Air Force?
     - Can you tell me about the exams required for joining the Air Force?
@@ -472,7 +481,6 @@ nlu:
     - Restart or learn more about it
     - Start again or find out more
     - How can I restart or get more information?
-
 - intent: mbbs_career
   examples: |
     - What is an M.B.B.S (Bachelor of Medicine and Bachelor of Surgery) degree?
@@ -483,7 +491,6 @@ nlu:
     - How can I enroll in an M.B.B.S program?
     - What opportunities does an M.B.B.S degree provide for aspiring medical professionals?
     - Explain the curriculum and focus areas of an M.B.B.S degree program.
-
 - intent: mbbs_qualification
   examples: |
     - What qualifications are required to enroll in an MBBS program?
@@ -491,7 +498,6 @@ nlu:
     - I'm interested in pursuing an MBBS degree. What qualifications do I need?
     - What criteria should I satisfy to enroll in an MBBS program?
     - Explain the qualifications and exams necessary for joining an MBBS program.
-
 - intent: bsc_nursing_career
   examples: |
     - What is a B.Sc. Nursing degree?
@@ -502,7 +508,6 @@ nlu:
     - How can I enroll in a B.Sc. Nursing program?
     - What opportunities does a B.Sc. Nursing degree provide for aspiring healthcare professionals?
     - Explain the curriculum and focus areas of a B.Sc. Nursing degree program.
-
 - intent: bsc_nursing_qualification
   examples: |
     - What qualifications are required for B.Sc. Nursing?
@@ -510,7 +515,6 @@ nlu:
     - What exams do I need to pass for B.Sc. Nursing?
     - What are the requirements to pursue B.Sc. Nursing?
     - Explain the qualifications needed to enroll in a B.Sc. Nursing program.
-
 - intent: bvsc_career
   examples: |
     - What is a Bachelor of Veterinary Science (B.V.Sc.) degree?
@@ -521,7 +525,6 @@ nlu:
     - How can I enroll in a B.V.Sc. program?
     - What opportunities does a B.V.Sc. degree provide for aspiring veterinarians?
     - Explain the curriculum and focus areas of a Bachelor of Veterinary Science program.
-
 - intent: bvsc_qualification
   examples: |
     - What qualifications are required to enroll in a Bachelor of Veterinary Science program?
@@ -529,7 +532,6 @@ nlu:
     - I'm interested in pursuing a Bachelor of Veterinary Science degree. What qualifications do I need?
     - What criteria should I satisfy to enroll in a B.V.Sc. program?
     - Explain the qualifications and exams necessary for joining a Bachelor of Veterinary Science program.
-
 - intent: bsc_bmbzc_career
   examples: |
     - What careers can I pursue with a B.Sc. in Botany, Microbiology, Biology, Zoology, or Chemistry?
@@ -574,7 +576,6 @@ nlu:
     - Tell me about the career pathways for students with a B.Sc. in Chemistry.
     - What job opportunities exist for graduates of B.Sc. programs in Chemistry?
     - Explain the employment prospects for individuals holding a B.Sc. degree in Chemistry.
-
 - intent: bsc_bmbzc_qualification
   examples: |
     - What qualifications are required for a B.Sc. in Botany, Microbiology, Biology, Zoology, or Chemistry?
@@ -582,7 +583,6 @@ nlu:
     - What exams do I need to pass to enroll in a B.Sc. program in Botany, Microbiology, Biology, Zoology, or Chemistry?
     - What are the requirements to pursue a B.Sc. degree in Botany, Microbiology, Biology, Zoology, or Chemistry?
     - Explain the qualifications needed to apply for a B.Sc. program in Botany, Microbiology, Biology, Zoology, or Chemistry.
-
 - intent: bscdt_career
   examples: |
     - What career options are available with a B.Sc. in Dairy Technology?
@@ -592,7 +592,6 @@ nlu:
     - Tell me about the employment prospects for individuals holding a B.Sc. degree in Dairy Technology.
     - What job opportunities exist for graduates of B.Sc. programs in Dairy Technology?
     - Explain the career pathways for students with a B.Sc. in Dairy Technology.
-
 - intent: bscdt_qualification
   examples: |
     - What qualifications are required to enroll in a B.Sc. in Dairy Technology program?
@@ -600,7 +599,6 @@ nlu:
     - I'm interested in pursuing a B.Sc. in Dairy Technology. What specific qualifications do I need?
     - What criteria should I satisfy to enroll in a B.Sc. in Dairy Technology program?
     - Explain in detail the qualifications and exams necessary for joining a B.Sc. in Dairy Technology program.
-
 - intent: bop_career
   examples: |
     - What career options are available with a Bachelor of Pharmacy degree?
@@ -610,7 +608,6 @@ nlu:
     - Tell me about the employment prospects for individuals holding a Bachelor of Pharmacy degree.
     - What job opportunities exist for graduates of Bachelor of Pharmacy programs?
     - Explain the career pathways for students with a Bachelor of Pharmacy degree.
-
 - intent: bop_qualification
   examples: |
     - What qualifications are required to enroll in a Bachelor of Pharmacy program?
@@ -618,7 +615,6 @@ nlu:
     - I'm interested in pursuing a Bachelor of Pharmacy. What specific qualifications do I need?
     - What criteria should I satisfy to enroll in a Bachelor of Pharmacy program?
     - Explain in detail the qualifications and exams necessary for joining a Bachelor of Pharmacy program.
-
 - intent: btech_agri_career
   examples: |
     - What careers can I pursue with a B.Tech in Agriculture?
@@ -628,7 +624,6 @@ nlu:
     - Tell me about the career pathways for students with a B.Tech in Agriculture.
     - What job opportunities exist for graduates of B.Tech programs in Agriculture?
     - Explain the employment prospects for individuals holding a B.Tech degree in Agriculture.
-
 - intent: btech_agri_qualification
   examples: |
     - What qualifications are required for a B.Tech in Agriculture?
@@ -636,7 +631,6 @@ nlu:
     - What exams do I need to pass to enroll in a B.Tech program in Agriculture?
     - What are the requirements to pursue a B.Tech degree in Agriculture?
     - Explain the qualifications needed to apply for a B.Tech program in Agriculture.
-
 - intent: bscbt_career
   examples: |
     - What career options are available with a B.Sc in Biotechnology degree?
@@ -646,7 +640,6 @@ nlu:
     - Tell me about the employment prospects for individuals holding a B.Sc in Biotechnology degree.
     - What job opportunities exist for graduates of B.Sc in Biotechnology programs?
     - Explain the career pathways for students with a B.Sc in Biotechnology degree.
-
 - intent: bscbt_qualification
   examples: |
     - What qualifications are required to enroll in a B.Sc in Biotechnology program?
@@ -654,7 +647,6 @@ nlu:
     - I'm interested in pursuing a B.Sc in Biotechnology. What specific qualifications do I need?
     - What criteria should I satisfy to enroll in a B.Sc in Biotechnology program?
     - Explain in detail the qualifications and exams necessary for joining a B.Sc in Biotechnology program.
-
 - intent: bsc_agri_career
   examples: |
     - What careers can I pursue with a B.Sc in Agriculture?
@@ -664,7 +656,6 @@ nlu:
     - Tell me about the career pathways for students with a B.Sc in Agriculture.
     - What job opportunities exist for graduates of B.Sc programs in Agriculture?
     - Explain the employment prospects for individuals holding a B.Sc degree in Agriculture.
-
 - intent: bsc_agri_qualification
   examples: |
     - What qualifications are required for a B.Sc in Agriculture?
@@ -672,8 +663,6 @@ nlu:
     - What exams do I need to pass to enroll in a B.Sc program in Agriculture?
     - What are the requirements to pursue a B.Sc degree in Agriculture?
     - Explain the qualifications needed to apply for a B.Sc program in Agriculture.
-
-
 - intent: dedt_career
   examples: |
     - What career options are available with a D.Ed. Teacher qualification?
@@ -683,7 +672,6 @@ nlu:
     - Tell me about the employment prospects for individuals with a D.Ed. Teacher qualification.
     - What job opportunities exist for graduates of D.Ed. Teacher programs?
     - Explain the career pathways for students with a D.Ed. Teacher qualification.
-
 - intent: dedt_qualification
   examples: |
     - What qualifications are required to enroll in a D.Ed. Teacher program?
@@ -691,7 +679,6 @@ nlu:
     - I'm interested in pursuing a D.Ed. Teacher qualification. What specific qualifications do I need?
     - What criteria should I satisfy to enroll in a D.Ed. Teacher program?
     - Explain in detail the qualifications and exams necessary for joining a D.Ed. Teacher program.
-
 - intent: llb_career
   examples: |
     - What career options are available with an L.L.B. Foundation qualification?
@@ -701,7 +688,6 @@ nlu:
     - Tell me about the employment prospects for individuals with an L.L.B. Foundation qualification.
     - What job opportunities exist for graduates of L.L.B. Foundation programs?
     - Explain the career pathways for students with an L.L.B. Foundation qualification.
-
 - intent: llb_qualification
   examples: |
     - What qualifications are required to enroll in an L.L.B. Foundation program?
@@ -709,7 +695,6 @@ nlu:
     - I'm interested in pursuing an L.L.B. Foundation qualification. What specific qualifications do I need?
     - What criteria should I satisfy to enroll in an L.L.B. Foundation program?
     - Explain in detail the qualifications and exams necessary for joining an L.L.B. Foundation program.
-
 - intent: fdd_career
   examples: |
     - What career options are available with a Fashion Designing Diploma?
@@ -719,7 +704,6 @@ nlu:
     - Tell me about the employment prospects for individuals with a Fashion Designing Diploma.
     - What job opportunities exist for graduates of Fashion Designing Diploma programs?
     - Explain the career pathways for students with a Fashion Designing Diploma.
-
 - intent: fdd_qualification
   examples: |
     - What qualifications are required to enroll in a Fashion Designing Diploma program?
@@ -727,7 +711,6 @@ nlu:
     - I'm interested in pursuing a Fashion Designing Diploma. What qualifications do I need?
     - What criteria should I satisfy to enroll in a Fashion Designing Diploma program?
     - Explain the qualifications and exams necessary for joining a Fashion Designing Diploma program.
-
 - intent: ba_career
   examples: |
     - What career options are available with a Bachelor in Arts degree?
@@ -737,7 +720,6 @@ nlu:
     - Tell me about the employment prospects for individuals with a Bachelor in Arts degree.
     - What job opportunities exist for graduates of B.A. programs?
     - Explain the career pathways for students with a B.A. degree.
-
 - intent: ba_qualification
   examples: |
     - What qualifications are required to enroll in a B.A. (Bachelor in Arts) program?
@@ -745,7 +727,6 @@ nlu:
     - I'm interested in pursuing a Bachelor in Arts degree. What qualifications do I need?
     - What criteria should I satisfy to enroll in a B.A. program?
     - Explain the qualifications and exams necessary for joining a Bachelor in Arts program.
-
 - intent: bba_career
   examples: |
     - What career options are available with a Bachelor of Business Administration degree?
@@ -755,7 +736,6 @@ nlu:
     - Tell me about the employment prospects for individuals with a B.B.A. degree.
     - What job opportunities exist for graduates of B.B.A. programs?
     - Explain the career pathways for students with a B.B.A. degree.
-
 - intent: bba_qualification
   examples: |
     - What qualifications are required to enroll in a B.B.A. (Bachelor of Business Administration) program?
@@ -763,7 +743,6 @@ nlu:
     - I'm interested in pursuing a Bachelor of Business Administration degree. What qualifications do I need?
     - What criteria should I satisfy to enroll in a B.B.A. program?
     - Explain the qualifications and exams necessary for joining a Bachelor of Business Administration program.
-
 - intent: commerce_subject_combination
   examples: |
     - Out of these fields, I want to pursue the commerce route.
@@ -778,7 +757,6 @@ nlu:
     - Give me advice on selecting subjects for the commerce route.
     - I want to pursue the commerce route.
     - Commerce Route
-
 - intent: arts_subject_combination
   examples: |
     - Out of these fields, I want to pursue the arts route.
@@ -793,7 +771,6 @@ nlu:
     - Give me advice on selecting subjects for the arts route.
     - I want to pursue the arts route.
     - Arts Route
-
 - intent: caf_career
   examples: |
     - What career options are available after completing the C.A. Foundation?
@@ -803,7 +780,6 @@ nlu:
     - Tell me about the employment prospects for individuals who complete the C.A. Foundation.
     - What job opportunities exist after completing the C.A. Foundation?
     - Explain the career pathways for students who clear the C.A. Foundation.
-
 - intent: caf_qualification
   examples: |
     - What qualifications are required to enroll in the C.A. Foundation?
@@ -811,7 +787,6 @@ nlu:
     - I'm interested in pursuing the C.A. Foundation. What qualifications do I need?
     - What criteria should I satisfy to enroll in the C.A. Foundation?
     - Explain the qualifications and exams necessary for enrolling in the C.A. Foundation.
-
 - intent: bc_career
   examples: |
     - What career options are available after completing a Bachelor's in Commerce?
@@ -821,7 +796,6 @@ nlu:
     - Tell me about the employment prospects for individuals with a B. Com degree.
     - What job opportunities exist for graduates of B. Com programs?
     - Explain the career pathways for students with a B. Com degree.
-
 - intent: bc_qualification
   examples: |
     - What qualifications are required to enroll in a Bachelor's in Commerce program?
@@ -829,7 +803,6 @@ nlu:
     - I'm interested in studying Commerce. What qualifications do I need for a B. Com program?
     - What criteria should I satisfy to enroll in a B. Com program?
     - Explain the qualifications and exams necessary for enrolling in a Bachelor's in Commerce program.
-
 - intent: csf_career
   examples: |
     - What career options are available after completing the C.S. Foundation?
@@ -839,7 +812,6 @@ nlu:
     - Tell me about the employment prospects for individuals who complete the C.S. Foundation.
     - What job opportunities exist after completing the C.S. Foundation?
     - Explain the career pathways for students who clear the C.S. Foundation.
-
 - intent: csf_qualification
   examples: |
     - What qualifications are required to enroll in the C.S. Foundation?
@@ -847,3 +819,493 @@ nlu:
     - I'm interested in pursuing the C.S. Foundation. What qualifications do I need?
     - What criteria should I satisfy to enroll in the C.S. Foundation?
     - Explain the qualifications and exams necessary for enrolling in the C.S. Foundation.
+- intent: extracurricular_career_combination
+  examples: |
+    - What extracurricular career opportunities are available in Arts and Creative Fields?
+    - Can you provide information about extracurricular career opportunities in Sports and Fitness?
+    - What are the prospects for individuals interested in extracurricular career opportunities in Entrepreneurship and Business?
+    - I'm curious about extracurricular career pathways in Environmental and Sustainability fields. Can you provide insights?
+    - Tell me about the employment prospects in extracurricular career opportunities in Arts and Creative Fields.
+    - What job opportunities exist in extracurricular career opportunities in Sports and Fitness?
+    - Explain the extracurricular career pathways for individuals interested in Entrepreneurship and Business.
+    - What extracurricular career options are available in Environmental and Sustainability?
+    - Extracurricular Career Combinations
+- intent: sports_career
+  examples: |
+    - I want to pursue a career in sports. How do I start?
+    - What are the requirements for becoming a professional athlete in cricket or football?
+    - Can you provide information on how to become a cricketer or a footballer?
+    - I'm interested in becoming a cricketer or a footballer. What steps should I take?
+    - How do I start a career in cricket or football?
+    - Tell me about the process of becoming a professional athlete in cricket or football.
+    - I want to play cricket or football professionally. What do I need to know?
+    - Provide guidance on pursuing a career in cricket or football.
+    - How can I become a cricketer or a footballer?
+    - I'm considering a career in cricket or football. What's the first step?
+    - What are the steps to becoming a professional athlete in cricket or football?
+    - Guide me on the process of pursuing a career in cricket or football.
+    - Share details about becoming a cricketer or a footballer.
+    - What are the entry requirements for becoming a professional athlete in cricket or football?
+    - I'm ready to pursue a career in cricket or football. What should I do next?
+    - Can you assist me with pursuing a career in cricket or football?
+    - I'm interested in a career in cricket or football. What's the procedure for starting?
+    - How can I apply to become a cricketer or a footballer?
+- intent: player_career_paths
+  examples: |
+    - What are the potential career paths for players in sports?
+    - Can you provide information about career options for athletes?
+    - I'm interested in pursuing a career as a player in sports. What steps should I take?
+    - How can I become a professional athlete?
+    - What are the pathways to becoming a player in sports?
+    - Tell me about the career opportunities available for players.
+    - I want to know more about becoming a player in sports.
+    - What steps can I follow to pursue a career as a player?
+    - Are there any tips for starting a career as a player in sports?
+    - Explain the process of transitioning from amateur to professional athlete.
+- intent: coach_career_paths
+  examples: |
+    - I want to pursue a career as a sports coach. How do I start?
+    - What are the requirements for becoming a coach in various sports?
+    - Can you provide information on how to become a coach in different sports?
+    - I'm interested in coaching sports. What steps should I take?
+    - How do I start a career as a sports coach?
+    - Tell me about the process of becoming a coach in various sports.
+    - I want to coach sports professionally. What do I need to know?
+    - Provide guidance on pursuing a career as a sports coach.
+    - How can I become a coach in different sports?
+    - I'm considering a career in coaching sports. What's the first step?
+    - What are the steps to becoming a coach in various sports?
+    - Guide me on the process of pursuing a career as a sports coach.
+    - Share details about becoming a coach in different sports.
+    - What are the entry requirements for coaching certifications in different sports?
+    - I'm ready to pursue a career as a sports coach. What should I do next?
+    - Can you assist me with pursuing a career as a sports coach?
+    - I'm interested in a career as a sports coach. What's the procedure for starting?
+    - How can I apply for coaching positions in sports clubs or organizations?
+- intent: trainer_career_paths
+  examples: |
+    - I want to pursue a career as a sports trainer. How do I start?
+    - What are the requirements for becoming a trainer in sports?
+    - Can you provide information on how to become a sports trainer?
+    - I'm interested in training athletes. What steps should I take to become a sports trainer?
+    - How do I start a career as a sports trainer?
+    - Tell me about the process of becoming a sports trainer.
+    - I want to train athletes professionally. What do I need to know?
+    - Provide guidance on pursuing a career as a sports trainer.
+    - How can I become a sports trainer?
+    - I'm considering a career in training athletes. What's the first step?
+    - What are the steps to becoming a sports trainer?
+    - Guide me on the process of pursuing a career as a sports trainer.
+    - Share details about becoming a sports trainer.
+    - What are the entry requirements for certifications or qualifications in sports training?
+    - I'm ready to pursue a career as a sports trainer. What should I do next?
+    - Can you assist me with pursuing a career as a sports trainer?
+    - I'm interested in a career as a sports trainer. What's the procedure for starting?
+    - How can I apply for training positions with sports teams or organizations?
+- intent: scout_career_paths
+  examples: |
+    - I want to pursue a career as a sports scout. How do I start?
+    - What are the requirements for becoming a scout in sports?
+    - Can you provide information on how to become a sports scout?
+    - I'm interested in scouting for sports teams. What steps should I take?
+    - How do I start a career as a sports scout?
+    - Tell me about the process of becoming a sports scout.
+    - I want to scout for sports talent professionally. What do I need to know?
+    - Provide guidance on pursuing a career as a sports scout.
+    - How can I become a sports scout?
+    - I'm considering a career in sports scouting. What's the first step?
+    - What are the steps to becoming a sports scout?
+    - Guide me on the process of pursuing a career as a sports scout.
+    - Share details about becoming a sports scout.
+    - What are the entry requirements for scouting positions in sports organizations?
+    - I'm ready to pursue a career as a sports scout. What should I do next?
+    - Can you assist me with pursuing a career as a sports scout?
+    - I'm interested in a career as a sports scout. What's the procedure for starting?
+    - How can I apply for scouting positions in sports teams or organizations?
+- intent: dietitian_career_paths
+  examples: |
+    - I want to pursue a career as a sports dietician. How do I start?
+    - What are the requirements for becoming a dietician in sports?
+    - Can you provide information on how to become a sports dietician?
+    - I'm interested in working as a dietician for athletes. What steps should I take?
+    - How do I start a career as a sports dietician?
+    - Tell me about the process of becoming a sports dietician.
+    - I want to specialize in sports nutrition. What do I need to know?
+    - Provide guidance on pursuing a career as a sports dietician.
+    - How can I become a sports dietician?
+    - I'm considering a career in sports nutrition. What's the first step?
+    - What are the steps to becoming a sports dietician?
+    - Guide me on the process of pursuing a career as a sports dietician.
+    - Share details about becoming a sports dietician.
+    - What are the entry requirements for certifications or qualifications in sports nutrition?
+    - I'm ready to pursue a career as a sports dietician. What should I do next?
+    - Can you assist me with pursuing a career as a sports dietician?
+    - I'm interested in a career as a sports dietician. What's the procedure for starting?
+    - How can I apply for dietician positions with sports teams or organizations?
+- intent: creative_career
+  examples: |
+    - I'm interested in exploring career options in arts and creative fields.
+    - Can you tell me about the various career paths available in arts and creative industries?
+    - What are the job prospects for individuals interested in art, music, or writing?
+    - I have a passion for creativity. What career opportunities exist in creative fields?
+    - Tell me about careers in design, photography, and other artistic domains.
+    - I want to know about potential careers in theater, dance, and other performing arts.
+    - Provide information about job opportunities for artists, musicians, and actors.
+- intent: artist_career
+  examples: |
+    - I'm interested in pursuing a career as an artist. Can you provide more information?
+    - Tell me about the career prospects for artists.
+    - What skills are required to become a successful artist?
+    - Can you provide details on how to become an artist?
+    - How can I start a career as an artist?
+    - I want to know more about becoming an artist.
+    - What exams or competitions are there for aspiring artists?
+    - Share information about the skills and qualifications needed to become an artist.
+    - How can I develop my skills as an artist?
+    - What are the career options for someone interested in visual arts?
+    - I'm passionate about art and want to pursue it as a career. Where should I start?
+    - What are the different types of artists and their career paths?
+    - Are there specific educational qualifications required to become an artist?
+    - How can I improve my artistic skills and techniques?
+    - Can you suggest some resources for aspiring artists to enhance their skills?
+    - What are the key steps to becoming a successful artist?
+    - Are there any online platforms where I can showcase my artwork?
+    - Can you recommend some art competitions or exhibitions for aspiring artists?
+    - What are the potential challenges of pursuing a career as an artist?
+    - I'm considering a career in the arts. What advice can you give me?
+    - How important is networking for artists, and how can I build connections in the industry?
+- intent: musician_career
+  examples: |
+    - I'm interested in pursuing a career as a musician. Can you provide more information?
+    - Tell me about the career prospects for musicians.
+    - What skills are required to become a successful musician?
+    - Can you provide details on how to become a musician?
+    - How can I start a career as a musician?
+    - I want to know more about becoming a musician.
+    - What exams or competitions are there for aspiring musicians?
+    - Share information about the skills and qualifications needed to become a musician.
+    - How can I develop my skills as a musician?
+    - What are the career options for someone interested in music?
+    - I'm passionate about music and want to pursue it as a career. Where should I start?
+    - What are the different types of musicians and their career paths?
+    - Are there specific educational qualifications required to become a musician?
+    - How can I improve my musical skills and techniques?
+    - Can you suggest some resources for aspiring musicians to enhance their skills?
+    - What are the key steps to becoming a successful musician?
+    - Are there any online platforms where I can showcase my music?
+    - Can you recommend some music competitions or festivals for aspiring musicians?
+    - What are the potential challenges of pursuing a career as a musician?
+    - I'm considering a career in music. What advice can you give me?
+    - How important is networking for musicians, and how can I build connections in the industry?
+- intent: actor_career
+  examples: |
+    - I'm interested in pursuing a career as an actor. Can you provide more information?
+    - Tell me about the career prospects for actors.
+    - What skills are required to become a successful actor?
+    - Can you provide details on how to become an actor?
+    - How can I start a career as an actor?
+    - I want to know more about becoming an actor.
+    - What exams or competitions are there for aspiring actors?
+    - Share information about the skills and qualifications needed to become an actor.
+    - How can I develop my acting skills?
+    - What are the career options for someone interested in acting?
+    - I'm passionate about acting and want to pursue it as a career. Where should I start?
+    - What are the different types of acting careers and their paths?
+    - Are there specific educational qualifications required to become an actor?
+    - How can I improve my acting skills and techniques?
+    - Can you suggest some resources for aspiring actors to enhance their skills?
+    - What are the key steps to becoming a successful actor?
+    - Are there any online platforms where I can showcase my acting talent?
+    - Can you recommend some acting competitions, auditions, or festivals for aspiring actors?
+    - What are the potential challenges of pursuing a career as an actor?
+    - I'm considering a career in acting. What advice can you give me?
+    - How important is networking for actors, and how can I build connections in the industry?
+- intent: writer_career
+  examples: |
+    - I'm interested in pursuing a career as a writer. Can you provide more information?
+    - Tell me about the career prospects for writers.
+    - What skills are required to become a successful writer?
+    - Can you provide details on how to become a writer?
+    - How can I start a career as a writer?
+    - I want to know more about becoming a writer.
+    - What exams or competitions are there for aspiring writers?
+    - Share information about the skills and qualifications needed to become a writer.
+    - How can I develop my writing skills?
+    - What are the career options for someone interested in writing?
+    - I'm passionate about writing and want to pursue it as a career. Where should I start?
+    - What are the different types of writing careers and their paths?
+    - Are there specific educational qualifications required to become a writer?
+    - How can I improve my writing skills and techniques?
+    - Can you suggest some resources for aspiring writers to enhance their skills?
+    - What are the key steps to becoming a successful writer?
+    - Are there any online platforms where I can showcase my writing talent?
+    - Can you recommend some writing competitions, contests, or festivals for aspiring writers?
+    - What are the potential challenges of pursuing a career as a writer?
+    - I'm considering a career in writing. What advice can you give me?
+    - How important is networking for writers, and how can I build connections in the industry?
+- intent: designer_career
+  examples: |
+    - I'm interested in pursuing a career as a designer. Can you provide more information?
+    - Tell me about the career prospects for designers.
+    - What skills are required to become a successful designer?
+    - Can you provide details on how to become a designer?
+    - How can I start a career as a designer?
+    - I want to know more about becoming a designer.
+    - What exams or competitions are there for aspiring designers?
+    - Share information about the skills and qualifications needed to become a designer.
+    - How can I develop my design skills?
+    - What are the career options for someone interested in design?
+    - I'm passionate about design and want to pursue it as a career. Where should I start?
+    - What are the different types of design careers and their paths?
+    - Are there specific educational qualifications required to become a designer?
+    - How can I improve my design skills and techniques?
+    - Can you suggest some resources for aspiring designers to enhance their skills?
+    - What are the key steps to becoming a successful designer?
+    - Are there any online platforms where I can showcase my design talent?
+    - Can you recommend some design competitions, contests, or festivals for aspiring designers?
+    - What are the potential challenges of pursuing a career as a designer?
+    - I'm considering a career in design. What advice can you give me?
+    - How important is networking for designers, and how can I build connections in the industry?
+- intent: social_impact_careerpath
+  examples: |
+    - I want to pursue a career in social impact. How do I start?
+    - What are the requirements for working in social impact?
+    - Can you provide information on how to build a career in social impact?
+    - I'm interested in making a difference in society. What steps should I take?
+    - How do I start a career in social impact?
+    - Tell me about the process of working in social impact.
+    - I want to work in social impact professionally. What do I need to know?
+    - Provide guidance on pursuing a career in social impact.
+    - How can I contribute to social impact efforts?
+    - I'm considering a career in social impact. What's the first step?
+    - What are the steps to building a career in social impact?
+    - Guide me on the process of pursuing a career in social impact.
+    - Share details about working in social impact.
+    - What are the entry requirements for positions in social impact organizations?
+    - I'm ready to pursue a career in social impact. What should I do next?
+    - Can you assist me with pursuing a career in social impact?
+    - I'm interested in a career in social impact. What's the procedure for starting?
+    - How can I apply for jobs in social impact organizations or nonprofits?
+- intent: environmental_science_careerpath
+  examples: |
+    - I want to pursue a career in environmental science. How do I start?
+    - What are the requirements for working in environmental science?
+    - Can you provide information on how to build a career in environmental science?
+    - I'm interested in environmental conservation. What steps should I take?
+    - How do I start a career in environmental science?
+    - Tell me about the process of working in environmental science.
+    - I want to work in environmental research. What do I need to know?
+    - Provide guidance on pursuing a career in environmental science.
+    - How can I contribute to environmental protection efforts?
+    - I'm considering a career in environmental science. What's the first step?
+    - What are the steps to building a career in environmental science?
+    - Guide me on the process of pursuing a career in environmental science.
+    - Share details about working in environmental science.
+    - What are the entry requirements for positions in environmental science organizations?
+    - I'm ready to pursue a career in environmental science. What should I do next?
+    - Can you assist me with pursuing a career in environmental science?
+    - I'm interested in a career in environmental science. What's the procedure for starting?
+    - How can I apply for jobs in environmental science organizations or research institutions?
+- intent: sustainability_management_careerpath
+  examples: |
+    - I want to pursue a career in sustainability management. How do I start?
+    - What are the requirements for working in sustainability management?
+    - Can you provide information on how to build a career in sustainability management?
+    - I'm interested in promoting sustainability. What steps should I take?
+    - How do I start a career in sustainability management?
+    - Tell me about the process of working in sustainability management.
+    - I want to work in sustainability planning. What do I need to know?
+    - Provide guidance on pursuing a career in sustainability management.
+    - How can I contribute to sustainable development efforts?
+    - I'm considering a career in sustainability management. What's the first step?
+    - What are the steps to building a career in sustainability management?
+    - Guide me on the process of pursuing a career in sustainability management.
+    - Share details about working in sustainability management.
+    - What are the entry requirements for positions in sustainability management organizations?
+    - I'm ready to pursue a career in sustainability management. What should I do next?
+    - Can you assist me with pursuing a career in sustainability management?
+    - I'm interested in a career in sustainability management. What's the procedure for starting?
+    - How can I apply for jobs in sustainability management organizations or corporations?
+- intent: volunteering_community_careerpath
+  examples: |
+    - I want to pursue a career in volunteering and community service. How do I start?
+    - What are the requirements for working in volunteering and community outreach?
+    - Can you provide information on how to build a career in volunteering and community service?
+    - I'm interested in making a difference in my community. What steps should I take?
+    - How do I start a career in volunteering and community service?
+    - Tell me about the process of working in volunteering and community outreach.
+    - I want to work in community development. What do I need to know?
+    - Provide guidance on pursuing a career in volunteering and community service.
+    - How can I contribute to community building efforts?
+    - I'm considering a career in volunteering and community service. What's the first step?
+    - What are the steps to building a career in volunteering and community outreach?
+    - Guide me on the process of pursuing a career in volunteering and community service.
+    - Share details about working in volunteering and community service.
+    - What are the entry requirements for positions in volunteering and community organizations?
+    - I'm ready to pursue a career in volunteering and community service. What should I do next?
+    - Can you assist me with pursuing a career in volunteering and community service?
+    - I'm interested in a career in volunteering and community service. What's the procedure for starting?
+    - How can I apply for jobs or volunteer positions in community organizations or nonprofits?
+- intent: nonprofit_management_careerpath
+  examples: |
+    - I want to pursue a career in nonprofit management. How do I start?
+    - What are the requirements for working in nonprofit management?
+    - Can you provide information on how to build a career in nonprofit management?
+    - I'm interested in leading a nonprofit organization. What steps should I take?
+    - How do I start a career in nonprofit management?
+    - Tell me about the process of working in nonprofit management.
+    - I want to work in nonprofit administration. What do I need to know?
+    - Provide guidance on pursuing a career in nonprofit management.
+    - How can I contribute to nonprofit organizations' missions?
+    - I'm considering a career in nonprofit management. What's the first step?
+    - What are the steps to building a career in nonprofit management?
+    - Guide me on the process of pursuing a career in nonprofit management.
+    - Share details about working in nonprofit management.
+    - What are the entry requirements for positions in nonprofit management?
+    - I'm ready to pursue a career in nonprofit management. What should I do next?
+    - Can you assist me with pursuing a career in nonprofit management?
+    - I'm interested in a career in nonprofit management. What's the procedure for starting?
+    - How can I apply for jobs or leadership positions in nonprofit organizations?
+
+- intent: iti_career
+  examples: |
+    - What career opportunities are available after completing ITI?
+    - Can you tell me about the career prospects after ITI?
+    - I'm interested in pursuing a career after completing ITI. What are my options?
+    - What are the career paths for ITI graduates?
+    - What are the different job roles I can explore after completing ITI?
+    - Tell me about the skills required for various ITI career options.
+    - How can I find a job after completing ITI?
+    - What exams or certifications are required for ITI graduates?
+    - Can you provide information about the skills and qualifications needed for ITI careers?
+    - What are the opportunities for advancement after completing ITI?
+    - I want to know more about the job opportunities after ITI.
+    - How can I prepare for a career after completing ITI?
+    - Are there any competitions or events for ITI graduates to showcase their skills?
+    - Share details about the skills and competencies required for different ITI job roles.
+    - What are the challenges faced by ITI graduates in the job market?
+    - Can you suggest some resources for ITI graduates to enhance their skills and knowledge?
+    - I'm considering ITI as a career option. What advice can you give me?
+    - How important is practical experience for ITI graduates, and how can I gain it?
+    - What are the key factors to consider when choosing a career path after completing ITI?
+    - Are there any specific industries or sectors where ITI graduates are in high demand?
+    - How can I specialize in a particular field after completing ITI?
+
+- intent: fitter_career
+  examples: |
+    - I want to pursue a career as a fitter. Can you provide more information?
+    - Tell me about the career prospects for fitters.
+    - What skills are required to become a successful fitter?
+    - Can you provide details on how to become a fitter?
+    - How can I start a career as a fitter?
+    - I want to know more about becoming a fitter.
+    - What exams or competitions are there for aspiring fitters?
+    - Share information about the skills and qualifications needed to become a fitter.
+    - How can I develop my skills as a fitter?
+    - What are the career options for someone interested in fitting and assembling?
+    - I'm passionate about mechanics and want to pursue it as a career. Where should I start?
+    - What are the different types of fitting careers and their paths?
+    - Are there specific educational qualifications required to become a fitter?
+    - How can I improve my technical skills and knowledge in fitting and assembly?
+    - Can you suggest some resources for aspiring fitters to enhance their skills?
+    - What are the key steps to becoming a successful fitter?
+    - Are there any apprenticeship programs available for aspiring fitters?
+    - What are the potential challenges of pursuing a career as a fitter?
+    - I'm considering a career in fitting and assembly. What advice can you give me?
+    - How important is hands-on experience for fitters, and how can I gain practical skills in the field?
+
+- intent: electrician_career
+  examples: |
+    - I want to pursue a career as an electrician. Can you provide more information?
+    - Tell me about the career prospects for electricians.
+    - What skills are required to become a successful electrician?
+    - Can you provide details on how to become an electrician?
+    - How can I start a career as an electrician?
+    - I want to know more about becoming an electrician.
+    - What exams or competitions are there for aspiring electricians?
+    - Share information about the skills and qualifications needed to become an electrician.
+    - How can I develop my skills as an electrician?
+    - What are the career options for someone interested in electrical work?
+    - I'm passionate about electrical work and want to pursue it as a career. Where should I start?
+    - What are the different types of electrical careers and their paths?
+    - Are there specific educational qualifications required to become an electrician?
+    - How can I improve my technical skills and knowledge in electrical work?
+    - Can you suggest some resources for aspiring electricians to enhance their skills?
+    - What are the key steps to becoming a successful electrician?
+    - Are there any apprenticeship programs available for aspiring electricians?
+    - What are the potential challenges of pursuing a career as an electrician?
+    - I'm considering a career in electrical work. What advice can you give me?
+    - How important is hands-on experience for electricians, and how can I gain practical skills in the field?
+
+- intent: mechanic_career
+  examples: |
+    - I'm interested in pursuing a career as a mechanic. Can you provide more information?
+    - What skills do I need to become a successful mechanic?
+    - Tell me about the career prospects for mechanics.
+    - How can I start a career in mechanical engineering?
+    - I want to know more about becoming a mechanic.
+    - What exams or competitions are there for aspiring mechanics?
+    - Share information about the skills and qualifications needed to become a mechanic.
+    - How can I develop my skills as a mechanic?
+    - What are the different types of mechanical careers and their paths?
+    - Can you suggest some resources for aspiring mechanics to enhance their skills?
+    - What are the key steps to becoming a successful mechanic?
+    - Are there any apprenticeship programs available for aspiring mechanics?
+    - What are the potential challenges of pursuing a career as a mechanic?
+    - I'm considering a career in mechanical engineering. What advice can you give me?
+    - How important is hands-on experience for mechanics, and how can I gain practical skills in the field?
+    - What are the educational requirements for becoming a mechanic?
+    - Can you provide information about the certifications available for mechanics?
+    - Are there specific tools or equipment I need to invest in to become a mechanic?
+    - How does technology impact the field of mechanical engineering, and how can I stay updated?
+    - What are some common misconceptions about working as a mechanic?
+
+- intent: welder_career
+  examples: |
+    - I'm interested in pursuing a career as a welder. Can you provide more information?
+    - What skills do I need to become a successful welder?
+    - Tell me about the career prospects for welders.
+    - How can I start a career in welding?
+    - I want to know more about becoming a welder.
+    - What exams or competitions are there for aspiring welders?
+    - Share information about the skills and qualifications needed to become a welder.
+    - How can I develop my skills as a welder?
+    - What are the different types of welding careers and their paths?
+    - Can you suggest some resources for aspiring welders to enhance their skills?
+    - What are the key steps to becoming a successful welder?
+    - Are there any apprenticeship programs available for aspiring welders?
+    - What are the potential challenges of pursuing a career as a welder?
+    - I'm considering a career in welding. What advice can you give me?
+    - How important is hands-on experience for welders, and how can I gain practical skills in the field?
+    - What are the educational requirements for becoming a welder?
+    - Can you provide information about the certifications available for welders?
+    - Are there specific tools or equipment I need to invest in to become a welder?
+    - How does technology impact the field of welding, and how can I stay updated?
+    - What are some common misconceptions about working as a welder?
+
+- intent: carpenter_career
+  examples: |
+    - I'm interested in pursuing a career as a carpenter. Can you provide more information?
+    - What skills do I need to become a successful carpenter?
+    - Tell me about the career prospects for carpenters.
+    - How can I start a career in carpentry?
+    - I want to know more about becoming a carpenter.
+    - What exams or competitions are there for aspiring carpenters?
+    - Share information about the skills and qualifications needed to become a carpenter.
+    - How can I develop my skills as a carpenter?
+    - What are the different types of carpentry careers and their paths?
+    - Can you suggest some resources for aspiring carpenters to enhance their skills?
+    - What are the key steps to becoming a successful carpenter?
+    - Are there any apprenticeship programs available for aspiring carpenters?
+    - What are the potential challenges of pursuing a career as a carpenter?
+    - I'm considering a career in carpentry. What advice can you give me?
+    - How important is hands-on experience for carpenters, and how can I gain practical skills in the field?
+    - What are the educational requirements for becoming a carpenter?
+    - Can you provide information about the certifications available for carpenters?
+    - Are there specific tools or equipment I need to invest in to become a carpenter?
+    - How does technology impact the field of carpentry, and how can I stay updated?
+    - What are some common misconceptions about working as a carpenter?
+
+- intent: get_started
+  examples: |
+    - -------------------------------------------------------------------------------------

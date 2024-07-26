@@ -91,8 +91,8 @@ stories:
     - action: utter_nda_career
     - intent: army_career
     - action: utter_army_career
-    - intent: army_qualifications
-    - action: utter_army_qualifications 
+    - intent: army_qualification
+    - action: utter_army_qualification
 
 
   - story: interactive_story_1
@@ -145,8 +145,8 @@ stories:
     - action: utter_nda_career
     - intent: army_career
     - action: utter_army_career
-    - intent: army_qualifications
-    - action: utter_army_qualifications
+    - intent: army_qualification
+    - action: utter_army_qualification
 
 
 
@@ -209,8 +209,8 @@ stories:
     - action: utter_nda_career
     - intent: navy_career
     - action: utter_navy_career
-    - intent: navy_qualifications
-    - action: utter_navy_qualifications 
+    - intent: navy_qualification
+    - action: utter_navy_qualification 
 
 
   - story: interactive_story_2
@@ -263,8 +263,8 @@ stories:
     - action: utter_nda_career
     - intent: navy_career
     - action: utter_navy_career
-    - intent: navy_qualifications
-    - action: utter_navy_qualifications
+    - intent: navy_qualification
+    - action: utter_navy_qualification
 
 
   - story: yes_airforce_yes
@@ -325,8 +325,8 @@ stories:
     - action: utter_nda_career
     - intent: airforce_career
     - action: utter_airforce_career
-    - intent: airforce_qualifications
-    - action: utter_airforce_qualifications 
+    - intent: airforce_qualification
+    - action: utter_airforce_qualification 
 
 
   - story: interactive_story_3
@@ -379,8 +379,8 @@ stories:
     - action: utter_nda_career
     - intent: airforce_career
     - action: utter_airforce_career
-    - intent: airforce_qualifications
-    - action: utter_airforce_qualifications 
+    - intent: airforce_qualification
+    - action: utter_airforce_qualification 
 
 
 
@@ -1211,8 +1211,8 @@ stories:
     - action: utter_army_navy_airforce_career_paths
     - intent: army_career
     - action: utter_army_career
-    - intent: army_qualifications
-    - action: utter_army_qualifications  
+    - intent: army_qualification
+    - action: utter_army_qualification  
 
 
     
@@ -1235,8 +1235,8 @@ stories:
     - action: utter_army_navy_airforce_career_paths
     - intent: navy_career
     - action: utter_navy_career
-    - intent: navy_qualifications
-    - action: utter_navy_qualifications  
+    - intent: navy_qualification
+    - action: utter_navy_qualification  
 
 
   - story: airforce_story
@@ -1257,8 +1257,8 @@ stories:
     - action: utter_army_navy_airforce_career_paths
     - intent: airforce_career
     - action: utter_airforce_career
-    - intent: airforce_qualifications
-    - action: utter_airforce_qualifications  
+    - intent: airforce_qualification
+    - action: utter_airforce_qualification  
 
 
   - story: army_story_no
@@ -3846,3 +3846,2497 @@ stories:
     - action: utter_hotelm_career
     - intent: no_button_selection
     - action: utter_no_button_selection
+
+
+  - story: yes_player_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '90'
+    - slot_was_set:
+      - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '89'
+    - slot_was_set:
+      - m_sci: '89'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '81'
+    - slot_was_set:
+      - m_ss: '81'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '78'
+    - slot_was_set:
+      - m_eng: '78'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: sports_career
+    - action: utter_sports_career
+    - intent: player_career_paths
+    - action: utter_player_career_paths
+
+
+  - story: yes_coach_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '90'
+    - slot_was_set:
+      - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '89'
+    - slot_was_set:
+      - m_sci: '89'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '81'
+    - slot_was_set:
+      - m_ss: '81'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '78'
+    - slot_was_set:
+      - m_eng: '78'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: sports_career
+    - action: utter_sports_career
+    - intent: coach_career_paths
+    - action: utter_coach_career_paths
+
+  - story: yes_trainer_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '90'
+    - slot_was_set:
+      - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '89'
+    - slot_was_set:
+      - m_sci: '89'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '81'
+    - slot_was_set:
+      - m_ss: '81'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '78'
+    - slot_was_set:
+      - m_eng: '78'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: sports_career
+    - action: utter_sports_career
+    - intent: trainer_career_paths
+    - action: utter_trainer_career_paths
+
+
+  - story: yes_scout_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '90'
+    - slot_was_set:
+      - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '89'
+    - slot_was_set:
+      - m_sci: '89'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '81'
+    - slot_was_set:
+      - m_ss: '81'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '78'
+    - slot_was_set:
+      - m_eng: '78'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: sports_career
+    - action: utter_sports_career
+    - intent: scout_career_paths
+    - action: utter_scout_career_paths
+
+  - story: yes_dietitian_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '90'
+    - slot_was_set:
+      - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '89'
+    - slot_was_set:
+      - m_sci: '89'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '81'
+    - slot_was_set:
+      - m_ss: '81'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '78'
+    - slot_was_set:
+      - m_eng: '78'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: sports_career
+    - action: utter_sports_career
+    - intent: dietitian_career_paths
+    - action: utter_dietitian_career_paths
+
+
+
+
+  - story: yes_artist_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '90'
+    - slot_was_set:
+      - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '89'
+    - slot_was_set:
+      - m_sci: '89'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '81'
+    - slot_was_set:
+      - m_ss: '81'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '78'
+    - slot_was_set:
+      - m_eng: '78'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: creative_career
+    - action: utter_creative_career
+    - intent: artist_career
+    - action: utter_artist_career
+
+  - story: yes_musician_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '90'
+    - slot_was_set:
+      - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '89'
+    - slot_was_set:
+      - m_sci: '89'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '81'
+    - slot_was_set:
+      - m_ss: '81'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '78'
+    - slot_was_set:
+      - m_eng: '78'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: creative_career
+    - action: utter_creative_career
+    - intent: musician_career
+    - action: utter_musician_career
+
+
+  - story: yes_actor_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '90'
+    - slot_was_set:
+      - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '89'
+    - slot_was_set:
+      - m_sci: '89'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '81'
+    - slot_was_set:
+      - m_ss: '81'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '78'
+    - slot_was_set:
+      - m_eng: '78'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: creative_career
+    - action: utter_creative_career
+    - intent: actor_career
+    - action: utter_actor_career
+
+
+  - story: yes_writer_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '90'
+    - slot_was_set:
+      - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '89'
+    - slot_was_set:
+      - m_sci: '89'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '81'
+    - slot_was_set:
+      - m_ss: '81'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '78'
+    - slot_was_set:
+      - m_eng: '78'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: creative_career
+    - action: utter_creative_career
+    - intent: writer_career
+    - action: utter_writer_career
+
+  - story: yes_designer_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '90'
+    - slot_was_set:
+      - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '89'
+    - slot_was_set:
+      - m_sci: '89'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '81'
+    - slot_was_set:
+      - m_ss: '81'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '78'
+    - slot_was_set:
+      - m_eng: '78'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: creative_career
+    - action: utter_creative_career
+    - intent: designer_career
+    - action: utter_designer_career
+
+    
+
+  - story: yes_environmental_science_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '90'
+    - slot_was_set:
+      - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '89'
+    - slot_was_set:
+      - m_sci: '89'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '81'
+    - slot_was_set:
+      - m_ss: '81'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '78'
+    - slot_was_set:
+      - m_eng: '78'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: social_impact_careerpath
+    - action: utter_social_impact_careerpath
+    - intent: environmental_science_careerpath
+    - action: utter_environmental_science_careerpath
+
+  - story: yes_sustainability management_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '90'
+    - slot_was_set:
+      - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '89'
+    - slot_was_set:
+      - m_sci: '89'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '81'
+    - slot_was_set:
+      - m_ss: '81'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '78'
+    - slot_was_set:
+      - m_eng: '78'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: social_impact_careerpath
+    - action: utter_social_impact_careerpath
+    - intent: sustainability_management_careerpath
+    - action: utter_sustainability_management_careerpath
+
+
+  - story: yes_volunteering_community_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '90'
+    - slot_was_set:
+      - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '89'
+    - slot_was_set:
+      - m_sci: '89'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '81'
+    - slot_was_set:
+      - m_ss: '81'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '78'
+    - slot_was_set:
+      - m_eng: '78'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: social_impact_careerpath
+    - action: utter_social_impact_careerpath
+    - intent: volunteering_community_careerpath
+    - action: utter_volunteering_community_careerpath
+
+
+  - story: yes_nonprofit_management_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+      - g_level: 10th
+    - slot_was_set:
+      - g_level: 10th
+    - action: action_get_user_grade
+    - intent: positive_feedback
+    - action: utter_positive_feedback
+    - intent: maths_marks
+      entities:
+      - m_maths: '90'
+    - slot_was_set:
+      - m_maths: '90'
+    - action: action_validate_form_maths
+    - action: utter_maths_marks
+    - intent: science_marks
+      entities:
+      - m_sci: '89'
+    - slot_was_set:
+      - m_sci: '89'
+    - action: action_validate_form_sci
+    - action: utter_science_marks
+    - intent: social_studies_marks
+      entities:
+      - m_ss: '81'
+    - slot_was_set:
+      - m_ss: '81'
+    - action: action_validate_form_ss
+    - action: utter_social_studies_marks
+    - intent: english_marks
+      entities:
+      - m_eng: '78'
+    - slot_was_set:
+      - m_eng: '78'
+    - action: action_validate_form_eng
+    - action: action_career_prediction
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: social_impact_careerpath
+    - action: utter_social_impact_careerpath
+    - intent: nonprofit_management_careerpath
+    - action: utter_nonprofit_management_careerpath
+
+
+  - story: nan
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: nda_career
+    - action: utter_nda_career
+    - intent: army_career
+    - action: utter_army_career
+    - intent: army_qualification
+    - action: utter_army_qualification     
+
+  - story: nay
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: nda_career
+    - action: utter_nda_career
+    - intent: army_career
+    - action: utter_army_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection  
+
+  - story: nnn
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: nda_career
+    - action: utter_nda_career
+    - intent: navy_career
+    - action: utter_navy_career
+    - intent: navy_qualification
+    - action: utter_navy_qualification     
+
+  - story: nny
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: nda_career
+    - action: utter_nda_career
+    - intent: navy_career
+    - action: utter_navy_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection  
+
+  - story: nafn
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: nda_career
+    - action: utter_nda_career
+    - intent: airforce_career
+    - action: utter_airforce_career
+    - intent: airforce_qualification
+    - action: utter_airforce_qualification     
+
+  - story: nafy
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: nda_career
+    - action: utter_nda_career
+    - intent: airforce_career
+    - action: utter_airforce_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection  
+
+  - story: nb
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: barch_career
+    - action: utter_barch_career
+    - intent: barch_qualification
+    - action: utter_barch_qualification   
+
+  - story: nba
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: barch_career
+    - action: utter_barch_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection 
+
+
+  - story: im
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: beng_career
+    - action: utter_beng_career
+    - intent: beng_qualification
+    - action: utter_beng_qualification  
+
+  - story: hu
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: beng_career
+    - action: utter_beng_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection 
+
+  - story: th
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: bca_career
+    - action: utter_bca_career
+    - intent: bca_qualification
+    - action: utter_bca_qualification     
+
+  - story: im2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: bca_career
+    - action: utter_bca_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection 
+
+  - story: av
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: hotelm_career
+    - action: utter_hotelm_career
+    - intent: hotelm_qualification
+    - action: utter_hotelm_qualification
+
+  - story: im3
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcm_careerpath
+    - action: utter_pcm_careerpath
+    - intent: hotelm_career
+    - action: utter_hotelm_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection 
+
+  - story: a
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcb_career_paths
+    - action: utter_pcb_career_paths
+    - intent: mbbs_career
+    - action: utter_mbbs_career
+    - intent: mbbs_qualification
+    - action: utter_mbbs_qualification   
+
+  - story: b
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcb_career_paths
+    - action: utter_pcb_career_paths
+    - intent: mbbs_career
+    - action: utter_mbbs_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection 
+
+  - story: c
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcb_career_paths
+    - action: utter_pcb_career_paths
+    - intent: bsc_nursing_career
+    - action: utter_bsc_nursing_career
+    - intent: bsc_nursing_qualification
+    - action: utter_bsc_nursing_qualification
+
+  - story: d
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcb_career_paths
+    - action: utter_pcb_career_paths
+    - intent: bsc_nursing_career
+    - action: utter_bsc_nursing_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection 
+
+
+  - story: e
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcb_career_paths
+    - action: utter_pcb_career_paths
+    - intent: bvsc_career
+    - action: utter_bvsc_career
+    - intent: bvsc_qualification
+    - action: utter_bvsc_qualification
+
+  - story: f
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcb_career_paths
+    - action: utter_pcb_career_paths
+    - intent: bvsc_career
+    - action: utter_bvsc_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection 
+
+  - story: g
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcb_career_paths
+    - action: utter_pcb_career_paths
+    - intent: bsc_bmbzc_career
+    - action: utter_bsc_bmbzc_career
+    - intent: bsc_bmbzc_qualification
+    - action: utter_bsc_bmbzc_qualification  
+
+  - story: h
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcb_career_paths
+    - action: utter_pcb_career_paths
+    - intent: bsc_bmbzc_career
+    - action: utter_bsc_bmbzc_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection 
+
+  - story: i
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: bscdt_career
+    - action: utter_bscdt_career
+    - intent: bscdt_qualification
+    - action: utter_bscdt_qualification  
+
+  - story: j
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: bscdt_career
+    - action: utter_bscdt_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection 
+
+  - story: k
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: bop_career
+    - action: utter_bop_career
+    - intent: bop_qualification
+    - action: utter_bop_qualification  
+
+  - story: l
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: bop_career
+    - action: utter_bop_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection 
+
+  - story: m
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: btech_agri_career
+    - action: utter_btech_agri_career
+    - intent: btech_agri_qualification
+    - action: utter_btech_agri_qualification  
+
+  - story: nn
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: btech_agri_career
+    - action: utter_btech_agri_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection 
+
+  - story: o
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: bscbt_career
+    - action: utter_bscbt_career
+    - intent: bscbt_qualification
+    - action: utter_bscbt_qualification  
+
+  - story: p
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: bscbt_career
+    - action: utter_bscbt_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection 
+
+  - story: q
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: bsc_agri_career
+    - action: utter_bsc_agri_career
+    - intent: bsc_agri_qualification
+    - action: utter_bsc_agri_qualification  
+
+  - story: r
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: science_subject_combination
+    - action: utter_science_subject_combination
+    - intent: pcmb_career_paths
+    - action: utter_pcmb_career_paths
+    - intent: bsc_agri_career
+    - action: utter_bsc_agri_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection 
+
+  - story: s
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: caf_career
+    - action: utter_caf_career
+    - intent: caf_qualification
+    - action: utter_caf_qualification
+
+
+  - story: t
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: caf_career
+    - action: utter_caf_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story: u
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: bc_career
+    - action: utter_bc_career
+    - intent: bc_qualification
+    - action: utter_bc_qualification
+
+
+  - story: v
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: bc_career
+    - action: utter_bc_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story: w
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: bba_career
+    - action: utter_bba_career
+    - intent: bba_qualification
+    - action: utter_bba_qualification
+
+
+  - story: x
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: bba_career
+    - action: utter_bba_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+
+  - story: yzy
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: bba_career
+    - action: utter_bba_career
+    - intent: bba_qualification
+    - action: utter_bba_qualification
+
+
+  - story: z 
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: bba_career
+    - action: utter_bba_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story: aa
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: csf_career
+    - action: utter_csf_career
+    - intent: csf_qualification
+    - action: utter_csf_qualification
+
+
+  - story: bb
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: csf_career
+    - action: utter_csf_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story: cc
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: bca_career
+    - action: utter_bca_career
+    - intent: bca_qualification
+    - action: utter_bca_qualification
+
+
+  - story: dd
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: bca_career
+    - action: utter_bca_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story: ee
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: barch_career
+    - action: utter_barch_career
+    - intent: barch_qualification
+    - action: utter_barch_qualification
+
+
+  - story: ff
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: barch_career
+    - action: utter_barch_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story: gg
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: dedt_career
+    - action: utter_dedt_career
+    - intent: dedt_qualification
+    - action: utter_dedt_qualification
+
+
+  - story: hh
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: dedt_career
+    - action: utter_dedt_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story: ii
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: hotelm_career
+    - action: utter_hotelm_career
+    - intent: hotelm_qualification
+    - action: utter_hotelm_qualification
+
+
+  - story: jj
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: commerce_subject_combination
+    - action: utter_commerce_subject_combination
+    - intent: hotelm_career
+    - action: utter_hotelm_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story: kk
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: dedt_career
+    - action: utter_dedt_career
+    - intent: dedt_qualification
+    - action: utter_dedt_qualification
+
+  - story: ll
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: dedt_career
+    - action: utter_dedt_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story: mm
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: llb_career
+    - action: utter_llb_career
+    - intent: llb_qualification
+    - action: utter_llb_qualification
+
+  - story: nnnn
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: llb_career
+    - action: utter_llb_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story: oo
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: fdd_career
+    - action: utter_fdd_career
+    - intent: fdd_qualification
+    - action: utter_fdd_qualification
+
+  - story: pp
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: fdd_career
+    - action: utter_fdd_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story: qq
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: ba_career
+    - action: utter_ba_career
+    - intent: ba_qualification
+    - action: utter_ba_qualification
+
+  - story: rr
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: ba_career
+    - action: utter_ba_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story: ss
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: bba_career
+    - action: utter_bba_career
+    - intent: bba_qualification
+    - action: utter_bba_qualification
+
+  - story: tt
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: bba_career
+    - action: utter_bba_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+  - story: uu
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: barch_career
+    - action: utter_barch_career
+    - intent: barch_qualification
+    - action: utter_barch_qualification
+
+  - story: vv
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: arts_subject_combination
+    - action: utter_arts_subject_combination
+    - intent: barch_career
+    - action: utter_barch_career
+    - intent: no_button_selection
+    - action: utter_no_button_selection
+
+
+  - story: no_player_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: sports_career
+    - action: utter_sports_career
+    - intent: player_career_paths
+    - action: utter_player_career_paths
+
+
+  - story: no_coach_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: sports_career
+    - action: utter_sports_career
+    - intent: coach_career_paths
+    - action: utter_coach_career_paths
+
+  - story: no_trainer_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: sports_career
+    - action: utter_sports_career
+    - intent: trainer_career_paths
+    - action: utter_trainer_career_paths
+
+
+  - story: no_scout_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: sports_career
+    - action: utter_sports_career
+    - intent: scout_career_paths
+    - action: utter_scout_career_paths
+
+  - story: no_dietitian_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: sports_career
+    - action: utter_sports_career
+    - intent: dietitian_career_paths
+    - action: utter_dietitian_career_paths
+
+  - story: no_artist_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: creative_career
+    - action: utter_creative_career
+    - intent: artist_career
+    - action: utter_artist_career
+
+  - story: no_musician_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: creative_career
+    - action: utter_creative_career
+    - intent: musician_career
+    - action: utter_musician_career
+
+
+  - story: no_actor_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: creative_career
+    - action: utter_creative_career
+    - intent: actor_career
+    - action: utter_actor_career
+
+
+  - story: no_writer_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: creative_career
+    - action: utter_creative_career
+    - intent: writer_career
+    - action: utter_writer_career
+
+  - story: no_designer_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: creative_career
+    - action: utter_creative_career
+    - intent: designer_career
+    - action: utter_designer_career
+
+    
+
+  - story: no_environmental_science_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: social_impact_careerpath
+    - action: utter_social_impact_careerpath
+    - intent: environmental_science_careerpath
+    - action: utter_environmental_science_careerpath
+
+  - story: no_sustainability management_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: social_impact_careerpath
+    - action: utter_social_impact_careerpath
+    - intent: sustainability_management_careerpath
+    - action: utter_sustainability_management_careerpath
+
+
+  - story: no_volunteering_community_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: social_impact_careerpath
+    - action: utter_social_impact_careerpath
+    - intent: volunteering_community_careerpath
+    - action: utter_volunteering_community_careerpath
+
+
+  - story: no_nonprofit_management_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: extracurricular_career_combination
+    - action: utter_extracurricular_career_combination
+    - intent: social_impact_careerpath
+    - action: utter_social_impact_careerpath
+    - intent: nonprofit_management_careerpath
+    - action: utter_nonprofit_management_careerpath
+
+
+  - story: fitter_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: iti_career
+    - action: utter_iti_career
+    - intent: fitter_career
+    - action: utter_fitter_career  
+
+  - story: electrician_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: iti_career
+    - action: utter_iti_career
+    - intent: electrician_career
+    - action: utter_electrician_career
+
+  - story: mechanic_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: iti_career
+    - action: utter_iti_career
+    - intent: mechanic_career
+    - action: utter_mechanic_career
+
+  - story: carpenter_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: iti_career
+    - action: utter_iti_career
+    - intent: carpenter_career
+    - action: utter_carpenter_career
+
+  - story: welder_career
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_career_guidance
+    - action: utter_get_career_guidance
+    - intent: get_user_grade
+      entities:
+        - g_level: 10th
+    - slot_was_set:
+        - g_level: 10th
+    - action: action_get_user_grade
+    - intent: negative_feedback
+    - action: utter_negative_feedback
+    - intent: iti_career
+    - action: utter_iti_career
+    - intent: welder_career
+    - action: utter_welder_career
+
+
+  - story: get_started
+    steps:
+      - intent: get_started
+      - action: utter_get_started

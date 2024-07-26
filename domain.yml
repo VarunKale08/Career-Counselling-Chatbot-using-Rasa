@@ -1,80 +1,103 @@
 version: '3.1'
 intents:
+- get_started
+- actor_career
 - airforce_career
-- airforce_qualifications
+- airforce_qualification
 - army_career
 - army_navy_airforce_career_paths
-- army_qualifications
+- army_qualification
+- artist_career
+- arts_subject_combination
+- ba_career
+- ba_qualification
 - barch_career
 - barch_qualification
+- bba_career
+- bba_qualification
+- bc_career
+- bc_qualification
 - bca_career
 - bca_qualification
 - beng_career
 - beng_qualification
+- bop_career
+- bop_qualification
+- bsc_agri_career
+- bsc_agri_qualification
+- bsc_bmbzc_career
+- bsc_bmbzc_qualification
+- bsc_nursing_career
+- bsc_nursing_qualification
+- bscbt_career
+- bscbt_qualification
+- bscdt_career
+- bscdt_qualification
+- btech_agri_career
+- btech_agri_qualification
+- bvsc_career
+- bvsc_qualification
+- caf_career
+- caf_qualification
+- coach_career_paths
+- commerce_subject_combination
+- creative_career
+- csf_career
+- csf_qualification
+- dedt_career
+- dedt_qualification
+- designer_career
+- dietitian_career_paths
 - english_marks
+- environmental_science_careerpath
+- extracurricular_career_combination
+- fdd_career
+- fdd_qualification
 - get_career_guidance
 - get_user_grade
 - greet
 - hotelm_career
 - hotelm_qualification
+- llb_career
+- llb_qualification
 - maths_marks
+- mbbs_career
+- mbbs_qualification
+- musician_career
 - navy_career
-- navy_qualifications
+- navy_qualification
 - nda_career
 - negative_feedback
 - nlu_fallback
 - no_button_selection
+- nonprofit_management_careerpath
 - pcb_career_paths
 - pcm_careerpath
 - pcmb_career_paths
+- player_career_paths
 - positive_feedback
 - science_marks
 - science_subject_combination
+- scout_career_paths
+- social_impact_careerpath
 - social_studies_marks
-- mbbs_career
-- mbbs_qualification
-- bsc_nursing_career
-- bsc_nursing_qualification
-- bvsc_career
-- bvsc_qualification
-- bsc_bmbzc_career
-- bsc_bmbzc_qualification
-- bscdt_career
-- bscdt_qualification
-- bop_career
-- bop_qualification
-- btech_agri_career
-- btech_agri_qualification
-- bscbt_career
-- bscbt_qualification
-- bsc_agri_career
-- bsc_agri_qualification
-- dedt_career
-- dedt_qualification
-- llb_career
-- llb_qualification
-- fdd_career
-- fdd_qualification
-- ba_career
-- ba_qualification
-- bba_career
-- bba_qualification
-- caf_career
-- caf_qualification
-- bc_career
-- bc_qualification
-- csf_career
-- csf_qualification
-- arts_subject_combination
-- commerce_subject_combination
-
-
+- sports_career
+- sustainability_management_careerpath
+- trainer_career_paths
+- volunteering_community_careerpath
+- writer_career
+- iti_career
+- fitter_career
+- electrician_career
+- mechanic_career
+- welder_career
+- carpenter_career
 entities:
-- m_ss
-- m_eng
 - m_maths
 - m_sci
+- m_ss
 - g_level
+- m_eng
 slots:
   g_level:
     type: text
@@ -107,37 +130,41 @@ slots:
     - type: from_entity
       entity: m_eng
 actions:
-- action_validate_form_eng
-- action_validate_form_maths
-- action_career_prediction
-- utter_greet
-- utter_pcm_careerpath
-- utter_get_career_guidance
-- utter_science_subject_combination
-- utter_social_studies_marks
-- utter_science_marks
-- utter_army_career
-- utter_army_qualifications
 - utter_positive_feedback
-- action_get_user_grade
-- action_validate_form_ss
+- utter_sports_career
 - action_validate_form_sci
-- utter_nda_career
+- utter_greet
 - utter_maths_marks
+- utter_creative_career
+- utter_social_studies_marks
+- action_validate_form_maths
+- action_validate_form_ss
+- utter_extracurricular_career_combination
+- utter_get_career_guidance
+- utter_science_marks
+- utter_player_career_paths
+- action_career_prediction
+- action_validate_form_eng
+- action_get_user_grade
+- utter_science_subject_combination
+- utter_pcm_careerpath
+- utter_beng_career
 - utter_negative_feedback
+- utter_beng_qualification
+- utter_army_career
+- utter_army_qualification
+- utter_nda_career
 - utter_please_rephrase
 - utter_army_navy_airforce_career_paths
 - utter_pcb_career_paths
 - utter_pcmb_career_paths
 - utter_navy_career
-- utter_navy_qualifications
+- utter_navy_qualification
 - utter_airforce_career
-- utter_airforce_qualifications
+- utter_airforce_qualification
 - utter_no_button_selection
 - utter_barch_career
 - utter_barch_qualification
-- utter_beng_career
-- utter_beng_qualification
 - utter_bca_career
 - utter_bca_qualification
 - utter_hotelm_career
@@ -178,8 +205,30 @@ actions:
 - utter_csf_qualification
 - utter_arts_subject_combination
 - utter_commerce_subject_combination
-
+- utter_nonprofit_management_careerpath
+- utter_volunteering_community_careerpath
+- utter_sustainability_management_careerpath
+- utter_environmental_science_careerpath
+- utter_social_impact_careerpath
+- utter_designer_career
+- utter_writer_career
+- utter_actor_career
+- utter_musician_career
+- utter_artist_career
+- utter_dietitian_career_paths
+- utter_scout_career_paths
+- utter_trainer_career_paths
+- utter_coach_career_paths
+- utter_iti_career
+- utter_fitter_career
+- utter_electrician_career
+- utter_mechanic_career
+- utter_welder_career
+- utter_carpenter_career
+- utter_get_started
 responses:
+  utter_get_started:
+  - text: Say Hi to get started.
   utter_greet:
   - text: Hello! Welcome to our career counseling chat. I'm here to help you explore and navigate various career paths. How can I assist you today?
   utter_get_career_guidance:
@@ -198,17 +247,15 @@ responses:
     - title: Science
       payload: /science_subject_combination
     - title: Commerce
-      payload: /
+      payload: /commerce_subject_combination
     - title: Arts
-      payload: /
+      payload: /arts_subject_combination
     - title: Army/Navy/Police officer
       payload: /army_navy_airforce_career_paths
-    - title: Diploma
-      payload: /
-    - title: Government clerk
-      payload: /
     - title: ITI
-      payload: /
+      payload: /iti_career
+    - title: Extra Curricular
+      payload: /extracurricular_career_combination
   utter_science_subject_combination:
   - text: |-
       Great to hear about your interest in science! To provide more tailored guidance, could you please specify your preferred subject combination:
@@ -235,8 +282,8 @@ responses:
       payload: /mbbs_career
     - title: B.Sc. Nursing
       payload: /bsc_nursing_career
-    - title: Bachelor of Veterinary Science (B.V.Sc.) 
-      payload: /bvsc_career  
+    - title: Bachelor of Veterinary Science (B.V.Sc.)
+      payload: /bvsc_career
     - title: B.Sc. in Botany, Microbiology, Biology, Zoology, or Chemistry
       payload: /bsc_bmbzc_career
   utter_pcm_careerpath:
@@ -268,11 +315,11 @@ responses:
       payload: /bscdt_career
     - title: Bachelor of Pharmacy
       payload: /bop_career
-    - title: B.Tech in Agriculture  
-      payload: /btech_agri_career  
-    - title: B.Sc in BioTechnology 
+    - title: B.Tech in Agriculture
+      payload: /btech_agri_career
+    - title: B.Sc in BioTechnology
       payload: /bscbt_career
-    - title: B.Sc in Agriculture 
+    - title: B.Sc in Agriculture
       payload: /bsc_agri_career
   utter_please_rephrase:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
@@ -308,10 +355,10 @@ responses:
       Are you interested in learning about the qualifications needed and the exams required for joining the army?(Yes/No)
     buttons:
     - title: Yes
-      payload: /army_qualifications
+      payload: /army_qualification
     - title: No
       payload: /no_button_selection
-  utter_army_qualifications:
+  utter_army_qualification:
   - text: |-
       To join the Army, you'll need to meet certain qualifications and pass specific exams. Here's what you need to know:
 
@@ -344,10 +391,10 @@ responses:
       Are you interested in learning about the qualifications needed and the exams required for joining the navy? (Yes/No)
     buttons:
     - title: Yes
-      payload: /navy_qualifications
+      payload: /navy_qualification
     - title: No
       payload: /no_button_selection
-  utter_navy_qualifications:
+  utter_navy_qualification:
   - text: |-
       To join the Navy, you'll need to meet specific qualifications and pass required exams. Here's what you need to know:
 
@@ -381,10 +428,10 @@ responses:
       Are you interested in learning about the qualifications needed and the exams required for joining the Air Force? (Yes/No)
     buttons:
     - title: Yes
-      payload: /airforce_qualifications
+      payload: /airforce_qualification
     - title: No
       payload: /no_button_selection
-  utter_airforce_qualifications:
+  utter_airforce_qualification:
   - text: |-
       Joining the Air Force requires meeting specific qualifications and passing exams. Here's what you need to know:
 
@@ -584,7 +631,6 @@ responses:
       3)Additionally, some institutions may conduct their own entrance exams or interviews to assess the candidate's aptitude, problem-solving skills, and suitability for a career in medicine.
 
       It's essential to research the specific requirements and admission procedures of the institutions you're interested in applying to and prepare accordingly for the entrance exams. Additionally, staying updated with the latest exam patterns, syllabi, and preparation strategies can enhance your chances of success in securing admission to an MBBS program.
-
   utter_bsc_nursing_career:
   - text: |-
       A B.Sc. Nursing degree is a 3-4 year undergraduate program that prepares individuals for roles in healthcare. It combines theoretical knowledge with practical training in nursing practices. Students learn about anatomy, physiology, pharmacology, and nursing techniques. Clinical rotations in hospitals or healthcare facilities provide hands-on experience. Graduates of B.Sc. Nursing programs can pursue diverse career paths in areas such as hospitals, clinics, community health centers, and more. If you're passionate about healthcare and helping others, a B.Sc. Nursing degree can lead to a fulfilling career as a registered nurse or in various healthcare roles.
@@ -630,7 +676,7 @@ responses:
       Exams:
       1)Entrance exams: Many universities or veterinary colleges conduct entrance exams specifically for admission to B.V.Sc. programs. These exams may assess your proficiency in Biology, Chemistry, and Physics, along with general aptitude and reasoning skills.
       2) Some institutions may accept scores from broader entrance exams like National Eligibility cum Entrance Test (NEET) or other national or state-level entrance exams.
-      
+
       Additionally, specific requirements and admission procedures may vary depending on the institution and country where you plan to pursue your Bachelor of Veterinary Science degree. It's advisable to check with the admissions office of your chosen program for the most accurate information regarding qualifications and exams.
   utter_bsc_bmbzc_career:
   - text: |-
@@ -710,7 +756,7 @@ responses:
       Exams:
       1) Entrance exams: Many universities or colleges offering B.Pharm programs may conduct entrance exams specifically for admission. These exams may assess your proficiency in science subjects and general aptitude. Examples of such exams include Pharmacy College Admission Test (PCAT), Graduate Pharmacy Aptitude Test (GPAT), or university-specific entrance exams.
       2) Some institutions may accept scores from broader entrance exams like National Eligibility cum Entrance Test (NEET) or other national or state-level entrance exams if they include relevant science subjects.
-      
+
       Additionally, specific requirements and admission procedures may vary depending on the institution and country where you plan to pursue your Bachelor of Pharmacy degree. It's advisable to check with the admissions office of your chosen program for the most accurate and up-to-date information regarding qualifications and exams.
   utter_btech_agri_career:
   - text: |-
@@ -762,7 +808,7 @@ responses:
 
       Exams:
       1) Entrance exams: Many universities or colleges offering B.Sc in Biotechnology programs may conduct entrance exams specifically for admission. These exams may assess your proficiency in science subjects and general aptitude. Examples of such exams include Biology, Chemistry, and Mathematics proficiency tests, Graduate Aptitude Test in Engineering (GATE), Biology, Chemistry, and Mathematics proficiency tests, or university-specific entrance exams.
-      
+
       Additionally, specific requirements and admission procedures may vary depending on the institution and country where you plan to pursue your B.Sc in Biotechnology degree. It's advisable to check with the admissions office of your chosen program for the most accurate and up-to-date information regarding qualifications and exams.
   utter_bsc_agri_career:
   - text: |-
@@ -794,21 +840,20 @@ responses:
     buttons:
     - title: C.A. Foundation
       payload: /caf_career
-    - title: Bachelor in Commerce 
+    - title: Bachelor in Commerce
       payload: /bc_career
     - title: Bachelor of Business Administration
       payload: /bba_career
     - title: C.S. Foundation
       payload: /csf_career
-    - title: Bachelor's in Computer Applications 
+    - title: Bachelor's in Computer Applications
       payload: /bca_career
     - title: Bachelor of Architecture
       payload: /barch_career
     - title: Diploma in Education
-      payload: /dedt_qualification
+      payload: /dedt_career
     - title: Hotel Management Degree
       payload: /hotelm_career
-
   utter_caf_career:
   - text: |-
       The C.A. Foundation is the first level in the Chartered Accountancy (C.A.) course and serves as a stepping stone toward a rewarding career as a Chartered Accountant. Upon successfully completing the C.A. Foundation exam, individuals can pursue various career pathways in the field of accounting, finance, and business. They can work as accounting professionals, auditors, financial analysts, tax consultants, or even start their own accounting firms. Additionally, clearing the C.A. Foundation opens up opportunities for further advancement in the Chartered Accountancy course, leading to becoming a fully qualified Chartered Accountant.
@@ -824,7 +869,6 @@ responses:
       payload: /caf_qualification
     - title: No
       payload: /no_button_selection
-
   utter_caf_qualification:
   - text: |-
       To enroll in the C.A. Foundation and embark on the journey to becoming a Chartered Accountant, you typically need to meet the following qualifications and criteria:
@@ -836,8 +880,6 @@ responses:
       Exams:
       C.A. Foundation exam: The main requirement for enrolling in the C.A. Foundation is to pass the C.A. Foundation exam conducted by the Institute of Chartered Accountants of India (ICAI). This exam assesses candidates' understanding of fundamental concepts in accounting, economics, law, and quantitative aptitude.
       It's advisable to check with the relevant regulatory body or the ICAI for the most accurate information regarding qualifications and exams.
-
-
   utter_bc_career:
   - text: |-
       A Bachelor's in Commerce (B. Com) degree is a 3-year undergraduate program that offers a wide range of career opportunities in the fields of commerce, accounting, finance, and business management. Graduates of this program can pursue diverse career pathways across different sectors. They can work in roles such as accountant, financial analyst, auditor, tax consultant, business analyst, or bank officer. Additionally, they may also explore opportunities in areas such as investment banking, corporate finance, management consulting, or entrepreneurship. The B. Com degree provides a strong foundation for building a successful career in the business and financial sectors.
@@ -855,7 +897,6 @@ responses:
       payload: /bc_qualification
     - title: No
       payload: /no_button_selection
-
   utter_bc_qualification:
   - text: |-
       To enroll in a Bachelor's in Commerce (B. Com) program and pursue a career in commerce, accounting, finance, or business management, you typically need to meet the following qualifications and criteria:
@@ -869,7 +910,6 @@ responses:
       1) Entrance exams: Some universities or colleges may require you to take specific entrance exams to assess your aptitude for commerce studies. However, entrance exams are not mandatory for all B. Com programs.
       2) Some institutions may have their own entrance exams, while others may consider scores from broader entrance exams like the Common Entrance Test (CET) or other relevant state-level exams.
       It's advisable to check with the admissions office of your chosen program for the most accurate information regarding qualifications and exams.
-
   utter_csf_career:
   - text: |-
       The Company Secretary (C.S.) Foundation serves as the first step towards a rewarding career as a Company Secretary, providing individuals with a strong foundation in corporate governance and related fields. Upon successfully completing the C.S. Foundation exam, individuals can pursue various career pathways in the corporate sector, legal firms, financial institutions, or government organizations. They can work as Company Secretaries, corporate governance professionals, legal advisors, compliance officers, or in managerial roles within companies. Additionally, clearing the C.S. Foundation opens up opportunities for further advancement in the Company Secretaryship course, leading to becoming a fully qualified Company Secretary.
@@ -886,7 +926,6 @@ responses:
       payload: /csf_qualification
     - title: No
       payload: /no_button_selection
-
   utter_csf_qualification:
   - text: |-
       To enroll in the Company Secretary (C.S.) Foundation program and begin your journey towards becoming a Company Secretary, you typically need to meet the following qualifications and criteria:
@@ -899,8 +938,6 @@ responses:
       Exams:
       1) C.S. Foundation exam: The main requirement for enrolling in the C.S. Foundation program is to pass the C.S. Foundation exam conducted by the Institute of Company Secretaries of India (ICSI). This exam assesses candidates' understanding of business environment, legal aspects, and communication skills.
       It's advisable to check with the relevant regulatory body or the ICSI for the most accurate information regarding qualifications and exams.
-
-
   utter_arts_subject_combination:
   - text: |-
       Arts encompasses a diverse range of disciplines including literature, history, sociology, psychology, and more. It explores human expression, creativity, and the complexities of society and culture.
@@ -910,7 +947,7 @@ responses:
       payload: /dedt_career
     - title: Bachelor of Legislative Law (L.L.B.)
       payload: /llb_career
-    - title: Fashion Designing Diploma 
+    - title: Fashion Designing Diploma
       payload: /fdd_career
     - title: Bachelor in Arts (B.A.)
       payload: /ba_career
@@ -918,7 +955,6 @@ responses:
       payload: /bba_career
     - title: Bachelor of Architecture (B.Arch.)
       payload: /barch_career
-
   utter_dedt_career:
   - text: |-
       A Diploma in Education (D.Ed.) is a 2-year program designed to train individuals to become qualified teachers. Graduates of this program can pursue various career opportunities in the field of education. They can work as primary or secondary school teachers in both public and private educational institutions. Additionally, they may also explore roles such as educational consultants, curriculum developers, teacher trainers, or education administrators.
@@ -936,7 +972,6 @@ responses:
       payload: /dedt_qualification
     - title: No
       payload: /no_button_selection
-
   utter_dedt_qualification:
   - text: |-
       To enroll in a Diploma in Education (D.Ed.) program and become a trained teacher, you typically need to meet the following detailed qualifications and criteria:
@@ -945,13 +980,12 @@ responses:
       1) Higher secondary education: You must have completed secondary education (12th grade or equivalent) with a strong academic record. Most institutions require a minimum percentage in your higher secondary exams, often around 50% or above.
       2) Subject prerequisites: Some D.Ed. programs may have specific subject requirements, particularly in areas related to education, humanities, or social sciences.
       3) Teaching aptitude: Candidates with a genuine interest in teaching and a passion for working with children are preferred. Some programs may assess teaching aptitude through interviews or written tests.
-      
+
       Exams:
       1)Entrance exams: Many D.Ed. Teacher programs may conduct entrance exams specifically for admission. These exams assess your teaching aptitude, subject knowledge, and general aptitude. Examples of such exams include the Teacher Eligibility Test (TET), State Level Eligibility Test (SLET), or university-specific entrance exams.
       2) Additionally, some institutions may accept scores from broader entrance exams like the Common Entrance Test (CET) or other relevant state-level exams.
-      
-      It's advisable to check with the admissions office of your chosen program for the most accurate and up-to-date information regarding qualifications and exams.
 
+      It's advisable to check with the admissions office of your chosen program for the most accurate and up-to-date information regarding qualifications and exams.
   utter_llb_career:
   - text: |-
       The L.L.B. Foundation (Bachelor of Legislative Law) is a 5-year undergraduate program that provides a strong foundation in various aspects of legal studies, preparing individuals for a career in law. Graduates of this program can pursue diverse career opportunities in the legal field. They can work as lawyers, legal advisors, legal researchers, corporate counsels, judges, or pursue careers in academia or public policy. Additionally, they may also explore roles in fields such as legal journalism, human rights advocacy, or legal consulting.
@@ -970,7 +1004,6 @@ responses:
       payload: /llb_qualification
     - title: No
       payload: /no_button_selection
-
   utter_llb_qualification:
   - text: |-
       To enroll in an L.L.B. Foundation (Bachelor of Legislative Law) program and embark on a journey in law, you typically need to meet the following detailed qualifications and criteria:
@@ -983,9 +1016,8 @@ responses:
       Exams:
       1) Entrance exams: Many L.L.B. Foundation programs may conduct entrance exams specifically for admission. These exams assess your aptitude for legal studies, analytical skills, and language proficiency. Examples of such exams include the Common Law Admission Test (CLAT), All India Law Entrance Test (AILET), or university-specific entrance exams.
       2) Additionally, some institutions may also consider scores from broader entrance exams like the Common Entrance Test (CET) or other relevant state-level exams.
-      
-      It's advisable to check with the admissions office of your chosen program for the most accurate and up-to-date information regarding qualifications and exams.
 
+      It's advisable to check with the admissions office of your chosen program for the most accurate and up-to-date information regarding qualifications and exams.
   utter_fdd_career:
   - text: |-
       A Fashion Designing Diploma is a 3-year program that opens up various career opportunities in the dynamic fashion industry. Graduates of this program can pursue roles such as fashion designer, apparel merchandiser, fashion stylist, textile designer, fashion illustrator, pattern maker, or fashion consultant. They can work in fashion houses, clothing manufacturing companies, retail stores, or start their own fashion labels. Additionally, they may also explore opportunities in fashion journalism, fashion marketing, or fashion event management.
@@ -1002,7 +1034,6 @@ responses:
       payload: /fdd_qualification
     - title: No
       payload: /no_button_selection
-
   utter_fdd_qualification:
   - text: |-
       To enroll in a Fashion Designing Diploma program and embark on a journey in the creative world of fashion, you typically need to meet the following qualifications and criteria:
@@ -1016,7 +1047,6 @@ responses:
       1) Entrance exams: Some Fashion Designing Diploma programs may require you to take specific entrance exams to assess your aptitude for design and creativity. These exams may include a design aptitude test or a personal interview to evaluate your artistic abilities and passion for fashion.
 
       It's advisable to check with the admissions office of your chosen program for the most accurate information regarding qualifications and exams.
-
   utter_ba_career:
   - text: |-
       A Bachelor in Arts (B.A.) degree is a traditional 3-year undergraduate program that offers a wide range of career opportunities across various fields. Graduates of this program can pursue diverse career pathways based on their chosen specialization. They can work in fields such as education, journalism, public relations, social work, human resources, marketing, or business administration. Additionally, they may also explore opportunities in government agencies, non-profit organizations, or pursue further studies in areas such as law, psychology, or social sciences.
@@ -1033,7 +1063,6 @@ responses:
       payload: /ba_qualification
     - title: No
       payload: /no_button_selection
-
   utter_ba_qualification:
   - text: |-
       To enroll in a Bachelor in Arts (B.A.) program and embark on a journey in the field of humanities and social sciences, you typically need to meet the following qualifications and criteria:
@@ -1047,7 +1076,6 @@ responses:
       1) Entrance exams: While many B.A. programs do not require specific entrance exams, some institutions may conduct entrance exams or interviews to assess your aptitude for the chosen field of study. These exams may include general aptitude tests or subject-specific tests, depending on the program and institution.
 
       It's advisable to check with the admissions office of your chosen program for the most accurate information regarding qualifications and exams.
-
   utter_bba_career:
   - text: |-
       A Bachelor of Business Administration (B.B.A.) degree is a 2-year undergraduate program that offers various career opportunities in the field of business, management, and entrepreneurship. Graduates of this program can pursue diverse career pathways across different sectors. They can work as business analysts, management consultants, marketing executives, financial analysts, human resource managers, or operations managers in corporations, government agencies, non-profit organizations, or start their own businesses. Additionally, they may also explore opportunities in fields such as finance, sales, supply chain management, or international business.
@@ -1061,11 +1089,10 @@ responses:
       5. Operations Manager: Overseeing daily operations, optimizing processes, and ensuring efficiency within businesses.
       Would you like to know about the qualifications required and the process for enrolling in a B.B.A. (Bachelor of Business Administration) ? (Yes/No)
     buttons:
-      - title: Yes
-        payload: /bba_qualification
-      - title: No
-        payload: /no_button_selection
-
+    - title: Yes
+      payload: /bba_qualification
+    - title: No
+      payload: /no_button_selection
   utter_bba_qualification:
   - text: |-
       To enroll in a B.B.A. (Bachelor of Business Administration) program and kickstart your journey in the field of business and management, you typically need to meet the following qualifications and criteria:
@@ -1079,8 +1106,434 @@ responses:
       1) Entrance exams: Many B.B.A. programs require you to take specific entrance exams to assess your aptitude for business studies. Common entrance exams include the BBA entrance exam conducted by various universities or institutes. Some institutions may also consider scores from broader entrance exams like the Common Entrance Test (CET) or other relevant state-level exams.
 
       It's advisable to check with the admissions office of your chosen program for the most accurate information regarding qualifications and exams.
+  utter_extracurricular_career_combination:
+  - text: |-
+      That's fantastic! Extracurricular activities can greatly shape your career path. Please choose your preferred combination:
 
+      Arts and Creative Fields: Explore your passion for creativity through various mediums such as visual arts, performing arts, literature, and design, unlocking opportunities in fields like graphic design, filmmaking, writing, and fine arts.
 
+      Sports and Fitness: Dive into the world of physical activity, sportsmanship, and health. Whether it's through playing sports, coaching, personal training, or sports management, this field offers avenues for competition, fitness, and community engagement.
+
+      Entrepreneurship and Business: Venture into the dynamic realm of innovation, leadership, and commerce. From starting your own business to working in management, marketing, finance, or consulting, entrepreneurship and business present opportunities for growth, risk-taking, and shaping economic landscapes.
+
+      Environmental and Sustainability: Embrace the responsibility of safeguarding our planet and its resources. Careers in environmental science, conservation, sustainable development, renewable energy, and green technology address pressing global challenges and advocate for a more sustainable future.
+
+      Feel free to select the option that aligns with your interests, and I'll provide information accordingly.
+    buttons:
+    - title: Arts and Creative Fields
+      payload: /creative_career
+    - title: Sports and Fitness
+      payload: /sports_career
+    - title: Social Impact
+      payload: /social_impact_careerpath
+  utter_sports_career:
+  - text: |-
+      Exciting to hear about your interest in sports! To provide more personalized guidance, could you please specify your preferred role:
+      Player: As a player, you'll be directly involved in the sport, honing your skills and competing at various levels.
+      Coach: Coaches guide and train athletes, develop strategies, and oversee team performance to achieve success.
+      Trainer: Trainers focus on fitness, strength, and conditioning, helping athletes improve their physical abilities.
+      Scout: Scouts identify and recruit talented players for teams, assessing skills and potential.
+      Dietitian: Dietitians design nutrition plans to optimize athletes' performance and overall health.
+      Feel free to select the option that aligns with your sports interests, and I'll provide information accordingly.
+    buttons:
+    - title: Player
+      payload: /player_career_paths
+    - title: Coach
+      payload: /coach_career_paths
+    - title: Trainer
+      payload: /trainer_career_paths
+    - title: Scout
+      payload: /scout_career_paths
+    - title: Dietitian
+      payload: /dietitian_career_paths
+  utter_player_career_paths:
+  - text: |-
+      Choosing the role of a player in sports can be both exhilarating and demanding. As a player, you'll be at the forefront of the action, showcasing your skills, teamwork, and dedication on the field or court. Player roles can vary widely based on the sport you're involved in, ranging from professional leagues to amateur or recreational teams. Some potential career paths for players include:
+      - Professional Sports: Become a professional athlete in sports leagues worldwide.
+      - Amateur Leagues: Participate in local or regional leagues and tournaments.
+      - Recreational Sports: Enjoy sports as a hobby or recreational activity.
+      - Coaching or Leadership: Transition to coaching or leadership roles to mentor and guide others.
+
+      To become a player, here are some steps you can take:
+      1. Start Early: Begin playing your chosen sport at a young age to develop skills and passion.
+      2. Join Teams: Join school teams, clubs, or community leagues to gain experience and exposure.
+      3. Train and Improve: Dedicate time to practice, training sessions, and fitness to enhance your performance.
+      4. Compete and Showcase: Participate in tournaments, showcases, and competitions to showcase your abilities and attract attention from scouts and recruiters.
+      5. Pursue Education: While pursuing a career in sports, continue your education to have a backup plan and develop well-rounded skills.
+  utter_coach_career_paths:
+  - text: |-
+      Coaching in sports can be incredibly rewarding and challenging. As a coach, you'll guide and mentor athletes, develop strategies, and lead teams to success. Coaching roles can vary based on the sport and level of competition. Some potential career paths for coaches include:
+      - Head Coach: Lead and manage teams at the professional, college, or high school level.
+      - Assistant Coach: Support the head coach in training, strategy development, and player management.
+      - Youth Coach: Work with young athletes in grassroots programs, schools, or community organizations.
+      - Specialized Coach: Focus on specific aspects of training, such as fitness, technique, or position coaching.
+
+      To become a coach, you typically need a combination of education, experience, and certifications:
+      1. Education: Obtain a degree in sports coaching, physical education, or a related field. Some coaching positions may require advanced degrees.
+      2. Experience: Gain experience through coaching clinics, internships, assistant coaching roles, or volunteering with sports teams.
+      3. Certifications: Obtain coaching certifications from recognized organizations or sports governing bodies. These certifications often include training in coaching techniques, sports psychology, safety protocols, and rules of the game
+  utter_trainer_career_paths:
+  - text: |-
+      Becoming a trainer in sports can be a fulfilling career choice that allows you to help athletes improve their fitness, skills, and performance. Trainers play a crucial role in developing athletes and ensuring their well-being. Some potential career paths for trainers include:
+      - Personal Trainer: Work one-on-one with clients to create personalized fitness plans and coaching sessions.
+      - Sports Trainer: Focus on training athletes in specific sports, emphasizing techniques, conditioning, and injury prevention.
+      - Fitness Instructor: Lead group fitness classes, workshops, and training sessions for individuals or teams.
+      - Strength and Conditioning Coach: Design and implement strength training and conditioning programs for athletes.
+
+      To become a trainer, here are some steps you can take:
+      1. Obtain Education: Pursue a degree or certification in sports science, kinesiology, exercise physiology, or a related field.
+      2. Gain Experience: Gain practical experience through internships, assistant trainer roles, or working at fitness centers.
+      3. Get Certified: Obtain certifications from recognized organizations such as NASM, ACE, NSCA, or ACSM for credibility and expertise.
+      4. Specialize: Consider specializing in specific areas such as sports nutrition, injury rehabilitation, or functional training to expand your skills and marketability.
+  utter_scout_career_paths:
+  - text: |-
+      Working as a scout in sports involves identifying and recruiting talented athletes for teams, clubs, or organizations. Scouts play a crucial role in talent evaluation and player recruitment. Some potential career paths for scouts include:
+      - Talent Scout: Focus on scouting and recruiting athletes based on their skills, potential, and fit with the team's needs.
+      - College Scout: Scout and evaluate college-level athletes for recruitment to professional or collegiate teams.
+      - International Scout: Scout and recruit athletes from international locations, expanding the team's talent pool globally.
+      - Specialized Scout: Focus on scouting specific positions, skills, or regions to meet team requirements and goals.
+
+      To become a scout, here are some steps you can take:
+      1. Learn the Game: Develop a deep understanding of the sport you're scouting for, including rules, strategies, and player positions.
+      2. Network: Build relationships with coaches, players, agents, and sports organizations to gain insights and access to talent.
+      3. Gain Experience: Start scouting at local levels, high schools, or amateur leagues to gain experience and hone your scouting skills.
+      4. Attend Events: Attend games, tournaments, showcases, and combines to observe and evaluate players in action.
+      5. Develop Evaluation Skills: Learn how to assess player skills, potential, character, and fit with team culture through observation and analysis.
+  utter_dietitian_career_paths:
+  - text: |-
+      Becoming a dietitian in sports involves providing nutrition guidance and plans to athletes, helping them optimize performance, recovery, and overall health. Dietitians play a crucial role in athlete well-being and performance enhancement. Some potential career paths for dietitians include:
+      - Sports Dietitian: Specialize in creating nutrition plans tailored to athletes' needs, focusing on energy, hydration, recovery, and performance optimization.
+      - Clinical Dietitian: Work in healthcare settings, providing nutrition counseling and support to individuals with medical conditions or special dietary needs.
+      - Wellness Coach: Combine nutrition expertise with coaching skills to promote healthy eating habits, lifestyle changes, and wellness goals.
+      - Researcher: Conduct research studies on nutrition, sports performance, and dietary interventions to contribute to scientific knowledge and advancements.
+
+      To become a dietitian, here are some steps you can take:
+      1. Earn a Degree: Obtain a bachelor's degree in nutrition, dietetics, or a related field accredited by the Accreditation Council for Education in Nutrition and Dietetics (ACEND).
+      2. Complete an Internship: Complete a supervised internship program accredited by ACEND to gain practical experience in clinical, community, or sports nutrition settings.
+      3. Pass the RD Exam: Pass the Registered Dietitian (RD) exam administered by the Commission on Dietetic Registration (CDR) to become a registered dietitian.
+      4. Gain Experience: Gain experience working with athletes, sports teams, or fitness programs to apply your nutrition knowledge in a sports context.
+      5. Stay Updated: Continuously update your knowledge and skills through continuing education, workshops, and certifications to stay current with nutrition trends and research.
+  utter_creative_career:
+  - text: |-
+      Arts and Creative Fields offer a wide range of career opportunities for individuals with a passion for creativity. Whether you're interested in art, music, theater, dance, writing, or any other creative field, there are various career paths you can explore. Some of the main positions in arts and creative fields include:
+      1. Artist: Create visual art such as paintings, sculptures, and illustrations.
+      2. Musician: Perform and compose music in various genres.
+      3. Actor: Perform in theater, film, television, or other forms of entertainment.
+      4. Writer: Create written content for books, articles, scripts, and other media.
+      5. Designer: Use creativity to design products, graphics, interiors, or fashion.
+
+      Please select one of the following positions to learn more about potential career paths.
+    buttons:
+    - title: Artist
+      payload: /artist_career
+    - title: Musician
+      payload: /musician_career
+    - title: Actor
+      payload: /actor_career
+    - title: Writer
+      payload: /writer_career
+    - title: Designer
+      payload: /designer_career
+  utter_artist_career:
+  - text: |-
+      Becoming an artist requires creativity, dedication, and a passion for visual arts. Here's what you need to know:
+      Skills Required:
+      - Creativity: The ability to express ideas and emotions through visual mediums.
+      - Technical Skills: Proficiency in drawing, painting, sculpting, or other artistic techniques.
+      - Observation Skills: The ability to observe and interpret the world around you.
+      - Attention to Detail: Precision and accuracy in your artwork.
+      - Communication Skills: The ability to convey messages or evoke emotions through your art.
+
+      Steps to Become an Artist:
+      1. Develop your skills: Practice drawing, painting, or sculpting regularly to improve your technique.
+      2. Build a portfolio: Create a collection of your best artwork to showcase your talent to potential clients or employers.
+      3. Gain education or training: Consider pursuing a degree in fine arts or attending art classes and workshops to enhance your skills.
+      4. Participate in exhibitions and competitions: Showcase your work in art galleries, exhibitions, or online platforms to gain recognition and exposure.
+      5. Network: Connect with other artists, art collectors, and industry professionals to expand your opportunities.
+
+      There are no specific exams required to become an artist, but participating in art competitions and exhibitions can help you gain recognition and exposure.
+  utter_musician_career:
+  - text: |-
+      Becoming a musician requires talent, dedication, and a passion for music. Here's what you need to know:
+      Skills Required:
+      - Musical Talent: Proficiency in playing one or more musical instruments or singing.
+      - Musical Knowledge: Understanding of music theory, composition, and arrangement.
+      - Performance Skills: Ability to perform live in front of an audience and connect with them.
+      - Creativity: Ability to compose or arrange music and develop your unique style.
+      - Discipline and Practice: Regular practice to improve your musical skills and technique.
+
+      Steps to Become a Musician:
+      1. Learn an instrument: Start by learning to play a musical instrument or develop your singing skills.
+      2. Study music theory: Understand the fundamentals of music theory, including notation, harmony, and rhythm.
+      3. Practice regularly: Dedicate time to practice your instrument and develop your musical skills.
+      4. Perform live: Gain experience by performing at local venues, open mic nights, or events.
+      5. Build a portfolio: Record your music, create a portfolio, and showcase your talent on online platforms.
+      6. Network: Connect with other musicians, industry professionals, and music enthusiasts to expand your opportunities.
+
+      While there are no specific exams required to become a musician, participating in music competitions, festivals, and auditions can help you gain recognition and exposure.
+  utter_actor_career:
+  - text: |-
+      Pursuing a career as an actor requires talent, dedication, and a passion for performing arts. Here's what you need to know:
+      Skills Required:
+      - Acting Skills: Ability to portray characters convincingly, express emotions, and deliver dialogues effectively.
+      - Voice Modulation: Control over voice pitch, tone, and clarity.
+      - Body Language: Ability to use body language to convey emotions and communicate non-verbally.
+      - Memorization: Capacity to memorize scripts and deliver lines fluently.
+      - Improvisation: Skill to think quickly and adapt to changes during performances.
+
+      Steps to Become an Actor:
+      1. Acting Classes: Enroll in acting classes or join a theater group to learn acting techniques and improve your skills.
+      2. Build a Portfolio: Create an acting portfolio with your headshots, resume, and showreel showcasing your acting talent.
+      3. Gain Experience: Participate in school or community theater productions, short films, and student projects to gain experience.
+      4. Network: Attend industry events, workshops, and acting seminars to network with industry professionals and fellow actors.
+      5. Audition: Attend auditions for films, television shows, theater productions, commercials, and other acting opportunities.
+      6. Persistence: Keep auditioning, honing your skills, and improving your craft while staying resilient in the face of rejection.
+
+      While there are no specific exams required to become an actor, participating in acting competitions, auditions, and festivals can help you gain recognition and exposure.
+  utter_writer_career:
+  - text: |-
+      Pursuing a career as a writer requires creativity, discipline, and a passion for storytelling. Here's what you need to know:
+      Skills Required:
+      - Writing Skills: Ability to communicate ideas effectively, tell compelling stories, and engage readers.
+      - Creativity: Capacity to generate original and imaginative ideas across different genres and formats.
+      - Research Skills: Ability to conduct thorough research to gather information and enhance the authenticity of writing.
+      - Editing Skills: Proficiency in proofreading, revising, and editing your own work to ensure clarity and coherence.
+      - Time Management: Skill to manage deadlines, prioritize tasks, and maintain productivity.
+
+      Steps to Become a Writer:
+      1. Read Widely: Read books, articles, and content across various genres and styles to broaden your understanding and improve your writing skills.
+      2. Write Regularly: Practice writing consistently, whether it's fiction, non-fiction, poetry, or journalism, to hone your craft and find your voice.
+      3. Receive Feedback: Seek feedback from peers, mentors, or writing groups to identify areas for improvement and refine your writing.
+      4. Build a Portfolio: Create a portfolio of your writing samples, including articles, short stories, essays, or blog posts, to showcase your skills to potential employers or clients.
+      5. Specialize: Consider specializing in a specific genre, niche, or writing style to develop expertise and stand out in the competitive writing industry.
+      6. Networking: Attend writing workshops, conferences, and literary events to connect with other writers, editors, and industry professionals.
+
+      While there are no specific exams required to become a writer, participating in writing competitions, contests, and festivals can help you gain recognition, exposure, and valuable feedback on your work.
+  utter_designer_career:
+  - text: |-
+      Pursuing a career as a designer requires creativity, technical skills, and a strong visual sense. Here's what you need to know:
+      Skills Required:
+      - Creativity: Ability to think innovatively, generate original ideas, and solve design problems effectively.
+      - Design Software Skills: Proficiency in design software such as Adobe Photoshop, Illustrator, InDesign, Sketch, or other relevant tools.
+      - Technical Skills: Understanding of design principles, typography, color theory, layout, and composition.
+      - Communication Skills: Ability to communicate ideas visually, verbally, and in writing, and to collaborate effectively with clients and team members.
+      - Attention to Detail: Ability to pay attention to small details and maintain high-quality standards in design projects.
+
+      Steps to Become a Designer:
+      1. Gain Education: Pursue a degree, diploma, or certificate in design-related fields such as graphic design, fashion design, interior design, or industrial design.
+      2. Develop Skills: Learn and practice design software, explore different design techniques and styles, and build a strong portfolio showcasing your work.
+      3. Gain Experience: Gain practical experience through internships, freelance projects, or entry-level positions to develop your skills and expand your portfolio.
+      4. Build a Portfolio: Create a portfolio showcasing your best design work, including projects, concepts, and designs across different mediums and platforms.
+      5. Specialize: Consider specializing in a specific area of design such as web design, UX/UI design, branding, illustration, or product design to develop expertise and stand out in the field.
+      6. Networking: Attend design events, workshops, and conferences to connect with other designers, industry professionals, and potential clients.
+
+      While there are no specific exams required to become a designer, participating in design competitions, contests, and festivals can help you gain recognition, exposure, and valuable feedback on your work.
+  utter_social_impact_careerpath:
+  - text: |-
+      Welcome to Social Impact Careers! To provide more tailored guidance, could you please specify your preferred area:                   
+      1. Environmental Science: Protecting our planet through research, conservation, and sustainable practices.
+      2. Sustainability Management: Leading businesses towards eco-friendly practices, reducing environmental impact, and promoting sustainability.
+      3. Volunteering and Community Development: Making a difference through community service, grassroots initiatives, and social development projects.
+      4. Nonprofit Management: Guiding and managing organizations dedicated to social causes, education, healthcare, and humanitarian efforts.
+      Pick your path to create positive change!
+    buttons:
+    - title: Environmental Science
+      payload: /environmental_science_careerpath
+    - title: Sustainability Management
+      payload: /sustainability_management_careerpath
+    - title: Volunteering and Community Development
+      payload: /volunteering_community_careerpath
+    - title: Nonprofit Management
+      payload: /nonprofit_management_careerpath
+  utter_environmental_science_careerpath:
+  - text: |-
+      Exploring a career in Environmental Science opens doors to diverse opportunities in safeguarding our planet. Some potential paths in Environmental Science include:
+      - Conservation Scientist: Research and implement strategies for preserving natural resources and ecosystems.
+      - Environmental Consultant: Advise businesses and governments on sustainable practices and environmental regulations.
+      - Environmental Engineer: Design and develop solutions for pollution control, waste management, and sustainable infrastructure.
+      - Climate Scientist: Study climate patterns, climate change impacts, and contribute to climate resilience efforts.
+
+      To pursue a career in Environmental Science, here are some steps you can follow:
+      1. Obtain Education: Earn a degree in Environmental Science, Biology, Chemistry, or related fields.
+      2. Gain Experience: Participate in internships, research projects, or volunteer work in environmental organizations.
+      3. Acquire Skills: Develop skills in data analysis, research methods, environmental modeling, and communication.
+      4. Specialize: Consider specializing in areas like environmental policy, wildlife conservation, or renewable energy to align with your interests and goals.
+  utter_sustainability_management_careerpath:
+  - text: |-
+      Exploring a career in Sustainability Management allows you to lead organizations towards eco-friendly practices and positive environmental impact. Some potential paths in Sustainability Management include:
+      - Sustainability Coordinator: Develop and implement sustainability initiatives within organizations, focusing on waste reduction, energy efficiency, and sustainable sourcing.
+      - Corporate Sustainability Manager: Lead sustainability strategies and programs in corporations to reduce environmental footprint and promote social responsibility.
+      - Green Building Consultant: Advise on sustainable building practices, LEED certification, and green infrastructure development.
+      - Sustainable Supply Chain Manager: Optimize supply chain operations for environmental sustainability, ethical sourcing, and carbon footprint reduction.
+
+      To pursue a career in Sustainability Management, here are some steps you can follow:
+      1. Obtain Education: Earn a degree in Sustainability Management, Environmental Studies, Business Administration, or related fields.
+      2. Gain Experience: Seek internships, projects, or jobs related to sustainability, environmental consulting, or corporate social responsibility.
+      3. Develop Skills: Enhance skills in sustainability reporting, stakeholder engagement, project management, and data analysis.
+      4. Certifications: Consider obtaining certifications such as LEED Green Associate, Sustainability Professional (ISSP), or Corporate Sustainability (CSR) to demonstrate expertise.
+  utter_volunteering_community_careerpath:
+  - text: |-
+      Embarking on a career in Volunteering and Community Development allows you to make a positive impact on society and empower communities. Some potential paths in Volunteering and Community Development include:
+      - Community Organizer: Coordinate and lead community initiatives, events, and programs to address social issues and foster community engagement.
+      - Nonprofit Program Coordinator: Manage and implement programs and services for nonprofit organizations, focusing on education, healthcare, or social welfare.
+      - Volunteer Coordinator: Recruit, train, and coordinate volunteers for community projects, nonprofits, or charitable events.
+      - Social Worker: Provide support, advocacy, and resources to individuals and families in need, promoting well-being and social justice.
+
+      To pursue a career in Volunteering and Community Development, here are some steps you can follow:
+      1. Obtain Education: Earn a degree in Social Work, Nonprofit Management, Community Development, or related fields.
+      2. Gain Experience: Volunteer with organizations, participate in community projects, or intern with nonprofits to gain practical experience.
+      3. Develop Skills: Build skills in communication, advocacy, project management, cultural competence, and empathy.
+      4. Network: Connect with professionals, attend workshops, and engage in professional development opportunities to expand your network and knowledge.  
+  utter_nonprofit_management_careerpath:
+  - text: |-
+      Exploring a career in Nonprofit Management allows you to lead organizations dedicated to social causes and make a positive impact on communities. Some potential paths in Nonprofit Management include:
+      - Executive Director: Provide strategic leadership and oversee operations, programs, and fundraising efforts of nonprofit organizations.
+      - Development Manager: Lead fundraising initiatives, donor relations, grant writing, and fundraising events to support nonprofit missions.
+      - Program Manager: Manage and coordinate programs, services, and initiatives focused on education, healthcare, social services, or environmental conservation.
+      - Operations Coordinator: Ensure smooth day-to-day operations, administration, and compliance with regulations within nonprofit organizations.
+
+      To pursue a career in Nonprofit Management, here are some steps you can follow:
+      1. Obtain Education: Earn a degree in Nonprofit Management, Public Administration, Business Administration, or related fields.
+      2. Gain Experience: Volunteer or intern with nonprofits, work in related roles such as fundraising or program coordination, and seek leadership opportunities.
+      3. Develop Skills: Enhance skills in leadership, strategic planning, fundraising, budgeting, grant writing, and nonprofit governance.
+      4. Network: Build connections with nonprofit professionals, attend industry events, and join professional associations to stay informed and connected.
+
+  utter_iti_career:
+  - text: |-
+      Completing an ITI (Industrial Training Institute) program opens up various career opportunities in skilled trades. Here's what you need to know:
+      
+      Positions that can be achieved by ITI:
+      - Fitter
+      - Electrician
+      - Mechanic
+      - Welder
+      - Carpenter
+
+      Skills Required:
+      - Technical Skills: Proficiency in specific trades such as fitting, electrical work, mechanics, welding, or carpentry.
+      - Hand-Eye Coordination: Ability to coordinate hands and eyes to manipulate tools and parts accurately.
+      - Problem-Solving Skills: Ability to identify and solve technical problems efficiently.
+      - Attention to Detail: Ability to follow technical instructions accurately and produce high-quality work.
+      - Physical Stamina: Capacity to perform physical tasks for extended periods.
+
+      Steps to Start a Career After ITI:
+      1. Specialization: Choose a specific trade or specialization based on your interests and aptitude.
+      2. Gain Practical Experience: Complete an apprenticeship or on-the-job training to gain hands-on experience and refine your skills.
+      3. Obtain Certifications: Acquire relevant certifications and licenses required for your chosen trade.
+      4. Build a Network: Connect with industry professionals, employers, and fellow ITI graduates to explore job opportunities.
+      5. Explore Job Opportunities: Apply for entry-level positions, apprenticeships, or training programs in industries such as manufacturing, construction, automotive, and more.
+    
+      Please select one of the following positions to learn more:
+    buttons:
+    - title: Fitter
+      payload: /fitter_career
+    - title: Electrician
+      payload: /electrician_career
+    - title: Mechanic
+      payload: /mechanic_career
+    - title: Welder
+      payload: /welder_career
+    - title: Carpenter
+      payload: /carpenter_career
+
+  utter_fitter_career:
+  - text: |-
+      Pursuing a career as a fitter requires technical expertise, precision, and problem-solving skills. Here's what you need to know:
+      Skills Required:
+      - Technical Skills: Proficiency in reading blueprints, using hand tools, operating machinery, and performing assembly tasks with precision.
+      - Mechanical Aptitude: Understanding of mechanical systems, components, and their functions to diagnose and troubleshoot issues.
+      - Attention to Detail: Ability to follow instructions accurately, maintain quality standards, and ensure precise fitting and assembly.
+      - Problem-solving Skills: Capacity to identify and resolve technical problems, make adjustments, and find solutions to ensure proper fit and function.
+      - Physical Stamina: Endurance to work in physically demanding environments, lift heavy objects, and stand for extended periods.
+
+      Steps to Become a Fitter:
+      1. Education: Obtain a high school diploma or equivalent. Consider pursuing vocational training or an apprenticeship program in fitting and assembly.
+      2. Gain Experience: Gain hands-on experience by working as an apprentice or trainee under experienced fitters or in manufacturing and industrial settings.
+      3. Develop Skills: Hone your technical skills, mechanical aptitude, and attention to detail through practical training and on-the-job experience.
+      4. Obtain Certification: While not always required, obtaining certification from recognized organizations can enhance your credibility and job prospects.
+      5. Stay Updated: Keep abreast of advancements in fitting techniques, tools, and technologies by attending workshops, seminars, and industry events.
+
+      While there are no specific exams required to become a fitter, completing apprenticeship programs, obtaining relevant certifications, and participating in skills competitions can help you demonstrate your skills and expertise in fitting and assembly.
+
+  utter_electrician_career:
+  - text: |-
+      Pursuing a career as an electrician requires technical expertise, problem-solving skills, and a strong focus on safety. Here's what you need to know:
+
+      Skills Required:
+      - Technical Skills: Proficiency in electrical systems, wiring, circuits, and troubleshooting electrical issues.
+      - Safety Awareness: Commitment to safety protocols, knowledge of electrical codes, and precautions to prevent accidents and hazards.
+      - Problem-solving Skills: Ability to diagnose electrical problems, find solutions, and implement repairs effectively.
+      - Attention to Detail: Precision in installing, repairing, and maintaining electrical components with accuracy and care.
+      - Physical Stamina: Endurance to work in various environments, climb ladders, lift heavy objects, and perform physically demanding tasks.
+
+      Steps to Become an Electrician:
+      1. Education: Obtain a high school diploma or equivalent. Consider enrolling in a vocational or technical school offering electrician training programs.
+      2. Apprenticeship: Gain hands-on experience through an apprenticeship program, typically lasting 4-5 years, under the supervision of experienced electricians.
+      3. Licensing: After completing your apprenticeship, obtain a license to work as an electrician. Requirements vary by state and may include passing an exam.
+      4. Specialization: Consider specializing in specific areas such as residential, commercial, or industrial electrical work to enhance your expertise and career prospects.
+      5. Continued Learning: Stay updated on the latest technologies, regulations, and safety standards through continuing education and training programs.
+
+      While there are no specific exams required to become an electrician, completing an apprenticeship program, obtaining a license, and participating in skills competitions can help you demonstrate your skills and expertise in electrical work.
+
+  utter_mechanic_career:
+  - text: |
+      Pursuing a career as a mechanic requires a blend of technical skills, problem-solving abilities, and a passion for working with machinery. Here's an overview of what you need to know:
+
+      Skills Required:
+      - Technical Skills: Proficiency in diagnosing, repairing, and maintaining mechanical systems and equipment.
+      - Problem-solving Skills: Ability to identify issues, troubleshoot problems, and implement effective solutions.
+      - Attention to Detail: Precision in handling tools and components, ensuring accurate repairs and adjustments.
+      - Mechanical Aptitude: Understanding of mechanical principles, machinery operation, and systems functionality.
+      - Communication Skills: Ability to communicate technical information clearly and effectively with team members and clients.
+
+      Steps to Become a Mechanic:
+      1. Education: Obtain a high school diploma or equivalent. Consider pursuing vocational or technical training in automotive technology or mechanical engineering.
+      2. Apprenticeship: Gain hands-on experience through an apprenticeship or internship program under the guidance of experienced mechanics.
+      3. Certification: Obtain relevant certifications, such as Automotive Service Excellence (ASE) certification, to demonstrate your skills and expertise.
+      4. Specialization: Consider specializing in specific areas such as automotive repair, diesel engines, or industrial machinery to expand your career opportunities.
+      5. Continued Learning: Stay updated on the latest technologies, tools, and techniques through continuing education and professional development courses.
+
+      While there are no specific exams required to become a mechanic, obtaining certifications and participating in skills competitions can help you showcase your abilities and advance your career in mechanical engineering.
+
+  utter_welder_career:
+  - text: |
+      Pursuing a career as a welder requires a unique set of skills and expertise in metal fabrication and joining techniques. Here's an overview of what you need to know:
+
+      Skills Required:
+      - Welding Techniques: Proficiency in various welding processes such as arc welding, MIG welding, TIG welding, and oxy-fuel welding.
+      - Metalworking Skills: Ability to read blueprints, understand welding symbols, and perform metal fabrication tasks.
+      - Safety Practices: Knowledge of safety procedures and protocols to prevent accidents and ensure a secure working environment.
+      - Attention to Detail: Precision in weld placement, bead formation, and weld quality inspection.
+      - Physical Stamina: Endurance to work in challenging environments and handle heavy equipment for extended periods.
+
+      Steps to Become a Welder:
+      1. Education: Obtain a high school diploma or equivalent. Consider enrolling in vocational or technical programs that offer welding courses.
+      2. Training: Gain hands-on experience through apprenticeships, internships, or on-the-job training programs under the supervision of experienced welders.
+      3. Certification: Pursue welding certifications such as Certified Welder (CW) or Welding Inspector (CWI) to validate your skills and enhance job opportunities.
+      4. Specialization: Explore specialized areas of welding such as underwater welding, pipeline welding, or aerospace welding to diversify your expertise.
+      5. Continued Learning: Stay updated on industry trends, new technologies, and advanced welding techniques through professional development courses and workshops.
+
+      While there are no specific exams required to become a welder, obtaining certifications from reputable organizations can boost your credibility and competitiveness in the field.
+
+  utter_carpenter_career:
+  - text: |
+      Pursuing a career as a carpenter requires a unique set of skills and expertise in woodworking and construction. Here's an overview of what you need to know:
+
+      Skills Required:
+      - Carpentry Techniques: Proficiency in woodworking skills such as measuring, cutting, shaping, and assembling wood materials.
+      - Blueprint Reading: Ability to interpret construction drawings, blueprints, and specifications to execute projects accurately.
+      - Safety Practices: Knowledge of safety protocols and procedures to prevent accidents and ensure a secure working environment.
+      - Attention to Detail: Precision in measuring, cutting, and installing materials to meet project requirements and quality standards.
+      - Physical Stamina: Endurance to work in physically demanding environments and handle heavy materials and equipment.
+
+      Steps to Become a Carpenter:
+      1. Education: Obtain a high school diploma or equivalent. Consider enrolling in vocational or technical programs that offer carpentry courses.
+      2. Training: Gain hands-on experience through apprenticeships, internships, or on-the-job training programs under the guidance of experienced carpenters.
+      3. Certification: Pursue carpentry certifications such as Certified Carpenter (CC) or Journeyman Carpenter to validate your skills and enhance job opportunities.
+      4. Specialization: Explore specialized areas of carpentry such as finish carpentry, framing, or cabinetry to diversify your expertise.
+      5. Continued Learning: Stay updated on industry trends, new tools, and construction techniques through professional development courses and workshops.
+
+      While there are no specific exams required to become a carpenter, obtaining certifications from reputable organizations can boost your credibility and competitiveness in the field.
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
